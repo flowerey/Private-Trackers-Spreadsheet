@@ -1,12 +1,12 @@
 {
   "name": "private-trackers-spreadsheet",
   "version": "1.0.0",
-  "description": "[Private Trackers Spreadsheet](https://hdvinnie.github.io/Private-Trackers-Spreadsheet/) - This comparative table of torrent trackers originates from discussions on [Reddit](https://www.reddit.com/r/trackers/comments/ehd7oy/new_private_trackers_spreadsheet/).",
+  "description": "[Private Trackers Spreadsheet](https://flowerey.github.io/Private-Trackers-Spreadsheet/) - This comparative table of torrent trackers originates from discussions on [Reddit](https://www.reddit.com/r/trackers/comments/ehd7oy/new_private_trackers_spreadsheet/).",
   "dependencies": {
-    "undici": "^6.19.8"
+    "undici": "^7.16.0"
   },
   "devDependencies": {
-    "js-yaml": "^3.13.1"
+    "js-yaml": "^4.1.0"
   },
   "scripts": {
     "update:jackett": "bun run read.js",
