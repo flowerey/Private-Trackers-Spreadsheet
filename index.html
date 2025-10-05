@@ -134,12 +134,6 @@
                                             </template>
                                         </tr>
                                         <tr>
-                                            <td>Observatory Grade</td>
-                                            <template x-for="tracker in selectedTrackers" :key="tracker.Name">
-                                                <td x-text="tracker['Observatory Grade']"></td>
-                                            </template>
-                                        </tr>
-                                        <tr>
                                             <td>Users</td>
                                             <template x-for="tracker in selectedTrackers" :key="tracker.Name">
                                                 <td x-text="tracker.Users"></td>
@@ -244,9 +238,6 @@
                         <th @click="sortBy('Codebase')" class="tracker-table__sortable">
                             Codebase <span class="icon icon-sort"></span>
                         </th>
-                        <th @click="sortBy('Observatory Grade')" class="tracker-table__sortable">
-                            Moz Grade <span class="icon icon-sort"></span>
-                        </th>
                         <th @click="sortBy('Users')" class="tracker-table__sortable">
                             Users <span class="icon icon-sort"></span>
                         </th>
@@ -332,12 +323,6 @@
                             class="tracker-table__sortable">
                             Codebase <span class="icon icon-sort"></span>
                         </th>
-                        <th @click="sortBy('Observatory Grade')"
-                            @mouseenter="showTooltip($event, 'Security grade from Mozilla Observatory (A+ is best, F is worst)')"
-                            @mouseleave="hideTooltip()"
-                            class="tracker-table__sortable">
-                            Moz Grade <span class="icon icon-sort"></span>
-                        </th>
                         <th @click="sortBy('Users')"
                             @mouseenter="showTooltip($event, 'Total number of registered users on the tracker')"
                             @mouseleave="hideTooltip()"
@@ -414,24 +399,6 @@
                             <td class="tracker-table__cell" x-text="tracker.Abbreviation"></td>
                             <td class="tracker-table__cell" x-text="tracker.Type"></td>
                             <td class="tracker-table__cell" x-text="tracker.Codebase"></td>
-                            <td class="tracker-table__cell"
-                                :class="tracker['Observatory Grade'] === 'A+' || tracker['Observatory Grade'] === 'A +' ? 'tracker-table__cell--grade-a-plus' :
-                                        tracker['Observatory Grade'] === 'A' ? 'tracker-table__cell--grade-a' :
-                                        tracker['Observatory Grade'] === 'A-' || tracker['Observatory Grade'] === 'A -' ? 'tracker-table__cell--grade-a-minus' :
-                                        tracker['Observatory Grade'] === 'B+' || tracker['Observatory Grade'] === 'B +' ? 'tracker-table__cell--grade-b-plus' :
-                                        tracker['Observatory Grade'] === 'B' ? 'tracker-table__cell--grade-b' :
-                                        tracker['Observatory Grade'] === 'B-' || tracker['Observatory Grade'] === 'B -' ? 'tracker-table__cell--grade-b-minus' :
-                                        tracker['Observatory Grade'] === 'C+' || tracker['Observatory Grade'] === 'C +' ? 'tracker-table__cell--grade-c-plus' :
-                                        tracker['Observatory Grade'] === 'C' ? 'tracker-table__cell--grade-c' :
-                                        tracker['Observatory Grade'] === 'C-' || tracker['Observatory Grade'] === 'C -' ? 'tracker-table__cell--grade-c-minus' :
-                                        tracker['Observatory Grade'] === 'D+' || tracker['Observatory Grade'] === 'D +' ? 'tracker-table__cell--grade-d-plus' :
-                                        tracker['Observatory Grade'] === 'D' ? 'tracker-table__cell--grade-d' :
-                                        tracker['Observatory Grade'] === 'D-' || tracker['Observatory Grade'] === 'D -' ? 'tracker-table__cell--grade-d-minus' :
-                                        tracker['Observatory Grade'] === 'F' ? 'tracker-table__cell--grade-f' : ''"
-                                :data-value="tracker['Observatory Grade']"
-                                :style="(tracker['Observatory Grade'] && tracker['Observatory Grade'] !== '-' && tracker['Observatory Grade'].trim() !== '') ? 'color: transparent;' : ''">
-                                <span x-show="!tracker['Observatory Grade'] || tracker['Observatory Grade'] === '-' || tracker['Observatory Grade'].trim() === ''" x-text="tracker['Observatory Grade']"></span>
-                            </td>
                             <td class="tracker-table__cell" x-text="tracker.Users"></td>
                             <td class="tracker-table__cell" x-text="tracker.Torrents"></td>
                             <td class="tracker-table__cell" x-text="tracker.Peers"></td>
