@@ -1,4 +1,3 @@
-const path = require('path');
 const fs = require('fs');
 const yaml = require('js-yaml');
 const { fetch } = require('undici');
@@ -21,7 +20,12 @@ if (fs.existsSync('trackers2.json')) {
 
 // Normalize function for names
 function normalizeName(name) {
-  return name.toLowerCase().replace(/\s+/g, '').replace(/\(.*?\)/g, '').replace(/[^a-z0-9]/g, '').trim();
+  return name
+    .toLowerCase()
+    .replace(/\(.*?\)/g, '') // remove anything in parentheses
+    .replace(/\s+/g, '')     // remove all spaces
+    .replace(/[^a-z0-9]/g, '') // remove any other non-alphanumeric
+    .trim();
 }
 
 // Build a map for merging existing trackers2.json
@@ -211,8 +215,8 @@ async function main(){
     // --- REMOVE IGNORED TRACKERS ---
     trackers2Json.trackers = trackers2Json.trackers.filter(tr=>{
       if(!tr.name||!tr.name.trim()) return false;
-      const normalized=tr.name.trim().toLowerCase();
-      return !customIgnore.includes(normalized);
+      const normalized=normalizeName(tr.name);
+      return !customIgnore.some(ignore => normalizeName(ignore) === normalized);
     });
 
     trackers2Json.trackers.sort((a,b)=>a.name.localeCompare(b.name));
