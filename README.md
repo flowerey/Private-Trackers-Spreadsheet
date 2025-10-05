@@ -1,9 +1,9 @@
 <div align="center">
 <h1>🏴‍☠️ Private Trackers Spreadsheet</h1>
 
-[![Live Site](https://img.shields.io/badge/🌐_Live_Site-hdvinnie.github.io-e74c3c?style=for-the-badge)](https://hdvinnie.github.io/Private-Trackers-Spreadsheet/)
-[![GitHub Stars](https://img.shields.io/github/stars/hdvinnie/Private-Trackers-Spreadsheet?style=for-the-badge&color=ffd700)](https://github.com/hdvinnie/Private-Trackers-Spreadsheet/stargazers)
-[![GitHub Forks](https://img.shields.io/github/forks/hdvinnie/Private-Trackers-Spreadsheet?style=for-the-badge&color=3498db)](https://github.com/hdvinnie/Private-Trackers-Spreadsheet/network)
+[![Live Site](https://img.shields.io/badge/🌐_Live_Site-flowerey.github.io-e74c3c?style=for-the-badge)](https://flowerey.github.io/Private-Trackers-Spreadsheet/)
+[![GitHub Stars](https://img.shields.io/github/stars/flowerey/Private-Trackers-Spreadsheet?style=for-the-badge&color=ffd700)](https://github.com/flowerey/Private-Trackers-Spreadsheet/stargazers)
+[![GitHub Forks](https://img.shields.io/github/forks/flowerey/Private-Trackers-Spreadsheet?style=for-the-badge&color=3498db)](https://github.com/flowerey/Private-Trackers-Spreadsheet/network)
 
 *"A interactive database of private BitTorrent tracker statistics with sorting and filtering capabilities. Built using AlpineJS, HTML5 and CSS3"*
 
@@ -23,7 +23,7 @@ The data is sourced from user contributions and regularly updated using Jackett,
 ## 🏃‍♂️ Quick Start
 
 ### 🌐 **View Online**
-Simply visit the [live site](https://hdvinnie.github.io/Private-Trackers-Spreadsheet/) to start exploring tracker data immediately.
+Simply visit the [live site](https://flowerey.github.io/Private-Trackers-Spreadsheet/) to start exploring tracker data immediately.
 
 ### 💻 **Local Development**
 
@@ -32,7 +32,7 @@ Simply visit the [live site](https://hdvinnie.github.io/Private-Trackers-Spreads
 curl -fsSL https://bun.sh/install | bash
 
 # Clone the repository
-git clone https://github.com/hdvinnie/Private-Trackers-Spreadsheet.git
+git clone https://github.com/flowerey/Private-Trackers-Spreadsheet.git
 
 # Navigate to project directory
 cd Private-Trackers-Spreadsheet
@@ -71,7 +71,7 @@ bun run update:jackett
 1. **🍴 Fork the Repository**
    ```bash
    # Click the "Fork" button on GitHub or use:
-   gh repo fork hdvinnie/Private-Trackers-Spreadsheet
+   gh repo fork flowerey/Private-Trackers-Spreadsheet
    ```
 
 2. **🌿 Create a Feature Branch**
