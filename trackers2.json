@@ -746,6 +746,11 @@
       "type": "TV, PC, Books, Audio, Movies, Console, General"
     },
     {
+      "name": "HELLENIC-HD (API)",
+      "description": "HELLENIC-HD is a GREEK Private Torrent Tracker for MOVIES / TV",
+      "type": "Movies, TV"
+    },
+    {
       "name": "HHanClub",
       "description": "HHanClub is a CHINESE Private Torrent Tracker for HD MOVIES / TV",
       "type": "General, TV, Movies, Audio"
