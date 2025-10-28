@@ -1646,6 +1646,11 @@
       "type": "Movies, Audio, TV"
     },
     {
+      "name": "uHDTorrent",
+      "description": "uHDTorrent is a TURKISH Private Torrent Tracker for HD MOVIES / TV / GENERAL",
+      "type": "Movies, TV, Audio, PC"
+    },
+    {
       "name": "UltraHD",
       "description": "UltraHD is a CHINESE Private Torrent Tracker for UHD MOVIES / TV / GENERAL",
       "type": "Movies, TV, Audio, General"
