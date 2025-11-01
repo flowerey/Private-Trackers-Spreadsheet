@@ -1121,6 +1121,11 @@
       "type": "TV, PC, Movies, General, XXX, Audio, Books"
     },
     {
+      "name": "Phoenix Project",
+      "description": "Phoenix Project is a Private MacOS software tracker",
+      "type": "PC, General, Audio"
+    },
+    {
       "name": "PigNetwork (猪猪网)",
       "description": "PigNetwork (猪猪网) is a CHINESE Private Torrent Tracker for HD MOVIES / TV / GENERAL",
       "type": "Movies, TV, Audio, General, Books"
