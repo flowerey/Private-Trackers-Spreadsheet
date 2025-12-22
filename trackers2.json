@@ -1111,6 +1111,11 @@
       "type": "Movies, TV, PC, Console, Books, Audio, General"
     },
     {
+      "name": "ParabellumHD (API)",
+      "description": "ParabellumHD is a SPANISH Private Torrent Tracker for HEVC & AV1-encoded MOVIES / TV",
+      "type": "Movies, TV, General"
+    },
+    {
       "name": "Party-Tracker",
       "description": "Party-Tracker is a HUNGARIAN private tracker for MOVIES / TV / GENERAL",
       "type": "Console, PC, Movies, Books, TV, XXX, General, Audio"
