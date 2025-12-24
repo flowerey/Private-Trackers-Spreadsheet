@@ -911,6 +911,11 @@
       "type": "Movies, Audio, TV"
     },
     {
+      "name": "LemonHD.net",
+      "description": "LemonHD.net is a CHINESE Private Torrent Tracker for HD MOVIES / TV",
+      "type": "Movies, Audio, TV, General"
+    },
+    {
       "name": "LeSaloon",
       "description": "Le Saloon is a FRENCH Private Torrent Tracker for MOVIES / TV / GENERAL",
       "type": "Movies, TV, Audio, PC, Console, Books, General"
