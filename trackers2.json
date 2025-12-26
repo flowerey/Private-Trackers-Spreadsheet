@@ -516,6 +516,11 @@
       "type": "TV, Console, XXX, Books"
     },
     {
+      "name": "Fappaizuri2FA",
+      "description": "Fappaizuri is a Private Torrent Tracker for HENTAI / JAV. This indexer uses cookie login for 2FA.",
+      "type": "XXX, Books, Console, TV"
+    },
+    {
       "name": "FearNoPeer",
       "description": "FearNoPear is a Private Torrent Tracker for MOVIES / TV / GENERAL",
       "type": "Movies, TV, Audio, PC, General"
