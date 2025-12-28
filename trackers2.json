@@ -116,6 +116,11 @@
       "type": "Movies, TV, XXX, General, Audio, Books, Console, PC"
     },
     {
+      "name": "ArabicSource (API)",
+      "description": "ArabicSource is an ARABIC Private Torrent Tracker for MOVIES / TV",
+      "type": "Movies, TV, General, Audio"
+    },
+    {
       "name": "ArabP2P",
       "description": "ArabP2P is an ARABIC Private Torrent Tracker for MOVIES / TV / GENERAL",
       "type": "Movies, TV, Audio, PC, Books, General"
@@ -159,6 +164,11 @@
       "name": "Back-ups",
       "description": "Back-Ups is a Private Torrent Tracker for MOVIES / TV / GENERAL",
       "type": "Console, PC, TV, Audio, Movies, Books, XXX"
+    },
+    {
+      "name": "baoziPT",
+      "description": "baoziPT is a CHINESE Private Torrent Tracker for MOVIES / TV / GENERAL",
+      "type": "Movies, TV, Audio, General"
     },
     {
       "name": "Beload",
