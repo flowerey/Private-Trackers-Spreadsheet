@@ -1076,6 +1076,11 @@
       "type": "Movies, TV, General"
     },
     {
+      "name": "NORDiCHD",
+      "description": "NORDiCHD is a Mixed NORDIC Private Tracker for MOVIES / TV / GENERAL",
+      "type": "Movies, TV, Audio"
+    },
+    {
       "name": "NordicQuality (API)",
       "description": "NordicQuality is a NORDIC Private Torrent Tracker for MOVIES / TV / GENERAL",
       "type": "Audio, Books, Console, Movies, PC, TV, XXX"
