@@ -186,6 +186,11 @@
       "type": "PC, Audio, Books"
     },
     {
+      "name": "BigBBS",
+      "description": "BigBBS is a POLISH Private Torrent Tracker for MOVIES / TV / GENERAL",
+      "type": "Movies, XXX, TV, Books, PC, Audio, Console, General"
+    },
+    {
       "name": "BigCore",
       "description": "BigCore is a HUNGARIAN Private Tracker for MOVIES / TV / GENERAL",
       "type": "Movies, TV, PC, Audio, Books, XXX"
