@@ -901,6 +901,11 @@
       "type": "XXX, Books, PC"
     },
     {
+      "name": "La Cale (API)",
+      "description": "La Cale is a FRENCH Private Torrent Tracker for MOVIES / TV / GENERAL",
+      "type": "PC, Audio, General, Books, Console, Movies, TV, XXX"
+    },
+    {
       "name": "lajidui",
       "description": "lajidui is a CHINESE Private Torrent Tracker for MOVIES / TV / GENERAL",
       "type": "Movies, TV, Audio, General, Books, PC"
