@@ -976,6 +976,11 @@
       "type": "Movies, TV, Audio"
     },
     {
+      "name": "LongPT",
+      "description": "LongPT is a CHINESE Private Torrent Tracker for MOVIES / TV / GENERAL",
+      "type": "Audio, General, TV, Movies"
+    },
+    {
       "name": "LosslessClub",
       "description": "LosslessClub is a RUSSIAN Private Torrent Tracker for High Quality Music",
       "type": ""
@@ -1099,6 +1104,11 @@
       "name": "NordicQuality (API)",
       "description": "NordicQuality is a NORDIC Private Torrent Tracker for MOVIES / TV / GENERAL",
       "type": "Audio, Books, Console, Movies, PC, TV, XXX"
+    },
+    {
+      "name": "NovaHD",
+      "description": "NovaHD is a CHINESE Private Torrent Tracker for MOVIES / TV / GENERAL",
+      "type": "TV, Movies, Audio, General"
     },
     {
       "name": "Nusanta(RA.RE)",
@@ -1454,6 +1464,11 @@
       "name": "Tangmen (唐门)",
       "description": "Tangmen (唐门) is a CHINESE Private Torrent Tracker for MOVIES / TV / GENERAL",
       "type": "TV, Audio, Movies"
+    },
+    {
+      "name": "TangPT (躺平)",
+      "description": "TangPT (躺平) is a CHINESE Private Torrent Tracker for MOVIES / TV / GENERAL",
+      "type": "Movies, TV, Audio, General"
     },
     {
       "name": "Tapochek",
