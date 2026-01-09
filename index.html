@@ -447,43 +447,6 @@
                 </table>
             </div>
         </section>
-        <section class="tracker-jackett" x-data="jackettTable()">
-            <div class="tracker-jackett__message">
-                Trackers from <a class="tracker-jackett__link" href="https://github.com/Jackett/Jackett">Jackett</a> that have not yet been added
-            </div>
-            <div class="tracker-jackett__controls">
-                <input class="tracker-jackett__search" type="text" placeholder="Search Jackett trackers..." x-model="search">
-                <div class="tracker-jackett__info">
-                    <span x-text="`${filteredJackettTrackers.length} of ${jackettTrackers.length} trackers`"></span>
-                </div>
-            </div>
-            <div class="tracker-jackett__container">
-                <table class="tracker-jackett__table">
-                    <thead>
-                    <tr>
-                        <th @click="sortJackettBy('name')" class="tracker-jackett__sortable">
-                            Name <span class="icon icon-sort"></span>
-                        </th>
-                        <th @click="sortJackettBy('description')" class="tracker-jackett__sortable">
-                            Description <span class="icon icon-sort"></span>
-                        </th>
-                        <th @click="sortJackettBy('type')" class="tracker-jackett__sortable">
-                            Type <span class="icon icon-sort"></span>
-                        </th>
-                    </tr>
-                    </thead>
-                    <tbody>
-                    <template x-for="tracker in filteredJackettTrackers" :key="tracker.name">
-                        <tr class="tracker-jackett__row">
-                            <td class="tracker-jackett__cell tracker-jackett__cell--name" x-text="tracker.name"></td>
-                            <td class="tracker-jackett__cell tracker-jackett__cell--description" x-text="tracker.description"></td>
-                            <td class="tracker-jackett__cell" x-text="tracker.type"></td>
-                        </tr>
-                    </template>
-                    </tbody>
-                </table>
-            </div>
-        </section>
         <section class="tracker-privacy">
             <div class="tracker-privacy__panel">
                 <div class="tracker-privacy__body">
