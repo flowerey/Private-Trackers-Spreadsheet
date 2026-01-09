@@ -476,6 +476,11 @@
       "type": "TV, PC, Movies, Console, Books, Audio, General, XXX"
     },
     {
+      "name": "dubhe (天枢)",
+      "description": "dubhe (天枢) is a CHINESE Private Torrent Tracker for MOVIES / TV / GENERAL",
+      "type": "Movies, TV, Audio, General, Books"
+    },
+    {
       "name": "Ebooks-Shares",
       "description": "Ebooks-Shares is a Private Torrent Tracker for EBOOKS / AUDIOBOOKS",
       "type": "Audio, Books"
@@ -856,6 +861,11 @@
       "type": "Audio, Movies, TV, General"
     },
     {
+      "name": "JPTV4us (API)",
+      "description": "JPTV4us is a JAPANESE Private Torrent Tracker for MOVIES / TV / MUSIC / GENERAL",
+      "type": "TV, Movies, Audio, General"
+    },
+    {
       "name": "KamePT",
       "description": "KamePT is a CHINESE Private Torrent Tracker for 3X",
       "type": "XXX"
@@ -1014,6 +1024,11 @@
       "name": "Malayabits (API)",
       "description": "Malayabits is a MALAYSIAN Private Torrent Tracker for MOVIES / TV / MUSIC",
       "type": "Movies, TV, Audio"
+    },
+    {
+      "name": "March",
+      "description": "March is a CHINESE Private Torrent Tracker for MOVIES / TV",
+      "type": "Movies, TV, Audio, General"
     },
     {
       "name": "Matrix",
