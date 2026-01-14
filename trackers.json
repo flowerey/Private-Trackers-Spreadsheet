@@ -235,13 +235,31 @@
       "Updated": "2021-04-11"
     },
     {
+      "Name": "Aura4K",
+      "Abbreviation": "-",
+      "Type": "Movie, TV",
+      "Codebase": "UNIT3D",
+      "Users": "116",
+      "Torrents": "278",
+      "Peers": "499",
+      "Ratio": "Yes",
+      "Ratio Diff": "Easy",
+      "Freeleech": "Yes",
+      "Points": "Yes",
+      "Hit & Run": "Yes",
+      "Birthdate": "2026",
+      "Join": "Invite, Open",
+      "Join Diff": "Easy",
+      "Updated": "2026-01-14"
+    },
+    {
       "Name": "AvistaZ",
       "Abbreviation": "AZ",
       "Type": "Movie, TV, Music, Asian",
       "Codebase": "Custom",
-      "Users": "89,632",
-      "Torrents": "132,930",
-      "Peers": "1,057,254",
+      "Users": "89,595",
+      "Torrents": "133,113",
+      "Peers": "1,029,347",
       "Ratio": "Yes",
       "Ratio Diff": "Easy",
       "Freeleech": "Yes",
@@ -250,16 +268,16 @@
       "Birthdate": "2005",
       "Join": "Donation, Invite, Open, Recruitment",
       "Join Diff": "Easy",
-      "Updated": "2026-01-10"
+      "Updated": "2026-01-14"
     },
     {
       "Name": "BakaBT",
       "Abbreviation": "BBT",
       "Type": "Anime",
       "Codebase": "-",
-      "Users": "58,316",
-      "Torrents": "30,907",
-      "Peers": "387,346",
+      "Users": "58,327",
+      "Torrents": "30,932",
+      "Peers": "378,002",
       "Ratio": "Yes",
       "Ratio Diff": "Easy",
       "Freeleech": "Yes",
@@ -268,7 +286,7 @@
       "Birthdate": "2003",
       "Join": "Application, Invite, Recruitment",
       "Join Diff": "Easy",
-      "Updated": "2026-01-10"
+      "Updated": "2026-01-14"
     },
     {
       "Name": "Bemaniso",
@@ -347,18 +365,18 @@
       "Abbreviation": "-",
       "Type": "Porn",
       "Codebase": "UNIT3D",
-      "Users": "32,751",
-      "Torrents": "70,212",
-      "Peers": "421,996",
+      "Users": "34,077",
+      "Torrents": "70,763",
+      "Peers": "282,353",
       "Ratio": "Yes",
-      "Ratio Diff": "-",
+      "Ratio Diff": "Easy",
       "Freeleech": "Yes",
-      "Points": "-",
+      "Points": "Yes",
       "Hit & Run": "Yes",
-      "Birthdate": "-",
+      "Birthdate": "2016",
       "Join": "Application, Invite, Open",
       "Join Diff": "Easy",
-      "Updated": "2026-01-10"
+      "Updated": "2026-01-14"
     },
     {
       "Name": "BitTorrentFiles",
@@ -545,9 +563,9 @@
       "Abbreviation": "CBR",
       "Type": "General, Brazilian",
       "Codebase": "UNIT3D",
-      "Users": "2,157",
-      "Torrents": "31,224",
-      "Peers": "62,155",
+      "Users": "4,211",
+      "Torrents": "38,370",
+      "Peers": "106,604",
       "Ratio": "Yes",
       "Ratio Diff": "Easy",
       "Freeleech": "Yes",
@@ -556,7 +574,7 @@
       "Birthdate": "2024",
       "Join": "Invite, Open, Recruitment",
       "Join Diff": "Easy",
-      "Updated": "2025-09-22"
+      "Updated": "2025-12-18"
     },
     {
       "Name": "CarPT",
@@ -617,9 +635,9 @@
       "Abbreviation": "CZ",
       "Type": "Movie, TV, European, Arthouse/Obscure",
       "Codebase": "Custom",
-      "Users": "30,425",
-      "Torrents": "55,567",
-      "Peers": "286,364",
+      "Users": "30,409",
+      "Torrents": "55,609",
+      "Peers": "283,327",
       "Ratio": "Yes",
       "Ratio Diff": "Easy",
       "Freeleech": "Yes",
@@ -628,7 +646,7 @@
       "Birthdate": "2010",
       "Join": "Donation, Invite, Open, Recruitment",
       "Join Diff": "Easy",
-      "Updated": "2026-01-10"
+      "Updated": "2026-01-14"
     },
     {
       "Name": "Coastal Music Crew",
@@ -833,9 +851,9 @@
       "Abbreviation": "-",
       "Type": "E-Learning",
       "Codebase": "-",
-      "Users": "23,918",
-      "Torrents": "9,081",
-      "Peers": "45,314",
+      "Users": "23,943",
+      "Torrents": "9,088",
+      "Peers": "48,767",
       "Ratio": "Yes",
       "Ratio Diff": "Easy",
       "Freeleech": "Yes",
@@ -844,7 +862,7 @@
       "Birthdate": "2021",
       "Join": "Invite, Open",
       "Join Diff": "Easy",
-      "Updated": "2025-10-05"
+      "Updated": "2026-01-14"
     },
     {
       "Name": "Empornium",
@@ -887,9 +905,9 @@
       "Abbreviation": "EZ",
       "Type": "Porn, Asian",
       "Codebase": "Custom",
-      "Users": "54,683",
-      "Torrents": "145,267",
-      "Peers": "994,729",
+      "Users": "54,689",
+      "Torrents": "145,458",
+      "Peers": "952,580",
       "Ratio": "Yes",
       "Ratio Diff": "Easy",
       "Freeleech": "Yes",
@@ -898,7 +916,7 @@
       "Birthdate": "2005",
       "Join": "Application, Invite, Recruitment",
       "Join Diff": "Easy",
-      "Updated": "2026-01-10"
+      "Updated": "2026-01-14"
     },
     {
       "Name": "ExtremeBits",
@@ -941,18 +959,18 @@
       "Abbreviation": "-",
       "Type": "Porn, Hentai, JAV",
       "Codebase": "-",
-      "Users": "5,000",
-      "Torrents": "11,308",
-      "Peers": "38,787",
-      "Ratio": "-",
-      "Ratio Diff": "-",
+      "Users": "5,001",
+      "Torrents": "11,385",
+      "Peers": "39,159",
+      "Ratio": "Yes",
+      "Ratio Diff": "Easy",
       "Freeleech": "Yes",
       "Points": "Yes",
       "Hit & Run": "-",
       "Birthdate": "2023",
       "Join": "Application, Invite, Open",
       "Join Diff": "Easy",
-      "Updated": "2026-01-10"
+      "Updated": "2026-01-14"
     },
     {
       "Name": "FearNoPeer",
@@ -1121,9 +1139,9 @@
       "Abbreviation": "HDS",
       "Type": "General",
       "Codebase": "XBTIT",
-      "Users": "18,685",
-      "Torrents": "112,622",
-      "Peers": "104,702",
+      "Users": "18,634",
+      "Torrents": "112,795",
+      "Peers": "103,450",
       "Ratio": "Yes",
       "Ratio Diff": "Easy",
       "Freeleech": "Yes",
@@ -1132,16 +1150,16 @@
       "Birthdate": "2009",
       "Join": "Donation, Invite, Open",
       "Join Diff": "Easy",
-      "Updated": "2026-01-10"
+      "Updated": "2026-01-14"
     },
     {
       "Name": "HD-Torrents",
       "Abbreviation": "HDT",
       "Type": "General",
       "Codebase": "XBTIT",
-      "Users": "19,732",
-      "Torrents": "404,849",
-      "Peers": "965,706",
+      "Users": "19,734",
+      "Torrents": "405,216",
+      "Peers": "958,621",
       "Ratio": "Yes",
       "Ratio Diff": "Easy",
       "Freeleech": "No",
@@ -1150,7 +1168,7 @@
       "Birthdate": "2008",
       "Join": "Donation, Invite, Open",
       "Join Diff": "Easy",
-      "Updated": "2026-01-10"
+      "Updated": "2026-01-14"
     },
     {
       "Name": "HDArea",
@@ -1373,9 +1391,9 @@
       "Abbreviation": "ITT",
       "Type": "Movie, TV, Italian",
       "Codebase": "UNIT3D",
-      "Users": "14,432",
-      "Torrents": "32,534",
-      "Peers": "69,737",
+      "Users": "14,435",
+      "Torrents": "32,650",
+      "Peers": "71,758",
       "Ratio": "Yes",
       "Ratio Diff": "Easy",
       "Freeleech": "Yes",
@@ -1384,7 +1402,7 @@
       "Birthdate": "2023",
       "Join": "Invite, Open",
       "Join Diff": "Easy",
-      "Updated": "2026-01-10"
+      "Updated": "2026-01-14"
     },
     {
       "Name": "JME-REUNIT3D",
@@ -1517,9 +1535,9 @@
       "Abbreviation": "LDU",
       "Type": "Movie, TV, Old/Obscure",
       "Codebase": "UNIT3D",
-      "Users": "6,532",
-      "Torrents": "45,215",
-      "Peers": "40,090",
+      "Users": "6,540",
+      "Torrents": "45,344",
+      "Peers": "48,673",
       "Ratio": "Yes",
       "Ratio Diff": "Easy",
       "Freeleech": "Yes",
@@ -1528,7 +1546,7 @@
       "Birthdate": "2024",
       "Join": "Application, Invite, Recruitment",
       "Join Diff": "Easy",
-      "Updated": "2026-01-10"
+      "Updated": "2026-01-14"
     },
     {
       "Name": "Lat-Team",
@@ -1738,13 +1756,13 @@
       "Peers": "769,657",
       "Ratio": "No",
       "Ratio Diff": "-",
-      "Freeleech": "-",
+      "Freeleech": "Yes",
       "Points": "No",
       "Hit & Run": "No",
       "Birthdate": "2019",
       "Join": "Invite, Open, Recruitment",
       "Join Diff": "Easy",
-      "Updated": "2024-05-19"
+      "Updated": "2026-01-14"
     },
     {
       "Name": "MoreThanTV",
@@ -1787,9 +1805,9 @@
       "Abbreviation": "MAM",
       "Type": "eBooks, Audiobooks",
       "Codebase": "TBDev",
-      "Users": "110,482",
-      "Torrents": "1,114,229",
-      "Peers": "16,695,875",
+      "Users": "110,338",
+      "Torrents": "1,114,954",
+      "Peers": "16,106,818",
       "Ratio": "Yes",
       "Ratio Diff": "Easy",
       "Freeleech": "Yes",
@@ -1798,7 +1816,7 @@
       "Birthdate": "2008",
       "Join": "Application, Invite, Recruitment",
       "Join Diff": "Easy",
-      "Updated": "2026-01-10"
+      "Updated": "2026-01-14"
     },
     {
       "Name": "MySpleen",
@@ -1913,9 +1931,9 @@
       "Abbreviation": "OTW",
       "Type": "Anime, Cartoon, Movie, TV",
       "Codebase": "UNIT3D",
-      "Users": "32,214",
-      "Torrents": "35,771",
-      "Peers": "340,448",
+      "Users": "32,219",
+      "Torrents": "35,962",
+      "Peers": "341,495",
       "Ratio": "Yes",
       "Ratio Diff": "Easy",
       "Freeleech": "Yes",
@@ -1924,7 +1942,7 @@
       "Birthdate": "2022",
       "Join": "Invite, Open, Recruitment",
       "Join Diff": "Easy",
-      "Updated": "2026-01-10"
+      "Updated": "2026-01-14"
     },
     {
       "Name": "OnlyEncodes+",
@@ -2237,9 +2255,9 @@
       "Abbreviation": "RAS",
       "Type": "General, Nordic",
       "Codebase": "UNIT3D",
-      "Users": "6,054",
-      "Torrents": "18,152",
-      "Peers": "43,291",
+      "Users": "6,060",
+      "Torrents": "18,472",
+      "Peers": "44,687",
       "Ratio": "Yes",
       "Ratio Diff": "Easy",
       "Freeleech": "Yes",
@@ -2248,7 +2266,7 @@
       "Birthdate": "2025",
       "Join": "Application, Invite, Open",
       "Join Diff": "Easy",
-      "Updated": "2026-01-10"
+      "Updated": "2026-01-14"
     },
     {
       "Name": "Redacted",
@@ -2291,9 +2309,9 @@
       "Abbreviation": "RFX",
       "Type": "Movie",
       "Codebase": "UNIT3D",
-      "Users": "4,189",
-      "Torrents": "96,022",
-      "Peers": "296,804",
+      "Users": "4,180",
+      "Torrents": "96,796",
+      "Peers": "305,448",
       "Ratio": "Yes",
       "Ratio Diff": "Easy",
       "Freeleech": "Yes",
@@ -2302,7 +2320,7 @@
       "Birthdate": "2019",
       "Join": "Application, Invite, Recruitment",
       "Join Diff": "Easy",
-      "Updated": "2026-01-10"
+      "Updated": "2026-01-14"
     },
     {
       "Name": "RevolutionTT",
@@ -2327,9 +2345,9 @@
       "Abbreviation": "RHD",
       "Type": "Movie, TV, German",
       "Codebase": "UNIT3D",
-      "Users": "1,429",
-      "Torrents": "27,654",
-      "Peers": "70,943",
+      "Users": "1,444",
+      "Torrents": "28,054",
+      "Peers": "70,350",
       "Ratio": "Yes",
       "Ratio Diff": "Easy",
       "Freeleech": "Yes",
@@ -2338,16 +2356,16 @@
       "Birthdate": "2024",
       "Join": "Invite, Open",
       "Join Diff": "Easy",
-      "Updated": "2026-01-10"
+      "Updated": "2026-01-14"
     },
     {
       "Name": "Samaritano",
       "Abbreviation": "-",
       "Type": "Movie, TV, Brazilian",
       "Codebase": "UNIT3D",
-      "Users": "5,392",
-      "Torrents": "5,173",
-      "Peers": "11,409",
+      "Users": "5,399",
+      "Torrents": "5,282",
+      "Peers": "11,147",
       "Ratio": "Yes",
       "Ratio Diff": "Easy",
       "Freeleech": "Yes",
@@ -2356,7 +2374,7 @@
       "Birthdate": "-",
       "Join": "Invite, Open",
       "Join Diff": "Easy",
-      "Updated": "2026-01-10"
+      "Updated": "2026-01-14"
     },
     {
       "Name": "SceneHD",
@@ -2435,18 +2453,18 @@
       "Abbreviation": "SP",
       "Type": "General",
       "Codebase": "UNIT3D",
-      "Users": "38,724",
-      "Torrents": "606,943",
-      "Peers": "2,008,127",
+      "Users": "38,747",
+      "Torrents": "612,429",
+      "Peers": "1,984,771",
       "Ratio": "Yes",
       "Ratio Diff": "Easy",
       "Freeleech": "Yes",
       "Points": "Yes",
       "Hit & Run": "Yes",
       "Birthdate": "2024",
-      "Join": "Invite, Open, Recruitment",
+      "Join": "Invite, Open",
       "Join Diff": "Easy",
-      "Updated": "2026-01-10"
+      "Updated": "2026-01-14"
     },
     {
       "Name": "Sharewood",
@@ -2503,6 +2521,24 @@
       "Updated": "2025-05-25"
     },
     {
+      "Name": "SkipTheCommercials",
+      "Abbreviation": "STC",
+      "Type": "TV",
+      "Codebase": "UNIT3D",
+      "Users": "893",
+      "Torrents": "2,175",
+      "Peers": "3,999",
+      "Ratio": "Yes",
+      "Ratio Diff": "Easy",
+      "Freeleech": "Yes",
+      "Points": "Yes",
+      "Hit & Run": "Yes",
+      "Birthdate": "2025",
+      "Join": "Application, Invite",
+      "Join Diff": "Easy",
+      "Updated": "2025-11-01"
+    },
+    {
       "Name": "SnowPT (Skyeysnow)",
       "Abbreviation": "SSPT",
       "Type": "Anime",
@@ -2543,9 +2579,9 @@
       "Abbreviation": "-",
       "Type": "General, Romanian",
       "Codebase": "Custom",
-      "Users": "325,664",
-      "Torrents": "99,496",
-      "Peers": "286,027",
+      "Users": "349,328",
+      "Torrents": "105,568",
+      "Peers": "292,459",
       "Ratio": "Yes",
       "Ratio Diff": "Easy",
       "Freeleech": "Yes",
@@ -2554,7 +2590,7 @@
       "Birthdate": "2007",
       "Join": "Application, Invite, Recruitment",
       "Join Diff": "Easy",
-      "Updated": "2025-03-06"
+      "Updated": "2025-10-25"
     },
     {
       "Name": "Spirit of Revolution",
@@ -2579,9 +2615,9 @@
       "Abbreviation": "SC",
       "Type": "Sports",
       "Codebase": "-",
-      "Users": "16,700",
-      "Torrents": "203,325",
-      "Peers": "329,825",
+      "Users": "22,441",
+      "Torrents": "237,169",
+      "Peers": "364,849",
       "Ratio": "Yes",
       "Ratio Diff": "Moderate",
       "Freeleech": "Yes",
@@ -2590,7 +2626,7 @@
       "Birthdate": "2014",
       "Join": "Invite, Open",
       "Join Diff": "Easy",
-      "Updated": "2025-02-15"
+      "Updated": "2026-01-14"
     },
     {
       "Name": "SpringSunday",
@@ -2759,9 +2795,9 @@
       "Abbreviation": "TOS",
       "Type": "General, French",
       "Codebase": "UNIT3D",
-      "Users": "3,252",
-      "Torrents": "263,879",
-      "Peers": "193,393",
+      "Users": "6,985",
+      "Torrents": "305,238",
+      "Peers": "397,439",
       "Ratio": "Yes",
       "Ratio Diff": "Easy",
       "Freeleech": "Yes",
@@ -2770,7 +2806,7 @@
       "Birthdate": "2022",
       "Join": "Application, Invite",
       "Join Diff": "Moderate",
-      "Updated": "2025-08-24"
+      "Updated": "2026-01-02"
     },
     {
       "Name": "The Paradiese",
@@ -3065,18 +3101,18 @@
       "Abbreviation": "-",
       "Type": "Movie, TV, Spanish",
       "Codebase": "UNIT3D",
-      "Users": "10,152",
-      "Torrents": "21,979",
-      "Peers": "136,077",
+      "Users": "10,323",
+      "Torrents": "23,047",
+      "Peers": "149,703",
       "Ratio": "-",
       "Ratio Diff": "-",
       "Freeleech": "Yes",
-      "Points": "-",
-      "Hit & Run": "-",
+      "Points": "Yes",
+      "Hit & Run": "Yes",
       "Birthdate": "-",
       "Join": "Application, Invite",
       "Join Diff": "Easy",
-      "Updated": "2025-08-04"
+      "Updated": "2025-10-18"
     },
     {
       "Name": "TorrentLeech",
@@ -3084,7 +3120,7 @@
       "Type": "General",
       "Codebase": "-",
       "Users": "174,550",
-      "Torrents": "1,762,557",
+      "Torrents": "2,275,204",
       "Peers": "-",
       "Ratio": "Yes",
       "Ratio Diff": "Easy",
@@ -3094,7 +3130,7 @@
       "Birthdate": "2005",
       "Join": "Donation, Invite, Open",
       "Join Diff": "Easy",
-      "Updated": "2025-05-01"
+      "Updated": "2026-01-14"
     },
     {
       "Name": "Torrentleech.pl",
@@ -3119,9 +3155,9 @@
       "Abbreviation": "TTR",
       "Type": "Movie, TV, Latino, Castellano",
       "Codebase": "UNIT3D",
-      "Users": "907",
-      "Torrents": "3,412",
-      "Peers": "5,765",
+      "Users": "1,133",
+      "Torrents": "6,051",
+      "Peers": "11,300",
       "Ratio": "-",
       "Ratio Diff": "-",
       "Freeleech": "-",
@@ -3130,7 +3166,7 @@
       "Birthdate": "-",
       "Join": "Application, Invite",
       "Join Diff": "Easy",
-      "Updated": "2025-02-22"
+      "Updated": "2025-11-01"
     },
     {
       "Name": "ToTheGlory",
@@ -3149,6 +3185,24 @@
       "Join": "Invite, Recruitment",
       "Join Diff": "Tough",
       "Updated": "2025-08-29"
+    },
+    {
+      "Name": "TurkSeed",
+      "Abbreviation": "-",
+      "Type": "General, Turkish",
+      "Codebase": "UNIT3D",
+      "Users": "21,650",
+      "Torrents": "9,840",
+      "Peers": "40,810",
+      "Ratio": "No",
+      "Ratio Diff": "-",
+      "Freeleech": "Yes",
+      "Points": "-",
+      "Hit & Run": "Yes",
+      "Birthdate": "2015",
+      "Join": "Invite, Recruitment",
+      "Join Diff": "-",
+      "Updated": "2025-10-24"
     },
     {
       "Name": "TV-Vault",
@@ -3191,9 +3245,9 @@
       "Abbreviation": "UHD",
       "Type": "Movie, TV",
       "Codebase": "Gazelle",
-      "Users": "8,855",
-      "Torrents": "66,607",
-      "Peers": "237,610",
+      "Users": "8,672",
+      "Torrents": "68,575",
+      "Peers": "239,120",
       "Ratio": "Yes",
       "Ratio Diff": "Easy",
       "Freeleech": "Yes",
@@ -3202,7 +3256,7 @@
       "Birthdate": "2012",
       "Join": "Invite, Recruitment",
       "Join Diff": "Moderate",
-      "Updated": "2025-03-06"
+      "Updated": "2025-11-01"
     },
     {
       "Name": "Universal-Torrents",
@@ -3245,9 +3299,9 @@
       "Abbreviation": "ULCX",
       "Type": "Movie, TV",
       "Codebase": "UNIT3D",
-      "Users": "9,293",
-      "Torrents": "45,888",
-      "Peers": "346,395",
+      "Users": "4,640",
+      "Torrents": "52,524",
+      "Peers": "386,130",
       "Ratio": "Yes",
       "Ratio Diff": "Easy",
       "Freeleech": "Yes",
@@ -3256,7 +3310,25 @@
       "Birthdate": "2024",
       "Join": "Application, Invite, Recruitment",
       "Join Diff": "Easy",
-      "Updated": "2025-10-05"
+      "Updated": "2025-11-01"
+    },
+    {
+      "Name": "Upscale Vault",
+      "Abbreviation": "UV",
+      "Type": "Movie, TV, Music",
+      "Codebase": "UNIT3D",
+      "Users": "2,961",
+      "Torrents": "692",
+      "Peers": "1,306",
+      "Ratio": "-",
+      "Ratio Diff": "-",
+      "Freeleech": "-",
+      "Points": "-",
+      "Hit & Run": "-",
+      "Birthdate": "2024",
+      "Join": "Invite, Open",
+      "Join Diff": "Easy",
+      "Updated": "2025-06-13"
     },
     {
       "Name": "Utopia",
@@ -3354,17 +3426,35 @@
       "Type": "General, French",
       "Codebase": "-",
       "Users": "-",
-      "Torrents": "886,556",
+      "Torrents": "977,495",
       "Peers": "-",
       "Ratio": "Yes",
-      "Ratio Diff": "Easy",
+      "Ratio Diff": "Moderate",
       "Freeleech": "No",
       "Points": "No",
       "Hit & Run": "No",
       "Birthdate": "2017",
-      "Join": "Donation, Closed",
-      "Join Diff": "-",
-      "Updated": "2025-05-25"
+      "Join": "Open",
+      "Join Diff": "Easy",
+      "Updated": "2026-01-10"
+    },
+    {
+      "Name": "YUSCENE",
+      "Abbreviation": "-",
+      "Type": "Movie, TV",
+      "Codebase": "UNIT3D",
+      "Users": "7,000",
+      "Torrents": "38,566",
+      "Peers": "120,162",
+      "Ratio": "Yes",
+      "Ratio Diff": "Easy",
+      "Freeleech": "Yes",
+      "Points": "Yes",
+      "Hit & Run": "Yes",
+      "Birthdate": "2024",
+      "Join": "Invite, Open",
+      "Join Diff": "Easy",
+      "Updated": "2025-10-26"
     }
   ]
 }
