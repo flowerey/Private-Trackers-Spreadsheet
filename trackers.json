@@ -86,9 +86,9 @@
       "Points": "Yes",
       "Hit & Run": "Yes",
       "Birthdate": "2020",
-      "Join": "Application, Invite, Recruitment",
-      "Join Diff": "Easy",
-      "Updated": "2025-11-01"
+      "Join": "Invite, Recruitment",
+      "Join Diff": "Moderate",
+      "Updated": "2026-02-27"
     },
     {
       "Name": "AlphaRatio",
@@ -649,6 +649,24 @@
       "Updated": "2026-01-14"
     },
     {
+      "Name": "Cinematik",
+      "Abbreviation": "TiK",
+      "Type": "Movies, TV, Discs Only",
+      "Codebase": "UNIT3D",
+      "Users": "1,792",
+      "Torrents": "86,164",
+      "Peers": "189,661",
+      "Ratio": "Yes",
+      "Ratio Diff": "Moderate",
+      "Freeleech": "Yes",
+      "Points": "Yes",
+      "Hit & Run": "Yes",
+      "Birthdate": "2006",
+      "Join": "Invite",
+      "Join Diff": "Tough",
+      "Updated": "2026-02-21"
+    },
+    {
       "Name": "ClearJAV (API)",
       "Abbreviation": "CJ",
       "Type": "Porn, Asian, JAV",
@@ -851,9 +869,9 @@
       "Abbreviation": "DC",
       "Type": "General, Scene",
       "Codebase": "-",
-      "Users": "22,629",
-      "Torrents": "1,897,148",
-      "Peers": "911,337",
+      "Users": "21,739",
+      "Torrents": "2,154,264",
+      "Peers": "1,339,916",
       "Ratio": "Yes",
       "Ratio Diff": "Easy",
       "Freeleech": "Yes",
@@ -862,7 +880,7 @@
       "Birthdate": "2019",
       "Join": "Invite, Open, Recruitment",
       "Join Diff": "Easy",
-      "Updated": "2025-11-01"
+      "Updated": "2026-03-01"
     },
     {
       "Name": "DocsPedia.world",
@@ -1241,6 +1259,24 @@
       "Join": "Invite, Recruitment",
       "Join Diff": "-",
       "Updated": "2025-05-25"
+    },
+    {
+      "Name": "HDFans",
+      "Abbreviation": "HDFans",
+      "Type": "General, Chinese",
+      "Codebase": "NexusPHP",
+      "Users": "-",
+      "Torrents": "137,644",
+      "Peers": "-",
+      "Ratio": "Yes",
+      "Ratio Diff": "Easy",
+      "Freeleech": "Yes",
+      "Points": "Yes",
+      "Hit & Run": "Yes",
+      "Birthdate": "2020",
+      "Join": "Invite, Recruitment",
+      "Join Diff": "Easy",
+      "Updated": "2026-02-28"
     },
     {
       "Name": "HQMusic",
