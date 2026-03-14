@@ -3,7 +3,7 @@
     {
       "Name": "3ChangTrai",
       "Abbreviation": "3CT",
-      "Type": "General, Vietnamese",
+      "Type": "Audio, Movies, Other, TV",
       "Codebase": "NexusPHP",
       "Users": "2,209",
       "Torrents": "15,528",
@@ -21,7 +21,7 @@
     {
       "Name": "ABTorrents",
       "Abbreviation": "ABT",
-      "Type": "eBooks, Audiobooks",
+      "Type": "Audio, Books",
       "Codebase": "U-232",
       "Users": "-",
       "Torrents": "178,271",
@@ -39,7 +39,7 @@
     {
       "Name": "Abnormal",
       "Abbreviation": "ABN",
-      "Type": "General, French",
+      "Type": "Books, Movies, PC, TV",
       "Codebase": "Gazelle",
       "Users": "7,923",
       "Torrents": "466,400",
@@ -57,7 +57,7 @@
     {
       "Name": "Aidoru!Online",
       "Abbreviation": "-",
-      "Type": "Music, TV",
+      "Type": "Audio, Movies, Other, TV",
       "Codebase": "Custom",
       "Users": "34,071",
       "Torrents": "155,144",
@@ -75,7 +75,7 @@
     {
       "Name": "Aither",
       "Abbreviation": "ATH",
-      "Type": "Movie, TV",
+      "Type": "Movies, TV",
       "Codebase": "UNIT3D",
       "Users": "9,146",
       "Torrents": "190,764",
@@ -165,7 +165,7 @@
     {
       "Name": "AnimeWorld",
       "Abbreviation": "AW",
-      "Type": "Anime, German",
+      "Type": "Audio, Books, Movies, Other, PC, TV, XXX",
       "Codebase": "UNIT3D",
       "Users": "1,216",
       "Torrents": "19,706",
@@ -183,7 +183,7 @@
     {
       "Name": "Anthelion",
       "Abbreviation": "ANT",
-      "Type": "Movie",
+      "Type": "Movies, Other",
       "Codebase": "Gazelle",
       "Users": "7,037",
       "Torrents": "104,681",
@@ -201,7 +201,7 @@
     {
       "Name": "AsianCinema",
       "Abbreviation": "ACM",
-      "Type": "Movie, TV, Music, Asian",
+      "Type": "Audio, Movies, TV",
       "Codebase": "UNIT3D",
       "Users": "2,941",
       "Torrents": "22,048",
@@ -219,7 +219,7 @@
     {
       "Name": "Audionews",
       "Abbreviation": "AN",
-      "Type": "Music Production, CG, VFX, E-Learning",
+      "Type": "Audio, Books, Other, PC",
       "Codebase": "TorrentPier",
       "Users": "151,202",
       "Torrents": "136,210",
@@ -237,7 +237,7 @@
     {
       "Name": "Aura4K",
       "Abbreviation": "-",
-      "Type": "Movie, TV",
+      "Type": "Movies, TV",
       "Codebase": "UNIT3D",
       "Users": "116",
       "Torrents": "278",
@@ -273,7 +273,7 @@
     {
       "Name": "BTSCHOOL",
       "Abbreviation": "BTS",
-      "Type": "General, Chinese",
+      "Type": "Audio, Movies, Other, PC, TV",
       "Codebase": "NexusPHP",
       "Users": "40,764",
       "Torrents": "211,310",
@@ -345,7 +345,7 @@
     {
       "Name": "Bibliotik",
       "Abbreviation": "BiB",
-      "Type": "eBooks, Audiobooks",
+      "Type": "Audio, Books, PC",
       "Codebase": "Custom",
       "Users": "5,508",
       "Torrents": "586,609",
@@ -381,7 +381,7 @@
     {
       "Name": "BitPorn",
       "Abbreviation": "-",
-      "Type": "Porn",
+      "Type": "XXX",
       "Codebase": "UNIT3D",
       "Users": "34,077",
       "Torrents": "70,763",
@@ -399,7 +399,7 @@
     {
       "Name": "BitTorrentFiles",
       "Abbreviation": "BTF",
-      "Type": "General, German",
+      "Type": "Audio, Books, Console, Movies, Other, PC, TV, XXX",
       "Codebase": "NetVision",
       "Users": "1,486",
       "Torrents": "109,934",
@@ -417,7 +417,7 @@
     {
       "Name": "Blutopia",
       "Abbreviation": "BLU",
-      "Type": "Movie, TV, FANRES",
+      "Type": "Audio, Movies, Other, TV",
       "Codebase": "UNIT3D",
       "Users": "13,272",
       "Torrents": "229,383",
@@ -435,7 +435,7 @@
     {
       "Name": "Borgzelle",
       "Abbreviation": "Borg",
-      "Type": "General, German",
+      "Type": "Audio, Books, Console, Movies, Other, PC, TV",
       "Codebase": "Gazelle",
       "Users": "196",
       "Torrents": "18,728",
@@ -525,7 +525,7 @@
     {
       "Name": "BwTorrents",
       "Abbreviation": "BwT",
-      "Type": "General, Indian",
+      "Type": "Audio, Books, Console, Movies, Other, PC, TV, XXX",
       "Codebase": "-",
       "Users": "20,389",
       "Torrents": "46,408",
@@ -543,7 +543,7 @@
     {
       "Name": "CGPeers",
       "Abbreviation": "CGP",
-      "Type": "CG, VFX",
+      "Type": "Other, PC",
       "Codebase": "Gazelle",
       "Users": "205,423",
       "Torrents": "49,109",
@@ -579,7 +579,7 @@
     {
       "Name": "CapybaraBR",
       "Abbreviation": "CBR",
-      "Type": "General, Brazilian",
+      "Type": "Books, Console, Movies, Other, PC, TV",
       "Codebase": "UNIT3D",
       "Users": "4,211",
       "Torrents": "38,370",
@@ -597,7 +597,7 @@
     {
       "Name": "CarPT",
       "Abbreviation": "-",
-      "Type": "General, Chinese",
+      "Type": "Audio, Movies, Other, TV",
       "Codebase": "NexusPHP",
       "Users": "12,948",
       "Torrents": "117,076",
@@ -615,7 +615,7 @@
     {
       "Name": "Cathode-Ray.Tube",
       "Abbreviation": "CRT",
-      "Type": "Movie, TV, Classic",
+      "Type": "Movies, Other, PC, TV",
       "Codebase": "Luminance",
       "Users": "3,001",
       "Torrents": "19,213",
@@ -651,7 +651,7 @@
     {
       "Name": "Cinematik",
       "Abbreviation": "TiK",
-      "Type": "Movies, TV, Discs Only",
+      "Type": "Movies, TV",
       "Codebase": "UNIT3D",
       "Users": "1,792",
       "Torrents": "86,164",
@@ -669,7 +669,7 @@
     {
       "Name": "ClearJAV (API)",
       "Abbreviation": "CJ",
-      "Type": "Porn, Asian, JAV",
+      "Type": "XXX",
       "Codebase": "UNIT3D",
       "Users": "1,370",
       "Torrents": "6,529",
@@ -705,7 +705,7 @@
     {
       "Name": "Concertos",
       "Abbreviation": "-",
-      "Type": "Music",
+      "Type": "Audio, TV",
       "Codebase": "UNIT3D",
       "Users": "-",
       "Torrents": "6,029",
@@ -759,7 +759,7 @@
     {
       "Name": "DanishBytes",
       "Abbreviation": "DBy",
-      "Type": "Movie, TV, Danish, Nordic",
+      "Type": "Audio, Books, Movies, PC, TV",
       "Codebase": "UNIT3D",
       "Users": "-",
       "Torrents": "24,014",
@@ -795,7 +795,7 @@
     {
       "Name": "DarkPeers",
       "Abbreviation": "DP",
-      "Type": "Movie, TV, Nordic",
+      "Type": "Audio, Books, Console, Movies, Other, PC, TV, XXX",
       "Codebase": "UNIT3D",
       "Users": "5,693",
       "Torrents": "36,728",
@@ -813,7 +813,7 @@
     {
       "Name": "DasUnerwartete",
       "Abbreviation": "DU",
-      "Type": "General, German",
+      "Type": "Audio, Books, Console, Movies, Other, PC, TV, XXX",
       "Codebase": "NetVision",
       "Users": "-",
       "Torrents": "485",
@@ -849,7 +849,7 @@
     {
       "Name": "DesiTorrents",
       "Abbreviation": "-",
-      "Type": "General, Indian",
+      "Type": "Audio, Movies, TV",
       "Codebase": "-",
       "Users": "-",
       "Torrents": "21,100",
@@ -867,7 +867,7 @@
     {
       "Name": "DigitalCore",
       "Abbreviation": "DC",
-      "Type": "General, Scene",
+      "Type": "Audio, Books, Console, Movies, Other, PC, TV, XXX",
       "Codebase": "-",
       "Users": "21,739",
       "Torrents": "2,154,264",
@@ -903,7 +903,7 @@
     {
       "Name": "Empornium",
       "Abbreviation": "EMP",
-      "Type": "Porn",
+      "Type": "XXX",
       "Codebase": "Luminance",
       "Users": "72,007",
       "Torrents": "741,886",
@@ -939,7 +939,7 @@
     {
       "Name": "ExtremeBits",
       "Abbreviation": "XB",
-      "Type": "Sports",
+      "Type": "Audio, Movies, Other, TV",
       "Codebase": "TBDev",
       "Users": "8,425",
       "Torrents": "8,750",
@@ -957,7 +957,7 @@
     {
       "Name": "F1Carreras",
       "Abbreviation": "F1C",
-      "Type": "Racing, Motorsports, Latino, Castellano",
+      "Type": "TV",
       "Codebase": "UNIT3D",
       "Users": "2,750",
       "Torrents": "1,389",
@@ -975,7 +975,7 @@
     {
       "Name": "F1GP",
       "Abbreviation": "F1GP",
-      "Type": "Racing, Motorsports",
+      "Type": "TV",
       "Codebase": "-",
       "Users": "499",
       "Torrents": "415",
@@ -993,7 +993,7 @@
     {
       "Name": "Fappaizuri",
       "Abbreviation": "-",
-      "Type": "Porn, Hentai, JAV",
+      "Type": "Books, Console, TV, XXX",
       "Codebase": "-",
       "Users": "5,001",
       "Torrents": "11,385",
@@ -1011,7 +1011,7 @@
     {
       "Name": "FearNoPeer",
       "Abbreviation": "FNP",
-      "Type": "Movie, TV, Music",
+      "Type": "Audio, Movies, Other, PC, TV",
       "Codebase": "UNIT3D",
       "Users": "25,312",
       "Torrents": "221,298",
@@ -1029,7 +1029,7 @@
     {
       "Name": "Femdomcult",
       "Abbreviation": "FDC",
-      "Type": "Porn",
+      "Type": "XXX",
       "Codebase": "Gazelle",
       "Users": "16,354",
       "Torrents": "48,186",
@@ -1065,7 +1065,7 @@
     {
       "Name": "GGPT",
       "Abbreviation": "-",
-      "Type": "Games, Chinese",
+      "Type": "Books, Console, PC, XXX",
       "Codebase": "NexusPHP",
       "Users": "3,744",
       "Torrents": "7,646",
@@ -1119,7 +1119,7 @@
     {
       "Name": "Generation Free",
       "Abbreviation": "GF",
-      "Type": "General, French",
+      "Type": "Audio, Books, Console, Movies, PC, TV",
       "Codebase": "UNIT3D",
       "Users": "10,644",
       "Torrents": "44,614",
@@ -1155,7 +1155,7 @@
     {
       "Name": "HD-Forever",
       "Abbreviation": "HDF",
-      "Type": "Movie, TV",
+      "Type": "Movies, TV",
       "Codebase": "Gazelle",
       "Users": "-",
       "Torrents": "22,761",
@@ -1173,7 +1173,7 @@
     {
       "Name": "HD-Space",
       "Abbreviation": "HDS",
-      "Type": "General",
+      "Type": "Audio, Movies, Other, PC, TV, XXX",
       "Codebase": "XBTIT",
       "Users": "18,634",
       "Torrents": "112,795",
@@ -1191,7 +1191,7 @@
     {
       "Name": "HD-Torrents",
       "Abbreviation": "HDT",
-      "Type": "General",
+      "Type": "Audio, Movies, TV, XXX",
       "Codebase": "XBTIT",
       "Users": "19,734",
       "Torrents": "405,216",
@@ -1209,7 +1209,7 @@
     {
       "Name": "HDArea",
       "Abbreviation": "HDA",
-      "Type": "General, Chinese",
+      "Type": "Audio, Movies, Other, TV",
       "Codebase": "NexusPHP",
       "Users": "24,300",
       "Torrents": "179,406",
@@ -1263,7 +1263,7 @@
     {
       "Name": "HDFans",
       "Abbreviation": "HDFans",
-      "Type": "General, Chinese",
+      "Type": "Audio, Books, Movies, Other, PC, TV",
       "Codebase": "NexusPHP",
       "Users": "-",
       "Torrents": "137,644",
@@ -1281,7 +1281,7 @@
     {
       "Name": "HQMusic",
       "Abbreviation": "HQM",
-      "Type": "Music, Asian",
+      "Type": "Audio",
       "Codebase": "Gazelle",
       "Users": "7,358",
       "Torrents": "5,799",
@@ -1299,7 +1299,7 @@
     {
       "Name": "HappyFappy",
       "Abbreviation": "HF",
-      "Type": "Porn",
+      "Type": "XXX",
       "Codebase": "Luminance",
       "Users": "50,192",
       "Torrents": "78,590",
@@ -1317,7 +1317,7 @@
     {
       "Name": "Hawke-UNO",
       "Abbreviation": "HUNO",
-      "Type": "Movie, TV",
+      "Type": "Movies, TV",
       "Codebase": "Custom UNIT3D Fork",
       "Users": "7,039",
       "Torrents": "92,721",
@@ -1335,7 +1335,7 @@
     {
       "Name": "HeBits",
       "Abbreviation": "HEB",
-      "Type": "General, Hebrew",
+      "Type": "Audio, Books, Movies, Other, PC, TV, XXX",
       "Codebase": "Gazelle",
       "Users": "8,888",
       "Torrents": "83,221",
@@ -1389,7 +1389,7 @@
     {
       "Name": "House of Devil",
       "Abbreviation": "HoD",
-      "Type": "General, German",
+      "Type": "Audio, Books, Console, Movies, Other, PC, TV, XXX",
       "Codebase": "NetVision",
       "Users": "-",
       "Torrents": "2,574",
@@ -1425,7 +1425,7 @@
     {
       "Name": "Immortuos",
       "Abbreviation": "-",
-      "Type": "General, German",
+      "Type": "Audio, Console, Movies, Other, PC, TV, XXX",
       "Codebase": "UNIT3D",
       "Users": "984",
       "Torrents": "72,653",
@@ -1443,7 +1443,7 @@
     {
       "Name": "IndieTorrents",
       "Abbreviation": "IP",
-      "Type": "Music",
+      "Type": "Audio",
       "Codebase": "Gazelle",
       "Users": "5,701",
       "Torrents": "14,813",
@@ -1461,7 +1461,7 @@
     {
       "Name": "Infire",
       "Abbreviation": "INF",
-      "Type": "General, Porn, Games, Books, TV, Movie, Slovenian",
+      "Type": "Audio, Books, Console, Movies, Other, PC, TV, XXX",
       "Codebase": "U-232",
       "Users": "5,000",
       "Torrents": "25,000",
@@ -1479,7 +1479,7 @@
     {
       "Name": "ItaTorrents",
       "Abbreviation": "ITT",
-      "Type": "Movie, TV, Italian",
+      "Type": "Audio, Books, Console, Movies, Other, PC, TV",
       "Codebase": "UNIT3D",
       "Users": "14,435",
       "Torrents": "32,650",
@@ -1497,7 +1497,7 @@
     {
       "Name": "JME-REUNIT3D",
       "Abbreviation": "JME",
-      "Type": "General, German",
+      "Type": "Audio, Books, Console, Movies, PC, TV, XXX",
       "Codebase": "UNIT3D",
       "Users": "440",
       "Torrents": "7,315",
@@ -1533,7 +1533,7 @@
     {
       "Name": "JPopsuki",
       "Abbreviation": "JPS",
-      "Type": "Music, Asian",
+      "Type": "Audio, Movies, Other, TV",
       "Codebase": "Gazelle",
       "Users": "192,655",
       "Torrents": "420,333",
@@ -1551,7 +1551,7 @@
     {
       "Name": "Karagarga",
       "Abbreviation": "KG",
-      "Type": "Movie, TV, eBooks, Audiobooks",
+      "Type": "Audio, Books, Movies",
       "Codebase": "-",
       "Users": "16,612",
       "Torrents": "226,688",
@@ -1569,7 +1569,7 @@
     {
       "Name": "Keep Friends",
       "Abbreviation": "FRDS",
-      "Type": "General, Chinese",
+      "Type": "Audio, Movies, Other, TV",
       "Codebase": "NexusPHP",
       "Users": "4,450",
       "Torrents": "9,541",
@@ -1605,7 +1605,7 @@
     {
       "Name": "LST",
       "Abbreviation": "-",
-      "Type": "General",
+      "Type": "Audio, Books, Console, Movies, Other, PC, TV, XXX",
       "Codebase": "UNIT3D",
       "Users": "5,883",
       "Torrents": "99,746",
@@ -1623,7 +1623,7 @@
     {
       "Name": "La Cale",
       "Abbreviation": "-",
-      "Type": "General, French",
+      "Type": "Audio, Books, Console, Movies, Other, PC, TV, XXX",
       "Codebase": "Custom",
       "Users": "18,017",
       "Torrents": "15,337",
@@ -1641,7 +1641,7 @@
     {
       "Name": "Last Digital Underground",
       "Abbreviation": "LDU",
-      "Type": "Movie, TV, Old/Obscure",
+      "Type": "Audio, Books, Console, Movies, Other, PC, TV, XXX",
       "Codebase": "UNIT3D",
       "Users": "6,540",
       "Torrents": "45,344",
@@ -1659,7 +1659,7 @@
     {
       "Name": "Lat-Team",
       "Abbreviation": "-",
-      "Type": "Movie, TV, Latino",
+      "Type": "Audio, Books, Console, Movies, Other, PC, TV, XXX",
       "Codebase": "UNIT3D",
       "Users": "4,113",
       "Torrents": "40,134",
@@ -1677,7 +1677,7 @@
     {
       "Name": "Le Saloon",
       "Abbreviation": "-",
-      "Type": "General, French/Canadian",
+      "Type": "Audio, Books, Console, Movies, Other, PC, TV",
       "Codebase": "XBTIT",
       "Users": "89,435",
       "Torrents": "76,500",
@@ -1695,7 +1695,7 @@
     {
       "Name": "LearnFlakes",
       "Abbreviation": "LF",
-      "Type": "E-Learning",
+      "Type": "Books",
       "Codebase": "Custom",
       "Users": "31,181",
       "Torrents": "52,641",
@@ -1749,7 +1749,7 @@
     {
       "Name": "LinkoManija",
       "Abbreviation": "LM",
-      "Type": "General",
+      "Type": "Audio, Books, Console, Movies, Other, PC, TV",
       "Codebase": "Custom",
       "Users": "314,938",
       "Torrents": "89,067",
@@ -1803,7 +1803,7 @@
     {
       "Name": "MaDs Revolution",
       "Abbreviation": "MaDs",
-      "Type": "General, German",
+      "Type": "Audio, Books, Console, Movies, Other, PC, TV, XXX",
       "Codebase": "Gazelle",
       "Users": "1,716",
       "Torrents": "6,109",
@@ -1821,7 +1821,7 @@
     {
       "Name": "Malayabits",
       "Abbreviation": "MB",
-      "Type": "Movie, TV, Music, Malaysian",
+      "Type": "Audio, Books, Movies, TV",
       "Codebase": "UNIT3D",
       "Users": "1,401",
       "Torrents": "742",
@@ -1875,7 +1875,7 @@
     {
       "Name": "Milkie",
       "Abbreviation": "-",
-      "Type": "General, Scene",
+      "Type": "Audio, Books, Movies, PC, TV, XXX",
       "Codebase": "Custom",
       "Users": "52,978",
       "Torrents": "1,585,881",
@@ -1893,7 +1893,7 @@
     {
       "Name": "MojBlink",
       "Abbreviation": "MBJ",
-      "Type": "General, Porn, Games, Books, TV, Movie, Slovenian",
+      "Type": "Audio, Books, Console, Movies, Other, PC, TV, XXX",
       "Codebase": "TBDEV",
       "Users": "5,500",
       "Torrents": "850,000",
@@ -1965,7 +1965,7 @@
     {
       "Name": "MySpleen",
       "Abbreviation": "MS",
-      "Type": "Movie, TV, Vintage",
+      "Type": "Other, TV",
       "Codebase": "-",
       "Users": "14,847",
       "Torrents": "32,972",
@@ -2037,7 +2037,7 @@
     {
       "Name": "NewHeaven",
       "Abbreviation": "NH",
-      "Type": "General, German",
+      "Type": "Audio, Books, Console, Movies, Other, PC, TV",
       "Codebase": "NetVision",
       "Users": "2,098",
       "Torrents": "21,949",
@@ -2091,7 +2091,7 @@
     {
       "Name": "OnlyEncodes+",
       "Abbreviation": "OE",
-      "Type": "Movie, TV",
+      "Type": "Movies, TV",
       "Codebase": "UNIT3D",
       "Users": "3,575",
       "Torrents": "74,835",
@@ -2127,7 +2127,7 @@
     {
       "Name": "OurBits",
       "Abbreviation": "OB",
-      "Type": "Movie, TV",
+      "Type": "Audio, Movies, TV",
       "Codebase": "NexusPHP",
       "Users": "-",
       "Torrents": "-",
@@ -2145,7 +2145,7 @@
     {
       "Name": "PTFans",
       "Abbreviation": "PTFans",
-      "Type": "General, Chinese",
+      "Type": "Audio, Books, Movies, Other, PC, TV, XXX",
       "Codebase": "Custom",
       "Users": "4,816",
       "Torrents": "4,490",
@@ -2163,7 +2163,7 @@
     {
       "Name": "PTFiles",
       "Abbreviation": "PTF",
-      "Type": "Movie, TV, Music, Porn",
+      "Type": "Audio, Books, Console, Movies, Other, PC, TV, XXX",
       "Codebase": "Custom",
       "Users": "4,457",
       "Torrents": "12,519",
@@ -2181,7 +2181,7 @@
     {
       "Name": "PTerClub",
       "Abbreviation": "PTer",
-      "Type": "General, Chinese",
+      "Type": "Audio, Books, Console, Movies, Other, PC, TV",
       "Codebase": "NexusPHP",
       "Users": "14,000",
       "Torrents": "417,257",
@@ -2217,7 +2217,7 @@
     {
       "Name": "Phoenix Project",
       "Abbreviation": "PHX",
-      "Type": "Mac Software, Games",
+      "Type": "Audio, Other, PC",
       "Codebase": "Gazelle",
       "Users": "1,192",
       "Torrents": "25,240",
@@ -2235,7 +2235,7 @@
     {
       "Name": "PixelCove",
       "Abbreviation": "PxC",
-      "Type": "Games",
+      "Type": "Audio, Books, Console, Other, PC",
       "Codebase": "Luminance",
       "Users": "2,110",
       "Torrents": "3,965",
@@ -2271,7 +2271,7 @@
     {
       "Name": "PolishTracker",
       "Abbreviation": "PT",
-      "Type": "General, Polish",
+      "Type": "Audio, Books, Console, Movies, PC, TV, XXX",
       "Codebase": "ReaperEngine",
       "Users": "-",
       "Torrents": "-",
@@ -2289,7 +2289,7 @@
     {
       "Name": "Pornbay",
       "Abbreviation": "PB",
-      "Type": "Porn",
+      "Type": "XXX",
       "Codebase": "Gazelle",
       "Users": "53,350",
       "Torrents": "151,244",
@@ -2307,7 +2307,7 @@
     {
       "Name": "Portugas",
       "Abbreviation": "PTG",
-      "Type": "General, Movie, TV, Games, Portuguese, Sports, Requests",
+      "Type": "Audio, Books, Movies, PC, TV, XXX",
       "Codebase": "UNIT3D",
       "Users": "5,233",
       "Torrents": "41,603",
@@ -2361,7 +2361,7 @@
     {
       "Name": "Racing4Everyone",
       "Abbreviation": "R4E",
-      "Type": "Sports",
+      "Type": "TV",
       "Codebase": "UNIT3D",
       "Users": "2,428",
       "Torrents": "35,000",
@@ -2379,7 +2379,7 @@
     {
       "Name": "RacingForMe",
       "Abbreviation": "RFM",
-      "Type": "Sports",
+      "Type": "TV",
       "Codebase": "Custom",
       "Users": "19,468",
       "Torrents": "194299",
@@ -2397,7 +2397,7 @@
     {
       "Name": "Rastastugan",
       "Abbreviation": "RAS",
-      "Type": "General, Nordic",
+      "Type": "Audio, Books, Console, Movies, Other, PC, TV, XXX",
       "Codebase": "UNIT3D",
       "Users": "6,060",
       "Torrents": "18,472",
@@ -2433,7 +2433,7 @@
     {
       "Name": "ReelFliX",
       "Abbreviation": "RFX",
-      "Type": "Movie",
+      "Type": "Movies",
       "Codebase": "UNIT3D",
       "Users": "4,180",
       "Torrents": "96,796",
@@ -2487,7 +2487,7 @@
     {
       "Name": "RocketHD",
       "Abbreviation": "RHD",
-      "Type": "Movie, TV, German",
+      "Type": "Movies, TV",
       "Codebase": "UNIT3D",
       "Users": "1,444",
       "Torrents": "28,054",
@@ -2505,7 +2505,7 @@
     {
       "Name": "Samaritano",
       "Abbreviation": "-",
-      "Type": "Movie, TV, Brazilian",
+      "Type": "Audio, Books, Console, Movies, Other, PC, TV",
       "Codebase": "UNIT3D",
       "Users": "3,620",
       "Torrents": "6,528",
@@ -2595,7 +2595,7 @@
     {
       "Name": "SeedFile",
       "Abbreviation": "SF",
-      "Type": "General, Romanian",
+      "Type": "Audio, Books, Console, Movies, Other, PC, TV, XXX",
       "Codebase": "-",
       "Users": "-",
       "Torrents": "21,010",
@@ -2613,7 +2613,7 @@
     {
       "Name": "SeedPool",
       "Abbreviation": "SP",
-      "Type": "General",
+      "Type": "Audio, Books, Console, Movies, Other, PC, TV",
       "Codebase": "UNIT3D",
       "Users": "38,970",
       "Torrents": "646,236",
@@ -2649,7 +2649,7 @@
     {
       "Name": "Shareisland",
       "Abbreviation": "SHR",
-      "Type": "General, Italian",
+      "Type": "Audio, Books, Movies, Other, PC, TV",
       "Codebase": "UNIT3D",
       "Users": "2,956",
       "Torrents": "60,005",
@@ -2667,7 +2667,7 @@
     {
       "Name": "Sharewood",
       "Abbreviation": "SW",
-      "Type": "General, French",
+      "Type": "Audio, Books, Console, Movies, Other, PC, TV, XXX",
       "Codebase": "UNIT3D",
       "Users": "119,050",
       "Torrents": "119,875",
@@ -2685,7 +2685,7 @@
     {
       "Name": "SkipTheCommercials",
       "Abbreviation": "STC",
-      "Type": "TV",
+      "Type": "Movies, TV",
       "Codebase": "UNIT3D",
       "Users": "893",
       "Torrents": "2,175",
@@ -2757,7 +2757,7 @@
     {
       "Name": "Spirit of Revolution",
       "Abbreviation": "SoR",
-      "Type": "General, German",
+      "Type": "Audio, Books, Console, Movies, Other, PC, TV, XXX",
       "Codebase": "NetVision",
       "Users": "679",
       "Torrents": "20,710",
@@ -2775,7 +2775,7 @@
     {
       "Name": "SportsCult",
       "Abbreviation": "SC",
-      "Type": "Sports",
+      "Type": "TV",
       "Codebase": "-",
       "Users": "22,441",
       "Torrents": "237,169",
@@ -2793,7 +2793,7 @@
     {
       "Name": "SpringSunday",
       "Abbreviation": "SSD",
-      "Type": "General, Chinese",
+      "Type": "Audio, Movies, Other, TV",
       "Codebase": "NexusPHP",
       "Users": "18,849",
       "Torrents": "56,527",
@@ -2811,7 +2811,7 @@
     {
       "Name": "SugoiMusic",
       "Abbreviation": "SM",
-      "Type": "Music, Asian",
+      "Type": "Audio, Other, TV",
       "Codebase": "Gazelle",
       "Users": "2,693",
       "Torrents": "59,245",
@@ -2829,7 +2829,7 @@
     {
       "Name": "SuperBits",
       "Abbreviation": "SBS",
-      "Type": "General, Swedish, Nordic",
+      "Type": "Audio, Books, Console, Movies, Other, PC, TV, XXX",
       "Codebase": "rartracker",
       "Users": "10,933",
       "Torrents": "187,145",
@@ -2847,7 +2847,7 @@
     {
       "Name": "Swarmazon",
       "Abbreviation": "SMZ",
-      "Type": "General",
+      "Type": "Audio, Books, Movies, Other, PC, TV",
       "Codebase": "-",
       "Users": "1,784",
       "Torrents": "11,376",
@@ -2901,7 +2901,7 @@
     {
       "Name": "Tasmanit",
       "Abbreviation": "TAS",
-      "Type": "TV, Australia, New Zealand",
+      "Type": "Audio, Movies, TV",
       "Codebase": "TSSE",
       "Users": "22,230",
       "Torrents": "57,606",
@@ -2919,7 +2919,7 @@
     {
       "Name": "The Falling Angels",
       "Abbreviation": "TFA",
-      "Type": "General, German",
+      "Type": "Audio, Books, Console, Movies, Other, PC, TV, XXX",
       "Codebase": "NetVision",
       "Users": "-",
       "Torrents": "34,305",
@@ -2955,7 +2955,7 @@
     {
       "Name": "The Leach Zone",
       "Abbreviation": "TLZ",
-      "Type": "Movie, TV",
+      "Type": "Audio, Books, Console, Movies, Other, PC, TV",
       "Codebase": "UNIT3D",
       "Users": "-",
       "Torrents": "96,545",
@@ -2991,7 +2991,7 @@
     {
       "Name": "The Old School",
       "Abbreviation": "TOS",
-      "Type": "General, French",
+      "Type": "Books, Console, Movies, PC, TV",
       "Codebase": "UNIT3D",
       "Users": "6,985",
       "Torrents": "323,404",
@@ -3009,7 +3009,7 @@
     {
       "Name": "The Paradiese",
       "Abbreviation": "TP",
-      "Type": "General, German",
+      "Type": "Audio, Books, Console, Movies, Other, PC, TV, XXX",
       "Codebase": "NetVision",
       "Users": "249",
       "Torrents": "869",
@@ -3045,7 +3045,7 @@
     {
       "Name": "The-Crazy-Ones",
       "Abbreviation": "TCO",
-      "Type": "General, German",
+      "Type": "Audio, Books, Console, Movies, Other, PC, TV, XXX",
       "Codebase": "NetVision",
       "Users": "-",
       "Torrents": "16,628",
@@ -3063,7 +3063,7 @@
     {
       "Name": "The-New-Fun",
       "Abbreviation": "TNF",
-      "Type": "General, German",
+      "Type": "Audio, Books, Console, Movies, Other, PC, TV, XXX",
       "Codebase": "NetVision",
       "Users": "-",
       "Torrents": "9,576",
@@ -3081,7 +3081,7 @@
     {
       "Name": "TheGeeks",
       "Abbreviation": "TG",
-      "Type": "E-Learning",
+      "Type": "Other",
       "Codebase": "TCG",
       "Users": "15,200",
       "Torrents": "73,787",
@@ -3099,7 +3099,7 @@
     {
       "Name": "TheMixingBowl",
       "Abbreviation": "TMB",
-      "Type": "Music, Radio",
+      "Type": "Audio",
       "Codebase": "-",
       "Users": "72,213",
       "Torrents": "96,526",
@@ -3117,7 +3117,7 @@
     {
       "Name": "ThePlace",
       "Abbreviation": "TP",
-      "Type": "Self-help, E-Learning, Pick-up",
+      "Type": "Other",
       "Codebase": "TCG",
       "Users": "20,075",
       "Torrents": "68,154",
@@ -3153,7 +3153,7 @@
     {
       "Name": "TheVault",
       "Abbreviation": "TV",
-      "Type": "E-Learning, eBooks, Business",
+      "Type": "Other",
       "Codebase": "TCG",
       "Users": "4,472",
       "Torrents": "61,321",
@@ -3189,7 +3189,7 @@
     {
       "Name": "Torr9",
       "Abbreviation": "-",
-      "Type": "General, French",
+      "Type": "Audio, Books, Console, Movies, Other, PC, TV, XXX",
       "Codebase": "Custom",
       "Users": "10,000",
       "Torrents": "17,151",
@@ -3243,7 +3243,7 @@
     {
       "Name": "Torrent Trader",
       "Abbreviation": "TT",
-      "Type": "General, German",
+      "Type": "Audio, Books, Console, Movies, Other, PC, TV, XXX",
       "Codebase": "NetVision",
       "Users": "-",
       "Torrents": "8,216",
@@ -3279,7 +3279,7 @@
     {
       "Name": "TorrentBD",
       "Abbreviation": "TBD",
-      "Type": "General",
+      "Type": "Audio, Books, Console, Movies, Other, PC, TV",
       "Codebase": "Custom",
       "Users": "247,530",
       "Torrents": "568,570",
@@ -3333,7 +3333,7 @@
     {
       "Name": "TorrentLeech",
       "Abbreviation": "TL",
-      "Type": "General",
+      "Type": "Audio, Books, Console, Movies, Other, PC, TV",
       "Codebase": "-",
       "Users": "174,550",
       "Torrents": "2,275,204",
@@ -3351,7 +3351,7 @@
     {
       "Name": "Torrenteros",
       "Abbreviation": "TTR",
-      "Type": "Movie, TV, Latino, Castellano",
+      "Type": "Movies, TV",
       "Codebase": "UNIT3D",
       "Users": "1,133",
       "Torrents": "6,051",
@@ -3369,7 +3369,7 @@
     {
       "Name": "Torrentleech.pl",
       "Abbreviation": "TL.pl",
-      "Type": "General, Polish",
+      "Type": "Audio, Books, Console, Movies, Other, PC, TV, XXX",
       "Codebase": "-",
       "Users": "8834",
       "Torrents": "33,962",
@@ -3387,7 +3387,7 @@
     {
       "Name": "TurkSeed",
       "Abbreviation": "-",
-      "Type": "General, Turkish",
+      "Type": "Audio, Console, Movies, Other, PC, TV",
       "Codebase": "UNIT3D",
       "Users": "21,850",
       "Torrents": "10,521",
@@ -3405,7 +3405,7 @@
     {
       "Name": "U2",
       "Abbreviation": "U2",
-      "Type": "Anime",
+      "Type": "Audio, Books, Movies, Other, TV",
       "Codebase": "NexusPHP",
       "Users": "16,213",
       "Torrents": "51,487",
@@ -3423,7 +3423,7 @@
     {
       "Name": "UHDBits",
       "Abbreviation": "UHD",
-      "Type": "Movie, TV",
+      "Type": "Audio, Movies, TV",
       "Codebase": "Gazelle",
       "Users": "8,672",
       "Torrents": "68,575",
@@ -3477,7 +3477,7 @@
     {
       "Name": "Upscale Vault",
       "Abbreviation": "UV",
-      "Type": "Movie, TV, Music",
+      "Type": "Audio, Movies, TV",
       "Codebase": "UNIT3D",
       "Users": "4,869",
       "Torrents": "1,053",
@@ -3495,7 +3495,7 @@
     {
       "Name": "Utopia",
       "Abbreviation": "-",
-      "Type": "Movie, TV, Ukrainian",
+      "Type": "Movies, TV",
       "Codebase": "UNIT3D",
       "Users": "1,205",
       "Torrents": "19,030",
@@ -3513,7 +3513,7 @@
     {
       "Name": "World-of-Tomorrow",
       "Abbreviation": "WoT",
-      "Type": "General, German",
+      "Type": "Audio, Books, Console, Movies, Other, PC, TV, XXX",
       "Codebase": "NetVision",
       "Users": "3545",
       "Torrents": "81,337",
@@ -3585,7 +3585,7 @@
     {
       "Name": "YUSCENE",
       "Abbreviation": "YUS",
-      "Type": "Movie, TV",
+      "Type": "Audio, Books, Console, Movies, PC, TV",
       "Codebase": "UNIT3D",
       "Users": "9,414",
       "Torrents": "52,327",
@@ -3657,7 +3657,7 @@
     {
       "Name": "nCore",
       "Abbreviation": "-",
-      "Type": "General, Hungarian",
+      "Type": "Audio, Books, Console, Movies, PC, TV, XXX",
       "Codebase": "Custom",
       "Users": "392,228",
       "Torrents": "713,791",
@@ -3693,7 +3693,7 @@
     {
       "Name": "upload.cx",
       "Abbreviation": "ULCX",
-      "Type": "Movie, TV",
+      "Type": "Movies, TV",
       "Codebase": "UNIT3D",
       "Users": "4,640",
       "Torrents": "52,524",

@@ -24,7 +24,9 @@ jobs:
         run: pip install requests
 
       - name: Sync trackers
-        run: python sync_trackers.py
+        run:
+          python update_types.py
+          python sync_trackers.py
 
       - name: Commit and push changes
         run: |

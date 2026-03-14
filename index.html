@@ -1,460 +1,450 @@
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+<!doctype html>
+<html lang="en" data-theme="dark">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Private Trackers Spreadsheet</title>
-    <link rel="stylesheet" type="text/css" href="assets/css/app.css">
+
+    <link rel="stylesheet" href="assets/css/app.css" />
+
+    <script
+      defer
+      src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"
+    ></script>
     <script src="assets/js/app.js"></script>
-    <!-- AlpineJS -->
-    <script defer src="https://cdn.jsdelivr.net/npm/alpinejs/dist/cdn.min.js"></script>
-    <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:ital,wght@0,200..900;1,200..900&display=swap"
-        rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Yanone+Kaffeesatz:wght@200..700&display=swap" rel="stylesheet">
-</head>
 
-<body>
-    <div class="tracker-wrapper">
-        <nav class="tracker-navbar">
-            <div class="tracker-navbar__container">
-                <div class="tracker-navbar__brand">
-                    <h2 class="tracker-navbar__title"><span
-                            class="icon icon-skull-crossbones tracker-navbar__icon"></span> Private Tracker List</h2>
-                </div>
-                <div class="tracker-navbar__actions">
-                    <!-- Theme Switcher -->
-                    <div x-data="themeSwitcher()" class="theme-switcher">
-                        <!-- Color Picker -->
-                        <div class="color-picker" x-show="showColorPicker" x-transition
-                            @click.away="showColorPicker = false">
-                            <div class="color-picker__grid">
-                                <template x-for="color in accentColors" :key="color.value">
-                                    <button @click="setAccentColor(color.value)" class="color-picker__swatch"
-                                        :style="`background-color: ${color.value}`"
-                                        :class="{ 'color-picker__swatch--active': accentColor === color.value }"
-                                        :title="color.name">
-                                    </button>
-                                </template>
-                            </div>
-                        </div>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Yanone+Kaffeesatz:wght@200..700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body x-data="trackerTable()">
+    <nav class="tracker-navbar">
+      <div class="tracker-navbar__container">
+        <div class="tracker-navbar__brand">
+          <svg
+            class="icon"
+            style="font-size: 1.5rem; color: var(--accent-primary)"
+            viewBox="0 0 512 512"
+          >
+            <path
+              d="M416 160c0-35.3-28.7-64-64-64s-64 28.7-64 64s28.7 64 64 64s64-28.7 64-64zm-96 85.9V256c0 17.7 14.3 32 32 32s32-14.3 32-32V245.9c35.2-11.2 60.8-43.7 60.8-85.9c0-53-43-96-96-96s-96 43-96 96c0 42.2 25.6 74.7 60.8 85.9zM74.1 386.4c0-2.6 1.1-4.9 2.8-6.6L197 259.7c8.5-8.5 8.5-22.1 0-30.6s-22.1-8.5-30.6 0L46.3 349.3C16.6 379 0 419.3 0 461.4V480c0 17.7 14.3 32 32 32h144c17.7 0 32-14.3 32-32s-14.3-32-32-32H44.1C22.7 448 40 411 65.5 391.2c2.6-2 5.6-3.1 8.6-4.8zM512 461.4c0-42.2-16.6-82.5-46.3-112.1L345.6 229.1c-8.5-8.5-22.1-8.5-30.6 0s-8.5 22.1 0 30.6L435 379.8c1.7 1.7 2.8 4 2.8 6.6c2.1 1.6 5.1 2.8 7.7 4.8C472 411 489.3 448 467.9 448h-119.8c-17.7 0-32 14.3-32 32s14.3 32 32 32H480c17.7 0 32-14.3 32-32v-18.6z"
+            />
+          </svg>
+          <h2 class="tracker-navbar__title">Private Tracker Hub</h2>
+        </div>
 
-                        <!-- Accent Color Button -->
-                        <button @click="showColorPicker = !showColorPicker"
-                            class="theme-switcher__button theme-switcher__button--accent" title="Change accent color">
-                            <span class="icon icon-palette"></span>
-                        </button>
+        <div class="tracker-navbar__actions">
+          <div x-data="themeSwitcher()" class="theme-switcher">
+            <button
+              @click="showColorPicker = !showColorPicker"
+              class="theme-switcher__button"
+              title="Accent Color"
+            >
+              <svg class="icon" viewBox="0 0 512 512">
+                <path
+                  d="M512 256c0 .9 0 1.8 0 2.7c-.4 36.5-24.5 68.3-58.4 81.2c-16.5 6.3-25.5 24.2-22.2 41.5c3.3 17.3 16.2 31.2 33 35.8c5.4 1.5 10.6 3.5 15.6 6.1C441.2 481.5 354 512 256 512c-141.4 0-256-114.6-256-256S114.6 0 256 0c115.3 0 212.4 76.2 244.5 180.7c3.9 12.8-1.5 26.5-12.8 33c-11.3 6.6-25.8 4.2-34.6-5.8c-10-11.4-21.7-21.4-34.7-29.6c-17-10.8-39.3-5.3-50 12.2s-5.3 39.3 12.2 50c18.1 11.4 34 25.4 47.3 41.5c6.3 7.6 15.6 11.9 25.4 11.9s19.1-4.3 25.4-11.9c12.3-14.8 26.6-28.1 42.1-39.4c17.6-12.9 42.1-8.9 54.8 8.8c5.2 7.3 8.3 16 8.3 25.1z"
+                />
+              </svg>
+            </button>
+            <button
+              @click="toggleTheme()"
+              class="theme-switcher__button"
+              :title="isDark ? 'Light Mode' : 'Dark Mode'"
+            >
+              <template x-if="isDark">
+                <svg class="icon" viewBox="0 0 512 512">
+                  <path
+                    d="M256 160c-52.9 0-96 43.1-96 96s43.1 96 96 96 96-43.1 96-96-43.1-96-96-96zm246.4 80.5l-94.7-47.3 33.5-100.4c4.5-13.6-8.4-26.5-21.9-21.9l-100.4 33.5-47.4-94.8c-6.4-12.8-24.6-12.8-31 0l-47.3 94.7L92.7 70.8c-13.6-4.5-26.5 8.4-21.9 21.9l33.5 100.4-94.7 47.4c-12.8 6.4-12.8 24.6 0 31l94.7 47.3-33.5 100.5c-4.5 13.6 8.4 26.5 21.9 21.9l100.4-33.5 47.3 94.7c6.4 12.8 24.6 12.8 31 0l47.3-94.7 100.4 33.5c13.6 4.5 26.5-8.4 21.9-21.9l-33.5-100.4 94.7-47.3c13-6.5 13-24.7.2-31.1z"
+                  />
+                </svg>
+              </template>
+              <template x-if="!isDark">
+                <svg class="icon" viewBox="0 0 512 512">
+                  <path
+                    d="M223.5 32C100 32 0 132.3 0 256s100 224 223.5 224c60.6 0 115.5-24.2 155.8-63.4c5-4.9 6.3-12.5 3.1-18.7s-10.1-9.7-17-8.5c-9.8 1.7-19.8 2.6-30.1 2.6c-96.9 0-175.5-78.8-175.5-176c0-65.8 36-123.1 89.3-153.3c6.1-3.5 9.2-10.5 7.7-17.3s-7.3-11.9-14.3-12.5c-6.3-.5-12.6-.8-19-.8z"
+                  />
+                </svg>
+              </template>
+            </button>
 
-                        <!-- Theme Toggle Button -->
-                        <button @click="toggleTheme()" class="theme-switcher__button"
-                            :title="isDark ? 'Switch to light mode' : 'Switch to dark mode'">
-                            <span :class="isDark ? 'icon icon-sun' : 'icon icon-moon'"></span>
-                        </button>
-                    </div>
-
-                    <ul class="tracker-navbar__links">
-                        <li class="tracker-navbar__dropdown">
-                            <span>Other Resources</span>
-                            <ul class="tracker-navbar__dropdown-menu">
-                                <li><a href="https://opentrackers.org/">Open Trackers</a></li>
-                                <li><a href="https://www.reddit.com/r/trackers/">r/trackers on Reddit</a></li>
-                                <li><a href="https://torrentfreak.com/">Torrent Freak</a></li>
-                                <li><a href="https://hdvinnie.github.io/TrackerHub">TrackerHub</a></li>
-                            </ul>
-                        </li>
-                    </ul>
-                </div>
+            <div
+              class="color-picker"
+              x-show="showColorPicker"
+              @click.away="showColorPicker = false"
+              x-transition
+            >
+              <div class="color-picker__grid">
+                <template x-for="color in accentColors" :key="color.value">
+                  <div
+                    @click="setAccentColor(color.value)"
+                    class="color-picker__swatch"
+                    :style="`background-color: ${color.value}`"
+                    :class="accentColor === color.value ? 'color-picker__swatch--active' : ''"
+                  ></div>
+                </template>
+              </div>
             </div>
-        </nav>
-        <main class="tracker-main">
-            <section class="tracker-table" x-data="trackerTable()">
-                <!-- Tooltip container -->
-                <div x-show="tooltip.show" x-transition class="alpine-tooltip"
-                    :style="`left: ${tooltip.x}px; top: ${tooltip.y}px; transform: translateX(-50%)`"
-                    x-text="tooltip.text">
-                </div>
+          </div>
 
-                <!-- Comparison Modal -->
-                <div x-show="showCompareModal" x-transition class="tracker-compare-modal">
-                    <div class="tracker-compare-modal__backdrop" @click="closeCompareModal()"></div>
-                    <div class="tracker-compare-modal__content">
-                        <div class="tracker-compare-modal__header">
-                            <h3 class="tracker-compare-modal__title">Compare Trackers</h3>
-                            <button class="tracker-compare-modal__close" @click="closeCompareModal()">
-                                <span class="icon icon-close"></span>
-                            </button>
-                        </div>
-                        <div class="tracker-compare-modal__body">
-                            <template x-if="selectedTrackers.length < 2">
-                                <div class="tracker-compare-modal__empty">
-                                    <p>Please select at least 2 trackers to compare (maximum 4).</p>
-                                </div>
-                            </template>
-                            <template x-if="selectedTrackers.length >= 2">
-                                <div class="tracker-compare-table-container">
-                                    <table class="tracker-compare-table">
-                                        <thead>
-                                            <tr>
-                                                <th class="tracker-compare-table__property">Property</th>
-                                                <template x-for="tracker in selectedTrackers" :key="tracker.Name">
-                                                    <th class="tracker-compare-table__tracker">
-                                                        <div class="tracker-compare-table__tracker-name"
-                                                            x-text="tracker.Name"></div>
-                                                        <button class="tracker-compare-table__remove-btn"
-                                                            @click="removeFromComparison(tracker)">
-                                                            <span class="icon icon-close"></span>
-                                                        </button>
-                                                    </th>
-                                                </template>
-                                            </tr>
-                                        </thead>
-                                        <tbody>
-                                            <tr>
-                                                <td>Name</td>
-                                                <template x-for="tracker in selectedTrackers" :key="tracker.Name">
-                                                    <td x-text="tracker.Name"></td>
-                                                </template>
-                                            </tr>
-                                            <tr>
-                                                <td>Abbreviation</td>
-                                                <template x-for="tracker in selectedTrackers" :key="tracker.Name">
-                                                    <td x-text="tracker.Abbreviation"></td>
-                                                </template>
-                                            </tr>
-                                            <tr>
-                                                <td>Type</td>
-                                                <template x-for="tracker in selectedTrackers" :key="tracker.Name">
-                                                    <td x-text="tracker.Type"></td>
-                                                </template>
-                                            </tr>
-                                            <tr>
-                                                <td>Codebase</td>
-                                                <template x-for="tracker in selectedTrackers" :key="tracker.Name">
-                                                    <td x-text="tracker.Codebase"></td>
-                                                </template>
-                                            </tr>
-                                            <tr>
-                                                <td>Users</td>
-                                                <template x-for="tracker in selectedTrackers" :key="tracker.Name">
-                                                    <td x-text="tracker.Users"></td>
-                                                </template>
-                                            </tr>
-                                            <tr>
-                                                <td>Torrents</td>
-                                                <template x-for="tracker in selectedTrackers" :key="tracker.Name">
-                                                    <td x-text="tracker.Torrents"></td>
-                                                </template>
-                                            </tr>
-                                            <tr>
-                                                <td>Peers</td>
-                                                <template x-for="tracker in selectedTrackers" :key="tracker.Name">
-                                                    <td x-text="tracker.Peers"></td>
-                                                </template>
-                                            </tr>
-                                            <tr>
-                                                <td>Ratio</td>
-                                                <template x-for="tracker in selectedTrackers" :key="tracker.Name">
-                                                    <td x-text="tracker.Ratio"></td>
-                                                </template>
-                                            </tr>
-                                            <tr>
-                                                <td>Ratio Difficulty</td>
-                                                <template x-for="tracker in selectedTrackers" :key="tracker.Name">
-                                                    <td x-text="tracker['Ratio Diff']"></td>
-                                                </template>
-                                            </tr>
-                                            <tr>
-                                                <td>Freeleech</td>
-                                                <template x-for="tracker in selectedTrackers" :key="tracker.Name">
-                                                    <td x-text="tracker.Freeleech"></td>
-                                                </template>
-                                            </tr>
-                                            <tr>
-                                                <td>Points</td>
-                                                <template x-for="tracker in selectedTrackers" :key="tracker.Name">
-                                                    <td x-text="tracker.Points"></td>
-                                                </template>
-                                            </tr>
-                                            <tr>
-                                                <td>Hit & Run</td>
-                                                <template x-for="tracker in selectedTrackers" :key="tracker.Name">
-                                                    <td x-text="tracker['Hit & Run']"></td>
-                                                </template>
-                                            </tr>
-                                            <tr>
-                                                <td>Birthdate</td>
-                                                <template x-for="tracker in selectedTrackers" :key="tracker.Name">
-                                                    <td x-text="tracker.Birthdate"></td>
-                                                </template>
-                                            </tr>
-                                            <tr>
-                                                <td>Join</td>
-                                                <template x-for="tracker in selectedTrackers" :key="tracker.Name">
-                                                    <td x-text="tracker.Join"></td>
-                                                </template>
-                                            </tr>
-                                            <tr>
-                                                <td>Join Difficulty</td>
-                                                <template x-for="tracker in selectedTrackers" :key="tracker.Name">
-                                                    <td x-text="tracker['Join Diff']"></td>
-                                                </template>
-                                            </tr>
-                                            <tr>
-                                                <td>Updated</td>
-                                                <template x-for="tracker in selectedTrackers" :key="tracker.Name">
-                                                    <td x-text="tracker.Updated"></td>
-                                                </template>
-                                            </tr>
-                                        </tbody>
-                                    </table>
-                                </div>
-                            </template>
-                        </div>
-                    </div>
-                </div>
+          <ul class="tracker-navbar__links">
+            <li class="tracker-navbar__dropdown">
+              <span>External Tools</span>
+              <div class="tracker-navbar__dropdown-menu">
+                <a href="https://opentrackers.org/" target="_blank"
+                  >Open Trackers</a
+                >
+                <a href="https://www.reddit.com/r/trackers/" target="_blank"
+                  >r/trackers</a
+                >
+                <a href="https://torrentfreak.com/" target="_blank"
+                  >Torrent Freak</a
+                >
+                <a href="https://hdvinnie.github.io/TrackerHub" target="_blank"
+                  >TrackerHub</a
+                >
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
 
-                <!-- Floating Sticky Header -->
-                <div x-show="showStickyHeader" x-transition:enter="transition ease-out duration-200"
-                    x-transition:enter-start="opacity-0 transform -translate-y-2"
-                    x-transition:enter-end="opacity-100 transform translate-y-0"
-                    x-transition:leave="transition ease-in duration-150"
-                    x-transition:leave-start="opacity-100 transform translate-y-0"
-                    x-transition:leave-end="opacity-0 transform -translate-y-2" class="tracker-table__sticky-header"
-                    :style="`left: ${stickyHeaderLeft}px; width: ${stickyHeaderWidth}px;`">
-                    <table class="tracker-table__sticky-table">
-                        <thead>
-                            <tr>
-                                <th @click="sortBy('Name')" class="tracker-table__sortable">
-                                    Name <span class="icon icon-sort"></span>
-                                </th>
-                                <th @click="sortBy('Abbreviation')" class="tracker-table__sortable">
-                                    Abbr <span class="icon icon-sort"></span>
-                                </th>
-                                <th @click="sortBy('Type')" class="tracker-table__sortable">
-                                    Type <span class="icon icon-sort"></span>
-                                </th>
-                                <th @click="sortBy('Codebase')" class="tracker-table__sortable">
-                                    Codebase <span class="icon icon-sort"></span>
-                                </th>
-                                <th @click="sortBy('Users')" class="tracker-table__sortable">
-                                    Users <span class="icon icon-sort"></span>
-                                </th>
-                                <th @click="sortBy('Torrents')" class="tracker-table__sortable">
-                                    Torrents <span class="icon icon-sort"></span>
-                                </th>
-                                <th @click="sortBy('Peers')" class="tracker-table__sortable">
-                                    Peers <span class="icon icon-sort"></span>
-                                </th>
-                                <th @click="sortBy('Ratio')" class="tracker-table__sortable">
-                                    Ratio <span class="icon icon-sort"></span>
-                                </th>
-                                <th @click="sortBy('Ratio Diff')" class="tracker-table__sortable">
-                                    Ratio Diff <span class="icon icon-sort"></span>
-                                </th>
-                                <th @click="sortBy('Freeleech')" class="tracker-table__sortable">
-                                    Freeleech <span class="icon icon-sort"></span>
-                                </th>
-                                <th @click="sortBy('Points')" class="tracker-table__sortable">
-                                    Points <span class="icon icon-sort"></span>
-                                </th>
-                                <th @click="sortBy('Hit & Run')" class="tracker-table__sortable">
-                                    H&R <span class="icon icon-sort"></span>
-                                </th>
-                                <th @click="sortBy('Birthdate')" class="tracker-table__sortable">
-                                    B-Day <span class="icon icon-sort"></span>
-                                </th>
-                                <th @click="sortBy('Join')" class="tracker-table__sortable">
-                                    Join <span class="icon icon-sort"></span>
-                                </th>
-                                <th @click="sortBy('Join Diff')" class="tracker-table__sortable">
-                                    Join Diff <span class="icon icon-sort"></span>
-                                </th>
-                                <th @click="sortBy('Updated')" class="tracker-table__sortable">
-                                    Updated <span class="icon icon-sort"></span>
-                                </th>
-                            </tr>
-                        </thead>
-                    </table>
-                </div>
+    <header class="tracker-hero">
+      <h1 class="tracker-hero__title">Discover Your Next Tracker</h1>
+      <p class="tracker-hero__subtitle">
+        The most comprehensive database of private trackers, updated live from
+        the community.
+      </p>
 
-                <div class="tracker-table__controls">
-                    <div class="tracker-table__search-container">
-                        <input class="tracker-table__search" type="text" placeholder="Search trackers..."
-                            x-model="search">
-                        <div class="tracker-table__info">
-                            <span style="font-size: 1rem;"
-                                x-text="`${filteredTrackers.length} of ${trackers.length} trackers`"></span>
-                        </div>
-                    </div>
-                    <button class="tracker-table__compare-btn" @click="openCompareModal()"
-                        :disabled="selectedTrackers.length < 2"
-                        @mouseenter="selectedTrackers.length < 2 ? showTooltip($event, 'Select at least two trackers to compare') : null"
-                        @mouseleave="hideTooltip()">
-                        Compare Trackers
-                        <span x-show="selectedTrackers.length > 0" class="tracker-table__compare-count"
-                            x-text="selectedTrackers.length"></span>
-                    </button>
-                </div>
-                <div class="tracker-table__container">
-                    <table class="tracker-table__main">
-                        <thead>
-                            <tr>
-                                <th @click="sortBy('Name')" @mouseenter="showTooltip($event, 'The tracker\'s name')"
-                                    @mouseleave="hideTooltip()" class="tracker-table__sortable">
-                                    Name <span class="icon icon-sort"></span>
-                                </th>
-                                <th @click="sortBy('Abbreviation')"
-                                    @mouseenter="showTooltip($event, 'Common abbreviation or short name for the tracker')"
-                                    @mouseleave="hideTooltip()" class="tracker-table__sortable">
-                                    Abbr <span class="icon icon-sort"></span>
-                                </th>
-                                <th @click="sortBy('Type')"
-                                    @mouseenter="showTooltip($event, 'Type of content the tracker specializes in (Movies, TV, Music, General, etc.)')"
-                                    @mouseleave="hideTooltip()" class="tracker-table__sortable">
-                                    Type <span class="icon icon-sort"></span>
-                                </th>
-                                <th @click="sortBy('Codebase')"
-                                    @mouseenter="showTooltip($event, 'The software/codebase the tracker runs on (Gazelle, UNIT3D, etc.)')"
-                                    @mouseleave="hideTooltip()" class="tracker-table__sortable">
-                                    Codebase <span class="icon icon-sort"></span>
-                                </th>
-                                <th @click="sortBy('Users')"
-                                    @mouseenter="showTooltip($event, 'Total number of registered users on the tracker')"
-                                    @mouseleave="hideTooltip()" class="tracker-table__sortable">
-                                    Users <span class="icon icon-sort"></span>
-                                </th>
-                                <th @click="sortBy('Torrents')"
-                                    @mouseenter="showTooltip($event, 'Total number of torrents available on the tracker')"
-                                    @mouseleave="hideTooltip()" class="tracker-table__sortable">
-                                    Torrents <span class="icon icon-sort"></span>
-                                </th>
-                                <th @click="sortBy('Peers')"
-                                    @mouseenter="showTooltip($event, 'Total number of peers (seeders + leechers) across all torrents')"
-                                    @mouseleave="hideTooltip()" class="tracker-table__sortable">
-                                    Peers <span class="icon icon-sort"></span>
-                                </th>
-                                <th @click="sortBy('Ratio')"
-                                    @mouseenter="showTooltip($event, 'Whether the tracker enforces upload/download ratio requirements')"
-                                    @mouseleave="hideTooltip()" class="tracker-table__sortable">
-                                    Ratio <span class="icon icon-sort"></span>
-                                </th>
-                                <th @click="sortBy('Ratio Diff')"
-                                    @mouseenter="showTooltip($event, 'How difficult it is to maintain the required ratio (Easy, Moderate, Tough)')"
-                                    @mouseleave="hideTooltip()" class="tracker-table__sortable">
-                                    Ratio Diff <span class="icon icon-sort"></span>
-                                </th>
-                                <th @click="sortBy('Freeleech')"
-                                    @mouseenter="showTooltip($event, 'Whether the tracker offers freeleech content (downloads don\'t count against ratio)')"
-                                    @mouseleave="hideTooltip()" class="tracker-table__sortable">
-                                    Freeleech <span class="icon icon-sort"></span>
-                                </th>
-                                <th @click="sortBy('Points')"
-                                    @mouseenter="showTooltip($event, 'Whether the tracker has a bonus points system (Points, BON, Lumens, etc.)')"
-                                    @mouseleave="hideTooltip()" class="tracker-table__sortable">
-                                    Points <span class="icon icon-sort"></span>
-                                </th>
-                                <th @click="sortBy('Hit & Run')" class="tracker-table__sortable">
-                                    H&R <span class="icon icon-sort"></span>
-                                </th>
-                                <th @click="sortBy('Birthdate')" class="tracker-table__sortable">
-                                    B-Day <span class="icon icon-sort"></span>
-                                </th>
-                                <th @click="sortBy('Join')" class="tracker-table__sortable">
-                                    Join <span class="icon icon-sort"></span>
-                                </th>
-                                <th @click="sortBy('Join Diff')" class="tracker-table__sortable">
-                                    Join Diff <span class="icon icon-sort"></span>
-                                </th>
-                                <th @click="sortBy('Updated')" class="tracker-table__sortable">
-                                    Updated <span class="icon icon-sort"></span>
-                                </th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <template x-for="tracker in filteredTrackers" :key="tracker.Name">
-                                <tr class="tracker-table__row">
-                                    <td class="tracker-table__cell tracker-table__cell--name">
-                                        <label class="tracker-table__checkbox-label" style="margin-right: 8px;">
-                                            <input type="checkbox" class="tracker-table__checkbox"
-                                                :disabled="!isInSelectedTrackers(tracker) && selectedTrackers.length >= 4"
-                                                :checked="isInSelectedTrackers(tracker)"
-                                                @click="toggleTrackerSelection(tracker)">
-                                            <span class="tracker-table__checkbox-custom"></span>
-                                        </label>
-                                        <span x-text="tracker.Name"></span>
-                                    </td>
-                                    <td class="tracker-table__cell" x-text="tracker.Abbreviation"></td>
-                                    <td class="tracker-table__cell" x-text="tracker.Type"></td>
-                                    <td class="tracker-table__cell" x-text="tracker.Codebase"></td>
-                                    <td class="tracker-table__cell" x-text="tracker.Users"></td>
-                                    <td class="tracker-table__cell" x-text="tracker.Torrents"></td>
-                                    <td class="tracker-table__cell" x-text="tracker.Peers"></td>
-                                    <td class="tracker-table__cell"
-                                        :class="tracker.Ratio === 'Yes' ? 'tracker-table__cell--yes' : tracker.Ratio === 'No' ? 'tracker-table__cell--no' : ''"
-                                        :data-value="tracker.Ratio"
-                                        :style="(tracker.Ratio === 'Yes' || tracker.Ratio === 'No') ? 'color: transparent;' : ''">
-                                        <span x-show="tracker.Ratio !== 'Yes' && tracker.Ratio !== 'No'"
-                                            x-text="tracker.Ratio"></span>
-                                    </td>
-                                    <td class="tracker-table__cell"
-                                        :class="tracker['Ratio Diff'] === 'Easy' ? 'tracker-table__cell--easy' : tracker['Ratio Diff'] === 'Moderate' ? 'tracker-table__cell--moderate' : tracker['Ratio Diff'] === 'Tough' ? 'tracker-table__cell--tough' : ''"
-                                        :data-value="tracker['Ratio Diff']"
-                                        :style="(tracker['Ratio Diff'] === 'Easy' || tracker['Ratio Diff'] === 'Moderate' || tracker['Ratio Diff'] === 'Tough') ? 'color: transparent;' : ''">
-                                        <span
-                                            x-show="tracker['Ratio Diff'] !== 'Easy' && tracker['Ratio Diff'] !== 'Moderate' && tracker['Ratio Diff'] !== 'Tough'"
-                                            x-text="tracker['Ratio Diff']"></span>
-                                    </td>
-                                    <td class="tracker-table__cell"
-                                        :class="tracker.Freeleech === 'Yes' ? 'tracker-table__cell--yes' : tracker.Freeleech === 'No' ? 'tracker-table__cell--no' : ''"
-                                        :data-value="tracker.Freeleech"
-                                        :style="(tracker.Freeleech === 'Yes' || tracker.Freeleech === 'No') ? 'color: transparent;' : ''">
-                                        <span x-show="tracker.Freeleech !== 'Yes' && tracker.Freeleech !== 'No'"
-                                            x-text="tracker.Freeleech"></span>
-                                    </td>
-                                    <td class="tracker-table__cell"
-                                        :class="tracker.Points === 'Yes' ? 'tracker-table__cell--yes' : tracker.Points === 'No' ? 'tracker-table__cell--no' : ''"
-                                        :data-value="tracker.Points"
-                                        :style="(tracker.Points === 'Yes' || tracker.Points === 'No') ? 'color: transparent;' : ''">
-                                        <span x-show="tracker.Points !== 'Yes' && tracker.Points !== 'No'"
-                                            x-text="tracker.Points"></span>
-                                    </td>
-                                    <td class="tracker-table__cell"
-                                        :class="tracker['Hit & Run'] === 'Yes' ? 'tracker-table__cell--yes' : tracker['Hit & Run'] === 'No' ? 'tracker-table__cell--no' : ''"
-                                        :data-value="tracker['Hit & Run']"
-                                        :style="(tracker['Hit & Run'] === 'Yes' || tracker['Hit & Run'] === 'No') ? 'color: transparent;' : ''">
-                                        <span x-show="tracker['Hit & Run'] !== 'Yes' && tracker['Hit & Run'] !== 'No'"
-                                            x-text="tracker['Hit & Run']"></span>
-                                    </td>
-                                    <td class="tracker-table__cell" x-text="tracker.Birthdate"></td>
-                                    <td class="tracker-table__cell" x-text="tracker.Join"></td>
-                                    <td class="tracker-table__cell"
-                                        :class="tracker['Join Diff'] === 'Easy' ? 'tracker-table__cell--easy' : tracker['Join Diff'] === 'Moderate' ? 'tracker-table__cell--moderate' : tracker['Join Diff'] === 'Tough' ? 'tracker-table__cell--tough' : ''"
-                                        :data-value="tracker['Join Diff']"
-                                        :style="(tracker['Join Diff'] === 'Easy' || tracker['Join Diff'] === 'Moderate' || tracker['Join Diff'] === 'Tough') ? 'color: transparent;' : ''">
-                                        <span
-                                            x-show="tracker['Join Diff'] !== 'Easy' && tracker['Join Diff'] !== 'Moderate' && tracker['Join Diff'] !== 'Tough'"
-                                            x-text="tracker['Join Diff']"></span>
-                                    </td>
-                                    <td class="tracker-table__cell" x-text="tracker.Updated"></td>
-                                </tr>
-                            </template>
-                        </tbody>
-                    </table>
-                </div>
-            </section>
-            <section class="tracker-privacy">
-                <div class="tracker-privacy__panel">
-                    <div class="tracker-privacy__body">
-                        <p><strong>Hey there!</strong> Like what you see? Feel free to contribute <a
-                                class="tracker-contribute__link"
-                                href="https://github.com/flowerey/Private-Trackers-Spreadsheet">HERE!</a></p>
-                    </div>
-                </div>
-            </section>
-        </main>
-    </div>
-</body>
+      <div class="tracker-stats">
+        <div class="tracker-stats__card">
+          <span class="tracker-stats__value" x-text="stats.count">0</span>
+          <span class="tracker-stats__label">Trackers</span>
+        </div>
+        <div class="tracker-stats__card">
+          <span class="tracker-stats__value" x-text="formatNumber(stats.users)"
+            >0</span
+          >
+          <span class="tracker-stats__label">Total Users</span>
+        </div>
+        <div class="tracker-stats__card">
+          <span
+            class="tracker-stats__value"
+            x-text="formatNumber(stats.torrents)"
+            >0</span
+          >
+          <span class="tracker-stats__label">Torrents</span>
+        </div>
+        <div class="tracker-stats__card">
+          <span class="tracker-stats__value" x-text="formatNumber(stats.peers)"
+            >0</span
+          >
+          <span class="tracker-stats__label">Active Peers</span>
+        </div>
+      </div>
+    </header>
 
+    <main class="tracker-main">
+      <section class="tracker-filters">
+        <span class="tracker-filters__label">Filter by Type</span>
+        <div class="tracker-chips">
+          <template x-for="type in uniqueTypes" :key="type">
+            <button
+              class="tracker-chip"
+              :class="activeTypeFilter === type ? 'tracker-chip--active' : ''"
+              @click="activeTypeFilter = type"
+              x-text="type"
+            ></button>
+          </template>
+        </div>
+      </section>
+
+      <section class="tracker-table__controls">
+        <div class="tracker-table__search-wrapper">
+          <span class="tracker-table__search-icon">🔍</span>
+          <input
+            type="text"
+            class="tracker-table__search"
+            placeholder="Search trackers by name, codebase, or type..."
+            x-model="search"
+          />
+        </div>
+
+        <button
+          class="tracker-table__compare-btn"
+          :disabled="selectedTrackers.length < 2"
+          @click="openCompareModal()"
+        >
+          <span>Compare Selected</span>
+          <span
+            class="tracker-table__compare-count"
+            x-text="selectedTrackers.length"
+            >0</span
+          >
+        </button>
+      </section>
+
+      <div class="tracker-table__container">
+        <table class="tracker-table__main">
+          <thead>
+            <tr>
+              <th style="width: 250px">Tracker Name</th>
+              <th @click="sortBy('Abbreviation')">
+                Abbr
+                <span
+                  class="tracker-table__sort-icon"
+                  x-show="sortColumn === 'Abbreviation'"
+                  x-text="sortDirection === 'asc' ? '↑' : '↓'"
+                ></span>
+              </th>
+              <th @click="sortBy('Type')">
+                Type
+                <span
+                  class="tracker-table__sort-icon"
+                  x-show="sortColumn === 'Type'"
+                  x-text="sortDirection === 'asc' ? '↑' : '↓'"
+                ></span>
+              </th>
+              <th @click="sortBy('Codebase')">
+                Codebase
+                <span
+                  class="tracker-table__sort-icon"
+                  x-show="sortColumn === 'Codebase'"
+                  x-text="sortDirection === 'asc' ? '↑' : '↓'"
+                ></span>
+              </th>
+              <th @click="sortBy('Users')">
+                Users
+                <span
+                  class="tracker-table__sort-icon"
+                  x-show="sortColumn === 'Users'"
+                  x-text="sortDirection === 'asc' ? '↑' : '↓'"
+                ></span>
+              </th>
+              <th @click="sortBy('Torrents')">
+                Torrents
+                <span
+                  class="tracker-table__sort-icon"
+                  x-show="sortColumn === 'Torrents'"
+                  x-text="sortDirection === 'asc' ? '↑' : '↓'"
+                ></span>
+              </th>
+              <th @click="sortBy('Peers')">
+                Peers
+                <span
+                  class="tracker-table__sort-icon"
+                  x-show="sortColumn === 'Peers'"
+                  x-text="sortDirection === 'asc' ? '↑' : '↓'"
+                ></span>
+              </th>
+              <th @click="sortBy('Ratio')">
+                Ratio
+                <span
+                  class="tracker-table__sort-icon"
+                  x-show="sortColumn === 'Ratio'"
+                  x-text="sortDirection === 'asc' ? '↑' : '↓'"
+                ></span>
+              </th>
+              <th @click="sortBy('Ratio Diff')">
+                Ratio Diff
+                <span
+                  class="tracker-table__sort-icon"
+                  x-show="sortColumn === 'Ratio Diff'"
+                  x-text="sortDirection === 'asc' ? '↑' : '↓'"
+                ></span>
+              </th>
+              <th @click="sortBy('Join')">
+                Join
+                <span
+                  class="tracker-table__sort-icon"
+                  x-show="sortColumn === 'Join'"
+                  x-text="sortDirection === 'asc' ? '↑' : '↓'"
+                ></span>
+              </th>
+              <th @click="sortBy('Updated')">
+                Updated
+                <span
+                  class="tracker-table__sort-icon"
+                  x-show="sortColumn === 'Updated'"
+                  x-text="sortDirection === 'asc' ? '↑' : '↓'"
+                ></span>
+              </th>
+            </tr>
+          </thead>
+          <tbody>
+            <template
+              x-for="(tracker, index) in filteredTrackers"
+              :key="tracker.Name"
+            >
+              <tr
+                class="tracker-table__row"
+                :style="`animation-delay: ${index * 0.02}s`"
+              >
+                <td class="tracker-table__cell tracker-table__cell--name">
+                  <input
+                    type="checkbox"
+                    class="tracker-checkbox"
+                    :checked="isInSelectedTrackers(tracker)"
+                    @click="toggleTrackerSelection(tracker)"
+                    :disabled="!isInSelectedTrackers(tracker) && selectedTrackers.length >= 4"
+                  />
+                  <span x-text="tracker.Name"></span>
+                </td>
+                <td class="tracker-table__cell">
+                  <span
+                    class="badge badge--info"
+                    x-text="tracker.Abbreviation"
+                  ></span>
+                </td>
+                <td
+                  class="tracker-table__cell"
+                  style="font-size: 0.8rem; color: var(--text-secondary)"
+                  x-text="tracker.Type"
+                ></td>
+                <td class="tracker-table__cell">
+                  <span class="badge" x-text="tracker.Codebase"></span>
+                </td>
+                <td class="tracker-table__cell" x-text="tracker.Users"></td>
+                <td class="tracker-table__cell" x-text="tracker.Torrents"></td>
+                <td class="tracker-table__cell" x-text="tracker.Peers"></td>
+                <td class="tracker-table__cell">
+                  <span
+                    class="badge"
+                    :class="getBadgeClass(tracker.Ratio)"
+                    x-text="tracker.Ratio"
+                  ></span>
+                </td>
+                <td class="tracker-table__cell">
+                  <span
+                    class="badge"
+                    :class="getBadgeClass(tracker['Ratio Diff'])"
+                    x-text="tracker['Ratio Diff']"
+                  ></span>
+                </td>
+                <td class="tracker-table__cell">
+                  <span
+                    class="badge"
+                    :class="getBadgeClass(tracker.Join)"
+                    x-text="tracker.Join"
+                  ></span>
+                </td>
+                <td
+                  class="tracker-table__cell"
+                  style="font-size: 0.8rem; color: var(--text-muted)"
+                  x-text="tracker.Updated"
+                ></td>
+              </tr>
+            </template>
+          </tbody>
+        </table>
+      </div>
+
+      <footer
+        style="
+          margin-top: 4rem;
+          text-align: center;
+          border-top: 1px solid var(--border-primary);
+          padding-top: 2rem;
+        "
+      >
+        <p style="color: var(--text-secondary)">
+          Help us improve the database! Contribute at
+          <a
+            href="https://github.com/HDVinnie/Private-Trackers-Spreadsheet"
+            style="
+              color: var(--accent-primary);
+              text-decoration: none;
+              font-weight: 600;
+            "
+            >GitHub</a
+          >
+        </p>
+      </footer>
+    </main>
+
+    <template x-if="showCompareModal">
+      <div class="modal">
+        <div class="modal__backdrop" @click="closeCompareModal()"></div>
+        <div class="modal__content">
+          <div class="modal__header">
+            <h3 class="modal__title">Tracker Comparison</h3>
+            <button class="modal__close" @click="closeCompareModal()">✕</button>
+          </div>
+          <div class="modal__body">
+            <table class="tracker-table__main">
+              <thead>
+                <tr>
+                  <th>Property</th>
+                  <template
+                    x-for="tracker in selectedTrackers"
+                    :key="tracker.Name"
+                  >
+                    <th style="min-width: 150px; text-align: center">
+                      <div
+                        x-text="tracker.Name"
+                        style="color: var(--accent-primary)"
+                      ></div>
+                      <button
+                        @click="removeFromComparison(tracker)"
+                        style="
+                          background: none;
+                          border: none;
+                          color: var(--error);
+                          cursor: pointer;
+                          font-size: 0.7rem;
+                          margin-top: 0.5rem;
+                        "
+                      >
+                        Remove
+                      </button>
+                    </th>
+                  </template>
+                </tr>
+              </thead>
+              <tbody>
+                <template
+                  x-for="field in ['Type', 'Codebase', 'Users', 'Torrents', 'Peers', 'Ratio', 'Ratio Diff', 'Freeleech', 'Points', 'Hit & Run', 'Birthdate', 'Join', 'Join Diff']"
+                >
+                  <tr class="tracker-table__row">
+                    <td
+                      class="tracker-table__cell"
+                      style="font-weight: 700; color: var(--text-secondary)"
+                      x-text="field"
+                    ></td>
+                    <template
+                      x-for="tracker in selectedTrackers"
+                      :key="tracker.Name"
+                    >
+                      <td
+                        class="tracker-table__cell"
+                        style="text-align: center"
+                      >
+                        <template
+                          x-if="['Ratio', 'Ratio Diff', 'Join', 'Join Diff', 'Freeleech', 'Points', 'Hit & Run'].includes(field)"
+                        >
+                          <span
+                            class="badge"
+                            :class="getBadgeClass(tracker[field])"
+                            x-text="tracker[field]"
+                          ></span>
+                        </template>
+                        <template
+                          x-if="!['Ratio', 'Ratio Diff', 'Join', 'Join Diff', 'Freeleech', 'Points', 'Hit & Run'].includes(field)"
+                        >
+                          <span x-text="tracker[field] || '-'"></span>
+                        </template>
+                      </td>
+                    </template>
+                  </tr>
+                </template>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </template>
+  </body>
 </html>
