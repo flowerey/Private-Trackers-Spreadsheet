@@ -2,7 +2,7 @@ name: Sync Upstream Trackers
 
 on:
   schedule:
-    - cron: "0 0 * * *" # Runs daily
+    - cron: "0 0 * * *"
   workflow_dispatch:
 
 jobs:
@@ -23,6 +23,16 @@ jobs:
       - name: Install dependencies
         run: pip install requests pyyaml
 
+      - name: Download Jackett Definitions
+        run: |
+          git clone --depth 1 --no-checkout https://github.com/Jackett/Jackett.git jackett_temp
+          cd jackett_temp
+          git sparse-checkout set src/Jackett.Common/Indexers/Definitions
+          git checkout
+          mv src/Jackett.Common/Indexers/Definitions ../definitions
+          cd ..
+          rm -rf jackett_temp
+
       - name: Sync trackers
         run: |
           python update_types.py
@@ -36,6 +46,6 @@ jobs:
           if git diff --staged --quiet; then
             echo "No changes to commit."
           else
-            git commit -m "chore: sync tracker stats and cats from upstream"
+            git commit -m "chore: update tracker categories and sync stats"
             git push
           fi

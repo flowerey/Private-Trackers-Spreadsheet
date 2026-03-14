@@ -3,14 +3,11 @@ import yaml
 import os
 import re
 
-# Configuration
-JACKETT_DIR = "/opt/Jackett/Definitions"
+JACKETT_DIR = "definitions"
 TRACKERS_FILE = "trackers.json"
-
 
 def normalize_name(name):
     return re.sub(r"[^a-zA-Z0-9]", "", name).lower()
-
 
 def extract_categories(yaml_path):
     try:
@@ -22,14 +19,12 @@ def extract_categories(yaml_path):
 
         unique_cats = set()
         is_adult_content = False
-
         adult_keywords = {"xxx", "porn", "adult"}
 
         for mapping in data["caps"]["categorymappings"]:
             cat = mapping.get("cat", "")
             if cat:
                 cat_lower = cat.lower()
-
                 if any(keyword in cat_lower for keyword in adult_keywords):
                     is_adult_content = True
 
@@ -44,23 +39,21 @@ def extract_categories(yaml_path):
             return None
 
         return ", ".join(sorted(list(unique_cats)))
-
     except Exception as e:
         print(f"Error parsing {yaml_path}: {e}")
         return None
-
 
 def main():
     if not os.path.exists(TRACKERS_FILE):
         print(f"Error: {TRACKERS_FILE} not found.")
         return
 
+    if not os.path.exists(JACKETT_DIR):
+        print(f"Error: Jackett definitions directory '{JACKETT_DIR}' not found.")
+        return
+
     with open(TRACKERS_FILE, "r", encoding="utf-8") as f:
         data = json.load(f)
-
-    if not os.path.exists(JACKETT_DIR):
-        print(f"Error: Jackett directory {JACKETT_DIR} not found.")
-        return
 
     jackett_files = os.listdir(JACKETT_DIR)
 
@@ -73,39 +66,31 @@ def main():
             filename_map[normalize_name(base)] = f
 
     updated_count = 0
-    not_found = []
+    not_found_count = 0
 
     for tracker in data.get("trackers", []):
         name = tracker.get("Name", "")
         norm_name = normalize_name(name)
-
         match = filename_map.get(norm_name)
 
         if match:
             yaml_path = os.path.join(JACKETT_DIR, match)
             new_type = extract_categories(yaml_path)
-
-            if new_type:
-                if tracker.get("Type") != new_type:
-                    tracker["Type"] = new_type
-                    updated_count += 1
-            else:
-                not_found.append(f"{name} (no categories found in YAML)")
+            if new_type and tracker.get("Type") != new_type:
+                tracker["Type"] = new_type
+                updated_count += 1
         else:
-            not_found.append(f"{name} (no YAML match found in {JACKETT_DIR})")
+            not_found_count += 1
 
     if updated_count > 0:
         with open(TRACKERS_FILE, "w", encoding="utf-8") as f:
             json.dump(data, f, indent=2, ensure_ascii=False)
         print(f"Successfully updated {updated_count} trackers.")
     else:
-        print("No updates found.")
+        print("No category updates required.")
 
-    if not_found:
-        print(f"\nSkipped {len(not_found)} trackers:")
-        for item in not_found:
-            print(f" - {item}")
-
+    if not_found_count > 0:
+        print(f"Note: {not_found_count} trackers had no matching Jackett definition.")
 
 if __name__ == "__main__":
     main()
