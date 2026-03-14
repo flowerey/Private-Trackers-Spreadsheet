@@ -21,10 +21,10 @@ jobs:
           python-version: "3.14"
 
       - name: Install dependencies
-        run: pip install requests
+        run: pip install requests pyyaml
 
       - name: Sync trackers
-        run:
+        run: |
           python update_types.py
           python sync_trackers.py
 
@@ -36,6 +36,6 @@ jobs:
           if git diff --staged --quiet; then
             echo "No changes to commit."
           else
-            git commit -m "chore: sync tracker stats from upstream"
+            git commit -m "chore: sync tracker stats and cats from upstream"
             git push
           fi
