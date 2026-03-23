@@ -541,6 +541,24 @@
       "Updated": "2024-10-30"
     },
     {
+      "Name": "C411",
+      "Abbreviation": "-",
+      "Type": "General, French",
+      "Codebase": "Custom",
+      "Users": "96,410",
+      "Torrents": "30,012",
+      "Peers": "468,794",
+      "Ratio": "Yes",
+      "Ratio Diff": "Easy",
+      "Freeleech": "Yes",
+      "Points": "No",
+      "Hit & Run": "Yes",
+      "Birthdate": "2026",
+      "Join": "Invite, Open",
+      "Join Diff": "Easy",
+      "Updated": "2026-03-15"
+    },
+    {
       "Name": "CGPeers",
       "Abbreviation": "CGP",
       "Type": "Other, PC",
@@ -1103,9 +1121,9 @@
       "Abbreviation": "G3MINI",
       "Type": "General, French",
       "Codebase": "UNIT3D",
-      "Users": "3,828",
-      "Torrents": "2,321",
-      "Peers": "13,405",
+      "Users": "12,564",
+      "Torrents": "9,585",
+      "Peers": "80,749",
       "Ratio": "Yes",
       "Ratio Diff": "Easy",
       "Freeleech": "Yes",
@@ -1114,7 +1132,7 @@
       "Birthdate": "2026",
       "Join": "Invite, Application",
       "Join Diff": "Easy",
-      "Updated": "2026-02-08"
+      "Updated": "2026-03-15"
     },
     {
       "Name": "Generation Free",
@@ -1623,10 +1641,10 @@
     {
       "Name": "La Cale",
       "Abbreviation": "-",
-      "Type": "Audio, Books, Console, Movies, Other, PC, TV, XXX",
+      "Type": "General, French",
       "Codebase": "Custom",
-      "Users": "18,017",
-      "Torrents": "15,337",
+      "Users": "21,374",
+      "Torrents": "27,120",
       "Peers": "-",
       "Ratio": "Yes",
       "Ratio Diff": "Easy",
@@ -1636,7 +1654,7 @@
       "Birthdate": "2025",
       "Join": "Closed",
       "Join Diff": "Moderate",
-      "Updated": "2026-02-08"
+      "Updated": "2026-03-15"
     },
     {
       "Name": "Last Digital Underground",
@@ -3189,11 +3207,11 @@
     {
       "Name": "Torr9",
       "Abbreviation": "-",
-      "Type": "Audio, Books, Console, Movies, Other, PC, TV, XXX",
+      "Type": "General, French",
       "Codebase": "Custom",
-      "Users": "10,000",
-      "Torrents": "17,151",
-      "Peers": "80,000",
+      "Users": "67,711",
+      "Torrents": "153,946",
+      "Peers": "723,163",
       "Ratio": "Yes",
       "Ratio Diff": "-",
       "Freeleech": "Yes",
@@ -3202,7 +3220,7 @@
       "Birthdate": "2026",
       "Join": "Invite, Open",
       "Join Diff": "Easy",
-      "Updated": "2026-02-08"
+      "Updated": "2026-03-15"
     },
     {
       "Name": "Torrent Explosiv",
