@@ -687,11 +687,11 @@
     {
       "Name": "ClearJAV (API)",
       "Abbreviation": "CJ",
-      "Type": "XXX",
+      "Type": "Porn, Asian, JAV",
       "Codebase": "UNIT3D",
-      "Users": "1,370",
-      "Torrents": "6,529",
-      "Peers": "39,009",
+      "Users": "2,335",
+      "Torrents": "13,638",
+      "Peers": "54,833",
       "Ratio": "Yes",
       "Ratio Diff": "Easy",
       "Freeleech": "Yes",
@@ -700,7 +700,7 @@
       "Birthdate": "2025",
       "Join": "Application, Invite",
       "Join Diff": "Easy",
-      "Updated": "2026-01-24"
+      "Updated": "2026-04-02"
     },
     {
       "Name": "Coastal Music Crew",
@@ -921,11 +921,11 @@
     {
       "Name": "Empornium",
       "Abbreviation": "EMP",
-      "Type": "XXX",
+      "Type": "Porn",
       "Codebase": "Luminance",
-      "Users": "72,007",
-      "Torrents": "741,886",
-      "Peers": "8,737,345",
+      "Users": "71,171",
+      "Torrents": "767,675",
+      "Peers": "8,898,486",
       "Ratio": "Yes",
       "Ratio Diff": "Easy",
       "Freeleech": "Yes",
@@ -934,16 +934,16 @@
       "Birthdate": "2011",
       "Join": "Invite, Recruitment",
       "Join Diff": "Moderate",
-      "Updated": "2025-11-01"
+      "Updated": "2026-04-02"
     },
     {
       "Name": "ExoticaZ",
       "Abbreviation": "EZ",
       "Type": "Porn, Asian",
       "Codebase": "Custom",
-      "Users": "54,689",
-      "Torrents": "145,458",
-      "Peers": "952,580",
+      "Users": "56,104",
+      "Torrents": "150,123",
+      "Peers": "1,024,493",
       "Ratio": "Yes",
       "Ratio Diff": "Easy",
       "Freeleech": "Yes",
@@ -952,7 +952,7 @@
       "Birthdate": "2005",
       "Join": "Application, Invite, Recruitment",
       "Join Diff": "Easy",
-      "Updated": "2026-01-14"
+      "Updated": "2026-04-02"
     },
     {
       "Name": "ExtremeBits",
@@ -1047,20 +1047,20 @@
     {
       "Name": "Femdomcult",
       "Abbreviation": "FDC",
-      "Type": "XXX",
+      "Type": "Porn",
       "Codebase": "Gazelle",
-      "Users": "16,354",
-      "Torrents": "48,186",
-      "Peers": "212,685",
+      "Users": "17,671",
+      "Torrents": "68,603",
+      "Peers": "322,567",
       "Ratio": "Yes",
-      "Ratio Diff": "-",
-      "Freeleech": "-",
+      "Ratio Diff": "Easy",
+      "Freeleech": "Yes",
       "Points": "Yes",
-      "Hit & Run": "-",
-      "Birthdate": "-",
+      "Hit & Run": "No",
+      "Birthdate": "2014",
       "Join": "Invite, Recruitment",
-      "Join Diff": "-",
-      "Updated": "2025-05-25"
+      "Join Diff": "Moderate",
+      "Updated": "2026-04-02"
     },
     {
       "Name": "FileList",
@@ -1317,11 +1317,11 @@
     {
       "Name": "HappyFappy",
       "Abbreviation": "HF",
-      "Type": "XXX",
+      "Type": "Porn",
       "Codebase": "Luminance",
-      "Users": "50,192",
-      "Torrents": "78,590",
-      "Peers": "818,527",
+      "Users": "37,775",
+      "Torrents": "94,032",
+      "Peers": "936,607",
       "Ratio": "Yes",
       "Ratio Diff": "Easy",
       "Freeleech": "Yes",
@@ -1329,8 +1329,8 @@
       "Hit & Run": "No",
       "Birthdate": "2021",
       "Join": "Closed",
-      "Join Diff": "-",
-      "Updated": "2026-01-10"
+      "Join Diff": "Easy",
+      "Updated": "2026-04-02"
     },
     {
       "Name": "Hawke-UNO",
