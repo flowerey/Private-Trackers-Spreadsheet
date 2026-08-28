@@ -1,4 +1,3 @@
-const path = require('path');
 const fs = require('fs');
 const yaml = require('js-yaml');
 const { fetch } = require('undici');
@@ -179,7 +178,7 @@ function authHeaders(extra) {
 	if (GITHUB_TOKEN) {
 		headers['Authorization'] = `Bearer ${GITHUB_TOKEN}`;
 	}
-	return Object.assign(headers, extra || {});
+	return { ...headers, ...(extra || {}) };
 }
 
 function sleep(ms) {
@@ -289,7 +288,7 @@ async function main() {
 		await mapWithConcurrency(definitions, 3, async (entry) => {
 			try {
 				const content = await githubRawByPath(OWNER, REPO, BRANCH, entry.path);
-				let data = yaml.safeLoad(content, {skipInvalid: true, json: true});
+				let data = yaml.load(content, {skipInvalid: true, json: true});
 				if (data && data.type === 'private') {
 					let tracker = {
 						name: '',
@@ -306,12 +305,6 @@ async function main() {
 					tracker.apiSupport = extractApiSupport(data.caps && data.caps.modes)
 					let rawTypes = []
 					if (data.caps && data.caps.categorymappings) {
-						data.caps.categorymappings.forEach(function(category) {
-							rawTypes.push(cleanTypeDefinition(category.cat.split("/")[0]))
-						})
-						rawTypes = Array.from(new Set(rawTypes))
-						tracker.type = normalizeJackettType(rawTypes)
-					} else if (data.caps && data.caps.categories && data.caps.categorymappings) {
 						data.caps.categorymappings.forEach(function(category) {
 							rawTypes.push(cleanTypeDefinition(category.cat.split("/")[0]))
 						})

@@ -270,23 +270,6 @@ body {
 }
 
 /* Contribute Section - Keep constrained */
-.tracker-contribute {
-  margin-bottom: 3rem;
-  max-width: 1400px;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-.tracker-contribute__message {
-  background: var(--gradient-red);
-  border: 1px solid var(--accent-primary);
-  border-radius: 12px;
-  padding: 1.5rem;
-  text-align: center;
-  font-size: 1.1rem;
-  color: var(--text-secondary);
-}
-
 .tracker-contribute__link {
   color: var(--accent-primary);
   text-decoration: none;
@@ -1309,6 +1292,11 @@ body.modal-open {
 }
 
 /* Scrollbar Styling */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: var(--scrollbar-thumb) var(--scrollbar-track);
+}
+
 ::-webkit-scrollbar {
   width: 8px;
   height: 8px;
@@ -1322,7 +1310,6 @@ body.modal-open {
 ::-webkit-scrollbar-thumb {
   background: var(--scrollbar-thumb);
   border-radius: 4px;
-  transition: all 0.3s ease;
 }
 
 ::-webkit-scrollbar-thumb:hover {
@@ -1482,12 +1469,6 @@ body.modal-open {
     min-width: 1600px;
   }
 
-  .tracker-contribute {
-    margin-left: 1.5rem;
-    margin-right: 1.5rem;
-    max-width: calc(100% - 3rem);
-  }
-
   .tracker-privacy {
     margin-left: 1.5rem;
     margin-right: 1.5rem;
@@ -1518,7 +1499,7 @@ body.modal-open {
   }
 
   .tracker-table__search-container {
-    max-width: none;,
+    max-width: none;
     width: 100%;
   }
 
@@ -1625,12 +1606,6 @@ body.modal-open {
     max-width: 200px;
   }
 
-  .tracker-contribute {
-    margin-left: 1rem;
-    margin-right: 1rem;
-    max-width: calc(100% - 2rem);
-  }
-
   .tracker-privacy {
     margin-left: 1rem;
     margin-right: 1rem;
@@ -1643,7 +1618,7 @@ body.modal-open {
     font-size: 1.5rem;
   }
 
-  .tracker-contribute__message, .tracker-jackett__message {
+  .tracker-jackett__message {
     padding: 1rem;
     font-size: 1rem;
   }
@@ -1658,5 +1633,15 @@ body.modal-open {
 
   .tracker-table__main {
     min-width: 2000px;
+  }
+}
+
+/* Accessibility: Reduced Motion */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
   }
 }
