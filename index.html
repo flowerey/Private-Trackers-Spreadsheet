@@ -124,6 +124,19 @@
                                             </template>
                                         </tr>
                                         <tr>
+                                            <td>URL</td>
+                                            <template x-for="tracker in selectedTrackers" :key="tracker.Name">
+                                                <td>
+                                                    <template x-if="tracker.URL && tracker.URL !== '-'">
+                                                        <a :href="tracker.URL" target="_blank" rel="noopener noreferrer" x-text="tracker.URL.replace(/^https?:\/\//, '').replace(/\/$/, '')"></a>
+                                                    </template>
+                                                    <template x-if="!tracker.URL || tracker.URL === '-'">
+                                                        <span x-text="'-'"></span>
+                                                    </template>
+                                                </td>
+                                            </template>
+                                        </tr>
+                                        <tr>
                                             <td>Type</td>
                                             <template x-for="tracker in selectedTrackers" :key="tracker.Name">
                                                 <td x-text="tracker.Type"></td>
@@ -240,6 +253,9 @@
                         <th @click="sortBy('Abbreviation')" class="tracker-table__sortable">
                             Abbr <span class="icon icon-sort"></span>
                         </th>
+                        <th @click="sortBy('URL')" class="tracker-table__sortable">
+                            URL <span class="icon icon-sort"></span>
+                        </th>
                         <th @click="sortBy('Type')" class="tracker-table__sortable">
                             Type <span class="icon icon-sort"></span>
                         </th>
@@ -297,104 +313,128 @@
                         <span style="font-size: 1rem;" x-text="`${filteredTrackers.length} of ${trackers.length} trackers`"></span>
                     </div>
                 </div>
-                <button class="tracker-table__compare-btn" 
-                        @click="openCompareModal()" 
-                        :disabled="selectedTrackers.length < 2"
-                        @mouseenter="selectedTrackers.length < 2 ? showTooltip($event, 'Select at least two trackers to compare') : null"
-                        @mouseleave="hideTooltip()">
-                    Compare Trackers
-                    <span x-show="selectedTrackers.length > 0" class="tracker-table__compare-count" x-text="selectedTrackers.length"></span>
-                </button>
+                <div class="tracker-table__actions">
+                    <button class="tracker-table__compare-btn" 
+                            @click="openCompareModal()" 
+                            :disabled="selectedTrackers.length < 2"
+                            @mouseenter="selectedTrackers.length < 2 ? showTooltip($event, 'Select at least two trackers to compare') : null"
+                            @mouseleave="hideTooltip()">
+                        Compare
+                        <span x-show="selectedTrackers.length > 0" class="tracker-table__compare-count" x-text="selectedTrackers.length"></span>
+                    </button>
+                    <button class="tracker-table__export-btn" @click="exportToCSV()" title="Export to CSV">
+                        CSV
+                    </button>
+                    <div class="tracker-table__col-toggle" @click.away="showColumnToggle = false">
+                        <button class="tracker-table__export-btn" @click="showColumnToggle = !showColumnToggle" title="Toggle columns">
+                            Columns
+                        </button>
+                        <div class="tracker-table__col-menu" x-show="showColumnToggle" x-transition>
+                            <template x-for="col in allColumns" :key="col">
+                                <label class="tracker-table__col-item">
+                                    <input type="checkbox" :checked="isColumnVisible(col)" @change="toggleColumn(col)">
+                                    <span x-text="col"></span>
+                                </label>
+                            </template>
+                        </div>
+                    </div>
+                </div>
             </div>
             <div class="tracker-table__container">
                 <table class="tracker-table__main">
                     <thead>
                     <tr>
-                        <th @click="sortBy('Name')"
+                        <th x-show="isColumnVisible('Name')" @click="sortBy('Name')"
                             @mouseenter="showTooltip($event, 'The tracker\'s name')"
                             @mouseleave="hideTooltip()"
                             class="tracker-table__sortable">
                             Name <span class="icon icon-sort"></span>
                         </th>
-                        <th @click="sortBy('Abbreviation')"
+                        <th x-show="isColumnVisible('Abbreviation')" @click="sortBy('Abbreviation')"
                             @mouseenter="showTooltip($event, 'Common abbreviation or short name for the tracker')"
                             @mouseleave="hideTooltip()"
                             class="tracker-table__sortable">
                             Abbr <span class="icon icon-sort"></span>
                         </th>
-                        <th @click="sortBy('Type')"
+                        <th x-show="isColumnVisible('URL')" @click="sortBy('URL')"
+                            @mouseenter="showTooltip($event, 'Tracker website URL')"
+                            @mouseleave="hideTooltip()"
+                            class="tracker-table__sortable">
+                            URL <span class="icon icon-sort"></span>
+                        </th>
+                        <th x-show="isColumnVisible('Type')" @click="sortBy('Type')"
                             @mouseenter="showTooltip($event, 'Type of content the tracker specializes in (Movies, TV, Music, General, etc.)')"
                             @mouseleave="hideTooltip()"
                             class="tracker-table__sortable">
                             Type <span class="icon icon-sort"></span>
                         </th>
-                        <th @click="sortBy('Codebase')"
+                        <th x-show="isColumnVisible('Codebase')" @click="sortBy('Codebase')"
                             @mouseenter="showTooltip($event, 'The software/codebase the tracker runs on (Gazelle, UNIT3D, etc.)')"
                             @mouseleave="hideTooltip()"
                             class="tracker-table__sortable">
                             Codebase <span class="icon icon-sort"></span>
                         </th>
-                        <th @click="sortBy('Observatory Grade')"
+                        <th x-show="isColumnVisible('Observatory Grade')" @click="sortBy('Observatory Grade')"
                             @mouseenter="showTooltip($event, 'Security grade from Mozilla Observatory (A+ is best, F is worst)')"
                             @mouseleave="hideTooltip()"
                             class="tracker-table__sortable">
                             Moz Grade <span class="icon icon-sort"></span>
                         </th>
-                        <th @click="sortBy('Users')"
+                        <th x-show="isColumnVisible('Users')" @click="sortBy('Users')"
                             @mouseenter="showTooltip($event, 'Total number of registered users on the tracker')"
                             @mouseleave="hideTooltip()"
                             class="tracker-table__sortable">
                             Users <span class="icon icon-sort"></span>
                         </th>
-                        <th @click="sortBy('Torrents')"
+                        <th x-show="isColumnVisible('Torrents')" @click="sortBy('Torrents')"
                             @mouseenter="showTooltip($event, 'Total number of torrents available on the tracker')"
                             @mouseleave="hideTooltip()"
                             class="tracker-table__sortable">
                             Torrents <span class="icon icon-sort"></span>
                         </th>
-                        <th @click="sortBy('Peers')"
+                        <th x-show="isColumnVisible('Peers')" @click="sortBy('Peers')"
                             @mouseenter="showTooltip($event, 'Total number of peers (seeders + leechers) across all torrents')"
                             @mouseleave="hideTooltip()"
                             class="tracker-table__sortable">
                             Peers <span class="icon icon-sort"></span>
                         </th>
-                        <th @click="sortBy('Ratio')"
+                        <th x-show="isColumnVisible('Ratio')" @click="sortBy('Ratio')"
                             @mouseenter="showTooltip($event, 'Whether the tracker enforces upload/download ratio requirements')"
                             @mouseleave="hideTooltip()"
                             class="tracker-table__sortable">
                             Ratio <span class="icon icon-sort"></span>
                         </th>
-                        <th @click="sortBy('Ratio Diff')"
+                        <th x-show="isColumnVisible('Ratio Diff')" @click="sortBy('Ratio Diff')"
                             @mouseenter="showTooltip($event, 'How difficult it is to maintain the required ratio (Easy, Moderate, Tough)')"
                             @mouseleave="hideTooltip()"
                             class="tracker-table__sortable">
                             Ratio Diff <span class="icon icon-sort"></span>
                         </th>
-                        <th @click="sortBy('Freeleech')"
+                        <th x-show="isColumnVisible('Freeleech')" @click="sortBy('Freeleech')"
                             @mouseenter="showTooltip($event, 'Whether the tracker offers freeleech content (downloads don\'t count against ratio)')"
                             @mouseleave="hideTooltip()"
                             class="tracker-table__sortable">
                             Freeleech <span class="icon icon-sort"></span>
                         </th>
-                        <th @click="sortBy('Points')"
+                        <th x-show="isColumnVisible('Points')" @click="sortBy('Points')"
                             @mouseenter="showTooltip($event, 'Whether the tracker has a bonus points system (Points, BON, Lumens, etc.)')"
                             @mouseleave="hideTooltip()"
                             class="tracker-table__sortable">
                             Points <span class="icon icon-sort"></span>
                         </th>
-                        <th @click="sortBy('Hit & Run')" class="tracker-table__sortable">
+                        <th x-show="isColumnVisible('Hit & Run')" @click="sortBy('Hit & Run')" class="tracker-table__sortable">
                             H&R <span class="icon icon-sort"></span>
                         </th>
-                        <th @click="sortBy('Birthdate')" class="tracker-table__sortable">
+                        <th x-show="isColumnVisible('Birthdate')" @click="sortBy('Birthdate')" class="tracker-table__sortable">
                             B-Day <span class="icon icon-sort"></span>
                         </th>
-                        <th @click="sortBy('Join')" class="tracker-table__sortable">
+                        <th x-show="isColumnVisible('Join')" @click="sortBy('Join')" class="tracker-table__sortable">
                             Join <span class="icon icon-sort"></span>
                         </th>
-                        <th @click="sortBy('Join Diff')" class="tracker-table__sortable">
+                        <th x-show="isColumnVisible('Join Diff')" @click="sortBy('Join Diff')" class="tracker-table__sortable">
                             Join Diff <span class="icon icon-sort"></span>
                         </th>
-                        <th @click="sortBy('Updated')" class="tracker-table__sortable">
+                        <th x-show="isColumnVisible('Updated')" @click="sortBy('Updated')" class="tracker-table__sortable">
                             Updated <span class="icon icon-sort"></span>
                         </th>
                     </tr>
@@ -402,7 +442,7 @@
                     <tbody>
                     <template x-for="tracker in filteredTrackers" :key="tracker.Name">
                         <tr class="tracker-table__row">
-                            <td class="tracker-table__cell tracker-table__cell--name">
+                            <td x-show="isColumnVisible('Name')" class="tracker-table__cell tracker-table__cell--name">
                                 <label class="tracker-table__checkbox-label" style="margin-right: 8px;">
                                     <input type="checkbox" 
                                            class="tracker-table__checkbox" 
@@ -413,73 +453,95 @@
                                 </label>
                                 <span x-text="tracker.Name"></span>
                             </td>
-                            <td class="tracker-table__cell" x-text="tracker.Abbreviation"></td>
-                            <td class="tracker-table__cell" x-text="tracker.Type"></td>
-                            <td class="tracker-table__cell" x-text="tracker.Codebase"></td>
-                            <td class="tracker-table__cell"
-                                :class="tracker['Observatory Grade'] === 'A+' || tracker['Observatory Grade'] === 'A +' ? 'tracker-table__cell--grade-a-plus' :
+                            <td x-show="isColumnVisible('Abbreviation')" class="tracker-table__cell" x-text="tracker.Abbreviation"></td>
+                            <td x-show="isColumnVisible('URL')" class="tracker-table__cell tracker-table__cell--url">
+                                <template x-if="tracker.URL && tracker.URL !== '-'">
+                                    <a :href="tracker.URL" target="_blank" rel="noopener noreferrer" class="tracker-table__link" x-text="tracker.URL.replace(/^https?:\/\//, '').replace(/\/$/, '')"></a>
+                                </template>
+                                <template x-if="!tracker.URL || tracker.URL === '-'">
+                                    <span x-text="'-'"></span>
+                                </template>
+                            </td>
+                            <td x-show="isColumnVisible('Type')" class="tracker-table__cell" x-text="tracker.Type"></td>
+                            <td x-show="isColumnVisible('Codebase')" class="tracker-table__cell" x-text="tracker.Codebase"></td>
+                            <td x-show="isColumnVisible('Observatory Grade')" class="tracker-table__cell"
+                                :class="tracker['Observatory Grade'] === 'A+' ? 'tracker-table__cell--grade-a-plus' :
                                         tracker['Observatory Grade'] === 'A' ? 'tracker-table__cell--grade-a' :
-                                        tracker['Observatory Grade'] === 'A-' || tracker['Observatory Grade'] === 'A -' ? 'tracker-table__cell--grade-a-minus' :
-                                        tracker['Observatory Grade'] === 'B+' || tracker['Observatory Grade'] === 'B +' ? 'tracker-table__cell--grade-b-plus' :
+                                        tracker['Observatory Grade'] === 'A-' ? 'tracker-table__cell--grade-a-minus' :
+                                        tracker['Observatory Grade'] === 'B+' ? 'tracker-table__cell--grade-b-plus' :
                                         tracker['Observatory Grade'] === 'B' ? 'tracker-table__cell--grade-b' :
-                                        tracker['Observatory Grade'] === 'B-' || tracker['Observatory Grade'] === 'B -' ? 'tracker-table__cell--grade-b-minus' :
-                                        tracker['Observatory Grade'] === 'C+' || tracker['Observatory Grade'] === 'C +' ? 'tracker-table__cell--grade-c-plus' :
+                                        tracker['Observatory Grade'] === 'B-' ? 'tracker-table__cell--grade-b-minus' :
+                                        tracker['Observatory Grade'] === 'C+' ? 'tracker-table__cell--grade-c-plus' :
                                         tracker['Observatory Grade'] === 'C' ? 'tracker-table__cell--grade-c' :
-                                        tracker['Observatory Grade'] === 'C-' || tracker['Observatory Grade'] === 'C -' ? 'tracker-table__cell--grade-c-minus' :
-                                        tracker['Observatory Grade'] === 'D+' || tracker['Observatory Grade'] === 'D +' ? 'tracker-table__cell--grade-d-plus' :
+                                        tracker['Observatory Grade'] === 'C-' ? 'tracker-table__cell--grade-c-minus' :
+                                        tracker['Observatory Grade'] === 'D+' ? 'tracker-table__cell--grade-d-plus' :
                                         tracker['Observatory Grade'] === 'D' ? 'tracker-table__cell--grade-d' :
-                                        tracker['Observatory Grade'] === 'D-' || tracker['Observatory Grade'] === 'D -' ? 'tracker-table__cell--grade-d-minus' :
+                                        tracker['Observatory Grade'] === 'D-' ? 'tracker-table__cell--grade-d-minus' :
                                         tracker['Observatory Grade'] === 'F' ? 'tracker-table__cell--grade-f' : ''"
                                 :data-value="tracker['Observatory Grade']"
                                 :style="(tracker['Observatory Grade'] && tracker['Observatory Grade'] !== '-' && tracker['Observatory Grade'].trim() !== '') ? 'color: transparent;' : ''">
                                 <span x-show="!tracker['Observatory Grade'] || tracker['Observatory Grade'] === '-' || tracker['Observatory Grade'].trim() === ''" x-text="tracker['Observatory Grade']"></span>
                             </td>
-                            <td class="tracker-table__cell" x-text="tracker.Users"></td>
-                            <td class="tracker-table__cell" x-text="tracker.Torrents"></td>
-                            <td class="tracker-table__cell" x-text="tracker.Peers"></td>
-                            <td class="tracker-table__cell"
+                            <td x-show="isColumnVisible('Users')" class="tracker-table__cell" x-text="tracker.Users"></td>
+                            <td x-show="isColumnVisible('Torrents')" class="tracker-table__cell" x-text="tracker.Torrents"></td>
+                            <td x-show="isColumnVisible('Peers')" class="tracker-table__cell" x-text="tracker.Peers"></td>
+                            <td x-show="isColumnVisible('Ratio')" class="tracker-table__cell"
                                 :class="tracker.Ratio === 'Yes' ? 'tracker-table__cell--yes' : tracker.Ratio === 'No' ? 'tracker-table__cell--no' : ''"
                                 :data-value="tracker.Ratio"
                                 :style="(tracker.Ratio === 'Yes' || tracker.Ratio === 'No') ? 'color: transparent;' : ''">
                                 <span x-show="tracker.Ratio !== 'Yes' && tracker.Ratio !== 'No'" x-text="tracker.Ratio"></span>
                             </td>
-                            <td class="tracker-table__cell"
+                            <td x-show="isColumnVisible('Ratio Diff')" class="tracker-table__cell"
                                 :class="tracker['Ratio Diff'] === 'Easy' ? 'tracker-table__cell--easy' : tracker['Ratio Diff'] === 'Moderate' ? 'tracker-table__cell--moderate' : tracker['Ratio Diff'] === 'Tough' ? 'tracker-table__cell--tough' : ''"
                                 :data-value="tracker['Ratio Diff']"
                                 :style="(tracker['Ratio Diff'] === 'Easy' || tracker['Ratio Diff'] === 'Moderate' || tracker['Ratio Diff'] === 'Tough') ? 'color: transparent;' : ''">
                                 <span x-show="tracker['Ratio Diff'] !== 'Easy' && tracker['Ratio Diff'] !== 'Moderate' && tracker['Ratio Diff'] !== 'Tough'" x-text="tracker['Ratio Diff']"></span>
                             </td>
-                            <td class="tracker-table__cell"
+                            <td x-show="isColumnVisible('Freeleech')" class="tracker-table__cell"
                                 :class="tracker.Freeleech === 'Yes' ? 'tracker-table__cell--yes' : tracker.Freeleech === 'No' ? 'tracker-table__cell--no' : ''"
                                 :data-value="tracker.Freeleech"
                                 :style="(tracker.Freeleech === 'Yes' || tracker.Freeleech === 'No') ? 'color: transparent;' : ''">
                                 <span x-show="tracker.Freeleech !== 'Yes' && tracker.Freeleech !== 'No'" x-text="tracker.Freeleech"></span>
                             </td>
-                            <td class="tracker-table__cell"
+                            <td x-show="isColumnVisible('Points')" class="tracker-table__cell"
                                 :class="tracker.Points === 'Yes' ? 'tracker-table__cell--yes' : tracker.Points === 'No' ? 'tracker-table__cell--no' : ''"
                                 :data-value="tracker.Points"
                                 :style="(tracker.Points === 'Yes' || tracker.Points === 'No') ? 'color: transparent;' : ''">
                                 <span x-show="tracker.Points !== 'Yes' && tracker.Points !== 'No'" x-text="tracker.Points"></span>
                             </td>
-                            <td class="tracker-table__cell"
+                            <td x-show="isColumnVisible('Hit & Run')" class="tracker-table__cell"
                                 :class="tracker['Hit & Run'] === 'Yes' ? 'tracker-table__cell--yes' : tracker['Hit & Run'] === 'No' ? 'tracker-table__cell--no' : ''"
                                 :data-value="tracker['Hit & Run']"
                                 :style="(tracker['Hit & Run'] === 'Yes' || tracker['Hit & Run'] === 'No') ? 'color: transparent;' : ''">
                                 <span x-show="tracker['Hit & Run'] !== 'Yes' && tracker['Hit & Run'] !== 'No'" x-text="tracker['Hit & Run']"></span>
                             </td>
-                            <td class="tracker-table__cell" x-text="tracker.Birthdate"></td>
-                            <td class="tracker-table__cell" x-text="tracker.Join"></td>
-                            <td class="tracker-table__cell"
+                            <td x-show="isColumnVisible('Birthdate')" class="tracker-table__cell" x-text="tracker.Birthdate"></td>
+                            <td x-show="isColumnVisible('Join')" class="tracker-table__cell" x-text="tracker.Join"></td>
+                            <td x-show="isColumnVisible('Join Diff')" class="tracker-table__cell"
                                 :class="tracker['Join Diff'] === 'Easy' ? 'tracker-table__cell--easy' : tracker['Join Diff'] === 'Moderate' ? 'tracker-table__cell--moderate' : tracker['Join Diff'] === 'Tough' ? 'tracker-table__cell--tough' : ''"
                                 :data-value="tracker['Join Diff']"
                                 :style="(tracker['Join Diff'] === 'Easy' || tracker['Join Diff'] === 'Moderate' || tracker['Join Diff'] === 'Tough') ? 'color: transparent;' : ''">
                                 <span x-show="tracker['Join Diff'] !== 'Easy' && tracker['Join Diff'] !== 'Moderate' && tracker['Join Diff'] !== 'Tough'" x-text="tracker['Join Diff']"></span>
                             </td>
-                            <td class="tracker-table__cell" x-text="tracker.Updated"></td>
+                            <td x-show="isColumnVisible('Updated')" class="tracker-table__cell" x-text="tracker.Updated"></td>
                         </tr>
                     </template>
                     </tbody>
                 </table>
+            </div>
+            <div class="tracker-chart">
+                <h3 class="tracker-chart__title">Codebase Distribution (Top 10)</h3>
+                <div class="tracker-chart__bars">
+                    <template x-for="[name, count] in codebaseStats" :key="name">
+                        <div class="tracker-chart__row">
+                            <span class="tracker-chart__label" x-text="name"></span>
+                            <div class="tracker-chart__bar-container">
+                                <div class="tracker-chart__bar" :style="`width: ${(count / codebaseMax) * 100}%`"></div>
+                                <span class="tracker-chart__count" x-text="count"></span>
+                            </div>
+                        </div>
+                    </template>
+                </div>
             </div>
         </section>
         <section class="tracker-jackett" x-data="jackettTable()">

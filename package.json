@@ -10,6 +10,9 @@
   },
   "scripts": {
     "update:jackett": "bun run read.js",
+    "validate": "python3 validate.py",
+    "normalize": "python3 normalize.py",
+    "healthcheck": "python3 healthcheck.py",
     "dev": "bun run bun.server.ts",
     "start": "bun run bun.server.ts"
   }

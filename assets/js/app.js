@@ -85,6 +85,9 @@ function trackerTable() {
         stickyHeaderWidth: 0,
         selectedTrackers: [],
         showCompareModal: false,
+        showColumnToggle: false,
+        visibleColumns: {},
+        allColumns: ['Name', 'Abbreviation', 'URL', 'Type', 'Codebase', 'Observatory Grade', 'Users', 'Torrents', 'Peers', 'Ratio', 'Ratio Diff', 'Freeleech', 'Points', 'Hit & Run', 'Birthdate', 'Join', 'Join Diff', 'Updated'],
         tooltip: {
             show: false,
             text: '',
@@ -93,8 +96,13 @@ function trackerTable() {
         },
         init() {
             this.loadTrackers();
-            // Set up scroll listener for sticky header
             this.setupStickyHeader();
+            this.loadVisibleColumns();
+            this.loadFromHash();
+            // Sync state to URL hash on changes
+            this.$watch('search', () => this.saveToHash());
+            this.$watch('sortColumn', () => this.saveToHash());
+            this.$watch('sortDirection', () => this.saveToHash());
         },
         setupStickyHeader() {
             const handleScroll = () => {
@@ -306,6 +314,84 @@ function trackerTable() {
             if (this.selectedTrackers.length < 2) {
                 this.closeCompareModal();
             }
+        },
+
+        // Column visibility
+        loadVisibleColumns() {
+            const saved = localStorage.getItem('visibleColumns');
+            if (saved) {
+                this.visibleColumns = JSON.parse(saved);
+            } else {
+                // Default: all visible
+                this.allColumns.forEach(c => this.visibleColumns[c] = true);
+            }
+        },
+        toggleColumn(col) {
+            this.visibleColumns[col] = !this.visibleColumns[col];
+            localStorage.setItem('visibleColumns', JSON.stringify(this.visibleColumns));
+        },
+        isColumnVisible(col) {
+            return this.visibleColumns[col] !== false;
+        },
+
+        // CSV Export
+        exportToCSV() {
+            const headers = this.allColumns.filter(c => this.isColumnVisible(c));
+            const rows = this.filteredTrackers.map(t =>
+                headers.map(h => {
+                    let val = t[h] || '-';
+                    // Escape quotes and wrap in quotes if contains comma
+                    if (val.includes(',') || val.includes('"')) {
+                        val = '"' + val.replace(/"/g, '""') + '"';
+                    }
+                    return val;
+                })
+            );
+            const csv = [headers.join(','), ...rows.map(r => r.join(','))].join('\n');
+            const blob = new Blob([csv], { type: 'text/csv;charset=utf-8;' });
+            const url = URL.createObjectURL(blob);
+            const link = document.createElement('a');
+            link.href = url;
+            link.download = 'private-trackers.csv';
+            link.click();
+            URL.revokeObjectURL(url);
+        },
+
+        // Codebase distribution
+        get codebaseStats() {
+            const stats = {};
+            this.trackers.forEach(t => {
+                const cb = t.Codebase || '-';
+                stats[cb] = (stats[cb] || 0) + 1;
+            });
+            return Object.entries(stats)
+                .sort((a, b) => b[1] - a[1])
+                .slice(0, 10);
+        },
+        get codebaseMax() {
+            return Math.max(...this.codebaseStats.map(s => s[1]), 1);
+        },
+
+        // URL hash state
+        saveToHash() {
+            const params = new URLSearchParams();
+            if (this.search) params.set('q', this.search);
+            if (this.sortColumn) params.set('sort', this.sortColumn);
+            if (this.sortDirection !== 'asc') params.set('dir', this.sortDirection);
+            const hash = params.toString();
+            if (hash) {
+                history.replaceState(null, '', '#' + hash);
+            } else {
+                history.replaceState(null, '', window.location.pathname + window.location.search);
+            }
+        },
+        loadFromHash() {
+            const hash = window.location.hash.slice(1);
+            if (!hash) return;
+            const params = new URLSearchParams(hash);
+            if (params.has('q')) this.search = params.get('q');
+            if (params.has('sort')) this.sortColumn = params.get('sort');
+            if (params.has('dir')) this.sortDirection = params.get('dir');
         }
     }
 }

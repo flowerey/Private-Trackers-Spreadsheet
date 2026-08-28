@@ -1,0 +1,106 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Private Trackers Spreadsheet",
+  "description": "Schema for trackers.json - the curated private BitTorrent tracker database",
+  "type": "object",
+  "required": ["trackers"],
+  "properties": {
+    "trackers": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "Name", "Abbreviation", "Type", "Codebase", "Observatory Grade",
+          "Users", "Torrents", "Peers", "Ratio", "Ratio Diff",
+          "Freeleech", "Points", "Hit & Run", "Birthdate", "Join",
+          "Join Diff", "Updated"
+        ],
+        "properties": {
+          "Name": {
+            "type": "string",
+            "minLength": 1,
+            "description": "Tracker name"
+          },
+          "Abbreviation": {
+            "type": "string",
+            "description": "Short name or abbreviation. Use '-' if none."
+          },
+          "URL": {
+            "type": "string",
+            "description": "Tracker website URL. Auto-populated from Jackett if available."
+          },
+          "Type": {
+            "type": "string",
+            "pattern": "^[A-Za-z0-9 /,+'-]+$",
+            "description": "Content categories. Multiple comma-separated. Language/region may follow content types."
+          },
+          "Codebase": {
+            "type": "string",
+            "description": "Software platform the tracker runs on."
+          },
+          "Observatory Grade": {
+            "type": "string",
+            "enum": ["A+", "A", "A-", "B+", "B", "B-", "C+", "C", "C-", "D+", "D", "D-", "F", "-"],
+            "description": "Mozilla Observatory security grade. Use '-' if unknown."
+          },
+          "Users": {
+            "type": "string",
+            "description": "Total registered users. Use '-' if unknown."
+          },
+          "Torrents": {
+            "type": "string",
+            "description": "Total torrents. Use '-' if unknown."
+          },
+          "Peers": {
+            "type": "string",
+            "description": "Total peers (seeders + leechers). Use '-' if unknown."
+          },
+          "Ratio": {
+            "type": "string",
+            "enum": ["Yes", "No", "-"],
+            "description": "Whether ratio is enforced."
+          },
+          "Ratio Diff": {
+            "type": "string",
+            "enum": ["Easy", "Moderate", "Tough", "-"],
+            "description": "How hard ratio is to maintain."
+          },
+          "Freeleech": {
+            "type": "string",
+            "enum": ["Yes", "No", "Partial", "-"],
+            "description": "Freeleech availability."
+          },
+          "Points": {
+            "type": "string",
+            "enum": ["Yes", "No", "-"],
+            "description": "Whether bonus points system exists."
+          },
+          "Hit & Run": {
+            "type": "string",
+            "enum": ["Yes", "No", "-"],
+            "description": "Hit-and-run policy enforced."
+          },
+          "Birthdate": {
+            "type": "string",
+            "description": "Year tracker was founded. Use '-' if unknown."
+          },
+          "Join": {
+            "type": "string",
+            "description": "How to join, comma-separated. Allowed values: Application, Closed, Donation, Interview, Invite, Open, Recruitment."
+          },
+          "Join Diff": {
+            "type": "string",
+            "enum": ["Easy", "Moderate", "Tough", "Unreasonable", "-"],
+            "description": "Difficulty to get in."
+          },
+          "Updated": {
+            "type": "string",
+            "pattern": "^\\d{4}-\\d{2}-\\d{2}$",
+            "description": "Last updated date in YYYY-MM-DD format."
+          }
+        },
+        "additionalProperties": false
+      }
+    }
+  }
+}

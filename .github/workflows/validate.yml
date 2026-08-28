@@ -1,0 +1,25 @@
+name: Validate trackers.json
+on:
+  pull_request:
+    paths:
+      - 'trackers.json'
+      - 'schema.json'
+  push:
+    branches: [master, main]
+    paths:
+      - 'trackers.json'
+      - 'schema.json'
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.x'
+      - name: Install jsonschema
+        run: pip install jsonschema
+      - name: Validate trackers.json against schema
+        run: python3 validate.py

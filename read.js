@@ -123,6 +123,54 @@ function cleanTypeDefinition(type) {
 	return types.get(type) || type
 }
 
+// Map Torznab top-level categories to friendly tracker type names
+// Used to generate clean Type field for trackers2.json
+const categoryToType = {
+	'Movies': 'Movie',
+	'TV': 'TV',
+	'Audio': 'Music',
+	'Books': 'eBooks',
+	'Console': 'Games',
+	'PC': 'PC',
+	'XXX': 'Porn',
+	'General': 'General',
+}
+
+// Extract unique top-level categories from raw category mappings
+function extractTopLevelCategories(rawTypes) {
+	const topLevel = new Set()
+	for (const t of rawTypes) {
+		const top = t.split('/')[0]
+		if (top && top !== 'General') { // 'General' comes from 'Other' mapping
+			topLevel.add(top)
+		} else if (top === 'General') {
+			topLevel.add('General')
+		}
+	}
+	return Array.from(topLevel)
+}
+
+// Generate a normalized Type string from Jackett categories
+// If 3+ top-level categories, collapse to "General"
+function normalizeJackettType(rawTypes) {
+	const topLevels = extractTopLevelCategories(rawTypes)
+	const mapped = topLevels
+		.map(c => categoryToType[c] || c)
+		.filter(Boolean)
+
+	if (mapped.length === 0) return '-'
+	if (mapped.length >= 3) return 'General'
+	return mapped.join(', ')
+}
+
+// Extract search capabilities from caps.modes
+function extractApiSupport(modes) {
+	if (!modes) return '-'
+	const capabilities = Object.keys(modes).filter(k => k !== 'search')
+	if (capabilities.length === 0) return 'Search'
+	return 'Search, ' + capabilities.map(k => k.replace('-search', '')).join(', ')
+}
+
 function authHeaders(extra) {
 	const headers = {
 		'User-Agent': 'private-trackers-spreadsheet/1.0',
@@ -246,23 +294,29 @@ async function main() {
 					let tracker = {
 						name: '',
 						description: '',
-						type: ''
+						type: '',
+						url: '',
+						language: '',
+						apiSupport: ''
 					}
 					tracker.name = data.name
 					tracker.description = data.description
-					let type = []
+					tracker.url = (data.links && data.links.length > 0) ? data.links[0] : ''
+					tracker.language = data.language || ''
+					tracker.apiSupport = extractApiSupport(data.caps && data.caps.modes)
+					let rawTypes = []
 					if (data.caps && data.caps.categorymappings) {
 						data.caps.categorymappings.forEach(function(category) {
-							type.push(cleanTypeDefinition(category.cat.split("/")[0]))
+							rawTypes.push(cleanTypeDefinition(category.cat.split("/")[0]))
 						})
-						type = Array.from(new Set(type))
-						tracker.type = type.join(", ")
+						rawTypes = Array.from(new Set(rawTypes))
+						tracker.type = normalizeJackettType(rawTypes)
 					} else if (data.caps && data.caps.categories && data.caps.categorymappings) {
 						data.caps.categorymappings.forEach(function(category) {
-							type.push(cleanTypeDefinition(category.cat.split("/")[0]))
+							rawTypes.push(cleanTypeDefinition(category.cat.split("/")[0]))
 						})
-						type = Array.from(new Set(type))
-						tracker.type = type.join(", ")
+						rawTypes = Array.from(new Set(rawTypes))
+						tracker.type = normalizeJackettType(rawTypes)
 					}
 					if (tracker.name && tracker.name.trim().length) {
 						trackers.trackers.push(tracker)
@@ -292,7 +346,10 @@ async function main() {
 					let tracker = {
 						name: '',
 						description: '',
-						type: ''
+						type: '',
+						url: '',
+						language: '',
+						apiSupport: ''
 					}
 					const res = fileContents.match(/:\s+base\([^{}]*"/s)
 					if (res !== null) {
@@ -312,9 +369,22 @@ async function main() {
 							if (description) {
 								tracker.description = description[1]
 							}
+							// Try to extract site URL from SiteLink or base URL
+							const siteLink = line.match(/.*(?:SiteLink|sitelink):\s+"([^"]+)"/i)
+							if (siteLink && !tracker.url) {
+								tracker.url = siteLink[1]
+							}
 						}
 					}
-					let type = []
+					// Try to extract URL from links pattern
+					if (!tracker.url) {
+						const urlMatch = fileContents.match(/(?:SiteLink|sitelink)\s*=\s*"https?:\/\/[^"]+"/i)
+						if (urlMatch) {
+							const url = urlMatch[0].match(/"(https?:\/\/[^"]+)"/)
+							if (url) tracker.url = url[1]
+						}
+					}
+					let rawTypes = []
 					const fileLines = fileContents.match(/[^\r\n]+/g)
 					for (const line of fileLines) {
 						if (line && line.includes("AddCategoryMapping")) {
@@ -322,15 +392,16 @@ async function main() {
 							if (category) {
 								const toReplace = cleanTypes.hasOwnProperty(category[1].toLowerCase())
 								if (toReplace) {
-									type.push(cleanTypes[category[1].toLowerCase()])
+									rawTypes.push(cleanTypes[category[1].toLowerCase()])
 								} else {
-									type.push(category[1])
+									rawTypes.push(category[1])
 								}
 							}
 						}
 					}
-					type = Array.from(new Set(type))
-					tracker.type = type.join(", ")
+					rawTypes = Array.from(new Set(rawTypes))
+					tracker.type = normalizeJackettType(rawTypes)
+					tracker.apiSupport = rawTypes.length > 0 ? 'Search' : '-'
 					if (tracker.name && tracker.name.trim().length) {
 						trackers.trackers.push(tracker)
 					}
@@ -362,6 +433,32 @@ async function main() {
 		} else {
 			fs.writeFileSync('trackers2.json', newJson);
 			console.log('Updated trackers2.json');
+		}
+
+		// Cross-reference: enrich trackers.json entries with URLs from Jackett
+		console.log('Cross-referencing trackers.json with Jackett data...');
+		const jackettMap = new Map()
+		for (const t of trackers.trackers) {
+			jackettMap.set(t.name.toLowerCase(), t)
+		}
+
+		let enrichedCount = 0
+		for (const tracker of mainJson.trackers) {
+			const key = tracker.Name.toLowerCase()
+			// Try exact match first, then without common suffixes like (API)
+			const jtk = jackettMap.get(key) || jackettMap.get(key.replace(/\s*\(api\)\s*$/, ''))
+			if (jtk && jtk.url && !tracker.URL) {
+				tracker.URL = jtk.url
+				enrichedCount++
+			}
+		}
+
+		if (enrichedCount > 0) {
+			const mainJsonNew = JSON.stringify(mainJson, null, 2) + '\n';
+			fs.writeFileSync('trackers.json', mainJsonNew);
+			console.log(`Enriched ${enrichedCount} trackers.json entries with URLs from Jackett`);
+		} else {
+			console.log('No new URLs to enrich in trackers.json');
 		}
 	} catch (e) {
 		console.log('Unable to fetch from GitHub API: ' + e.message);
