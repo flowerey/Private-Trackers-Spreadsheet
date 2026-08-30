@@ -33,6 +33,14 @@
       "apiSupport": "Search, movie, music"
     },
     {
+      "name": "3D Vault (API)",
+      "description": "3D Vault is a Private Torrent Tracker for 3D MOVIES",
+      "type": "Movie, TV",
+      "url": "https://3dvault.org/",
+      "language": "en-US",
+      "apiSupport": "Search, tv, movie"
+    },
+    {
       "name": "4thD",
       "description": "4th Dimension is a Private Torrent Tracker for MOVIES / TV / GENERAL",
       "type": "General",
