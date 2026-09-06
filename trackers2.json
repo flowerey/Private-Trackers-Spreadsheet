@@ -553,6 +553,14 @@
       "apiSupport": "Search, tv, movie, music, book"
     },
     {
+      "name": "DanishBits (API)",
+      "description": "DanishBits is a Private Torrent Tracker for MOVIES / TV / GENERAL",
+      "type": "General",
+      "url": "https://danishbits.me/",
+      "language": "en-US",
+      "apiSupport": "Search, tv, movie, music, book"
+    },
+    {
       "name": "Darkpeers (API)",
       "description": "Darkpeers is a Private Torrent Tracker for MOVIES / TV / GENERAL",
       "type": "General",
@@ -851,7 +859,7 @@
     {
       "name": "Hǎitáng (海棠PT)",
       "description": "Hǎitáng (海棠PT) is a CHINESE Private Torrent Tracker for OPERA / CROSSTALK",
-      "type": "Music, TV",
+      "type": "General",
       "url": "https://www.htpt.cc/",
       "language": "zh-CN",
       "apiSupport": "Search, tv, music"
@@ -1295,14 +1303,6 @@
       "url": "https://majomparade.eu/",
       "language": "hu-HU",
       "apiSupport": "Search, tv, movie, music, book"
-    },
-    {
-      "name": "Making Off",
-      "description": "Making Off is a BRAZILIAN Private Torrent Tracker for MOVIES / TV / GENERAL",
-      "type": "General",
-      "url": "https://makingoff.org/",
-      "language": "pt-BR",
-      "apiSupport": "Search, tv, movie, music"
     },
     {
       "name": "Malayabits (API)",
@@ -2065,6 +2065,14 @@
       "apiSupport": "Search, tv, movie, music"
     },
     {
+      "name": "Sportz247",
+      "description": "Sportz247 is a Private Torrent Tracker for SPORTS",
+      "type": "TV, General",
+      "url": "https://sportz247.bar/",
+      "language": "en-US",
+      "apiSupport": "Search, tv"
+    },
+    {
       "name": "Swarmazon (API)",
       "description": "Swarmazon is a Private Torrent Tracker for MOVIES / TV / GENERAL",
       "type": "General",
@@ -2183,6 +2191,14 @@
       "url": "https://tlzdigital.com/",
       "language": "en-US",
       "apiSupport": "Search, tv, movie, music, book"
+    },
+    {
+      "name": "Thor HUB (API)",
+      "description": "Thor HUB is a Private Torrent Tracker for MOVIES / TV / MUSIC",
+      "type": "General",
+      "url": "https://thorhub.eu/",
+      "language": "en-US",
+      "apiSupport": "Search, tv, movie, music"
     },
     {
       "name": "TJUPT (北洋园PT)",
