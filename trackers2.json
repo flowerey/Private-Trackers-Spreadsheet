@@ -9,6 +9,14 @@
       "apiSupport": "Search, tv, movie, music"
     },
     {
+      "name": "0DayFiles (API)",
+      "description": "0DayFiles is a Private Torrent Tracker for 0DAY / GENERAL",
+      "type": "General",
+      "url": "https://0dayfiles.net/",
+      "language": "en-US",
+      "apiSupport": "Search, tv, movie, music, book"
+    },
+    {
       "name": "13City",
       "description": "13City is a CHINESE Private Torrent Tracker for MOVIES / TV / GENERAL",
       "type": "General",
@@ -247,14 +255,6 @@
       "url": "https://best-core.info/",
       "language": "hu-HU",
       "apiSupport": "Search, tv, movie, book, music"
-    },
-    {
-      "name": "BigBBS",
-      "description": "BigBBS is a POLISH Private Torrent Tracker for MOVIES / TV / GENERAL",
-      "type": "General",
-      "url": "https://bigbbs.eu/",
-      "language": "pl-PL",
-      "apiSupport": "Search, tv, movie, music, book"
     },
     {
       "name": "BigCore",
@@ -659,10 +659,10 @@
     {
       "name": "DreadVault (API)",
       "description": "DreadVault is a Private Torrent Tracker for HORROR MOVIES / TV",
-      "type": "Movie, TV",
+      "type": "General",
       "url": "https://dreadvault.org/",
       "language": "en-US",
-      "apiSupport": "Search, tv, movie"
+      "apiSupport": "Search, tv, movie, book"
     },
     {
       "name": "Drugari",
@@ -2298,11 +2298,11 @@
     },
     {
       "name": "Torrenteros (API)",
-      "description": "Torrenteros (TTR) is a SPANISH Torrent Tracker for MOVIES / TV / GENERAL",
-      "type": "Movie, TV",
+      "description": "Torrenteros (TTR) is a SPANISH Torrent Tracker for MOVIES / TV / MUSIC",
+      "type": "General",
       "url": "https://torrenteros.org/",
       "language": "es-ES",
-      "apiSupport": "Search, tv, movie"
+      "apiSupport": "Search, tv, movie, music"
     },
     {
       "name": "TorrentHaven (API)",
