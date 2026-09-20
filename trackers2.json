@@ -662,7 +662,7 @@
       "type": "General",
       "url": "https://dreadvault.org/",
       "language": "en-US",
-      "apiSupport": "Search, tv, movie, book"
+      "apiSupport": "Search, tv, movie, book, music"
     },
     {
       "name": "Drugari",
@@ -687,14 +687,6 @@
       "url": "https://dubhe.site/",
       "language": "zh-CN",
       "apiSupport": "Search, tv, movie, music, book"
-    },
-    {
-      "name": "Ebooks-Shares",
-      "description": "Ebooks-Shares is a Private Torrent Tracker for EBOOKS / AUDIOBOOKS",
-      "type": "Music, eBooks",
-      "url": "https://ebooks-shares.org/",
-      "language": "en-US",
-      "apiSupport": "Search, book"
     },
     {
       "name": "eMuwarez (API)",
@@ -889,8 +881,8 @@
       "apiSupport": "Search, tv, movie, music, book"
     },
     {
-      "name": "HD-Forever2FA",
-      "description": "HD-Forever (HD-F) is a FRENCH Private Torrent Tracker for HD MOVIES. This indexer uses cookie login for 2FA.",
+      "name": "HD-Forever (API)",
+      "description": "HD-Forever (HD-F) is a French private tracker dedicated to movies, TV shows, animation, documentaries, concerts, and live shows.",
       "type": "Movie, TV",
       "url": "https://hdf.world/",
       "language": "fr-FR",
@@ -2636,7 +2628,7 @@
       "name": "ZRPT (自然)",
       "description": "ZRPT (自然) is a CHINESE Private Torrent Tracker for Documentaries",
       "type": "TV",
-      "url": "https://zrpt.cc/",
+      "url": "https://naturept.top/",
       "language": "zh-CN",
       "apiSupport": "Search, tv"
     }
