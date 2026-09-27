@@ -121,10 +121,18 @@
       "apiSupport": "Search, tv, movie"
     },
     {
+      "name": "alingPT (API)",
+      "description": "alingPT is a CHINESE Private Torrent Tracker for MOVIES / TV",
+      "type": "TV, Movie",
+      "url": "https://pt.aling.de/",
+      "language": "zh-CN",
+      "apiSupport": "Search, tv, movie"
+    },
+    {
       "name": "Amigos Share Club",
       "description": "Amigos Share Club (ASC) is a BRAZILIAN Private Torrent Tracker for MOVIES / TV / GENERAL",
       "type": "General",
-      "url": "https://cliente.amigos-share.club/",
+      "url": "https://amigos-share.club/",
       "language": "pt-BR",
       "apiSupport": "Search, tv, movie, book"
     },
@@ -199,6 +207,14 @@
       "url": "https://asiandvdclub.org/",
       "language": "en-US",
       "apiSupport": "Search, tv, movie, music"
+    },
+    {
+      "name": "AstraTorrent",
+      "description": "AstraTorrent is a FRENCH Private Torrent Tracker for MOVIES / TV / GENERAL",
+      "type": "General",
+      "url": "https://astratorrent.la/",
+      "language": "fr-FR",
+      "apiSupport": "Search, tv, movie, music, book"
     },
     {
       "name": "Audiences",
@@ -594,6 +610,14 @@
     },
     {
       "name": "DaXiangJiao (大香蕉)",
+      "description": "DaXiangJiao (大香蕉) is a CHINESE Private Torrent Tracker for MOVIES / TV / GENERAL",
+      "type": "General",
+      "url": "https://pt.daxiangjiao.org/",
+      "language": "zh-CN",
+      "apiSupport": "Search, tv, movie, music, book"
+    },
+    {
+      "name": "DaXiangJiao (大香蕉) (API)",
       "description": "DaXiangJiao (大香蕉) is a CHINESE Private Torrent Tracker for MOVIES / TV / GENERAL",
       "type": "General",
       "url": "https://pt.daxiangjiao.org/",
@@ -1153,6 +1177,14 @@
       "apiSupport": "Search, tv, movie, music, book"
     },
     {
+      "name": "Kufei (库非) (API)",
+      "description": "Kufei (库非) is a CHINESE Private Torrent Tracker for MOVIES / TV / GENERAL",
+      "type": "General",
+      "url": "https://kufei.org/",
+      "language": "zh-CN",
+      "apiSupport": "Search, tv, movie, music, book"
+    },
+    {
       "name": "Kufirc",
       "description": "Kufirc is a HUNGARIAN Private tracker for 3X",
       "type": "General",
@@ -1545,6 +1577,14 @@
       "apiSupport": "Search, tv, movie, music"
     },
     {
+      "name": "OshenPT (API)",
+      "description": "OshenPT is a CHINESE Private Torrent Tracker for HD MOVIES / TV / GENERAL",
+      "type": "General",
+      "url": "https://www.oshen.win/",
+      "language": "zh-CN",
+      "apiSupport": "Search, tv, movie, music"
+    },
+    {
       "name": "P2PBG",
       "description": "P2PBG is a BULGARIAN Private PAY2DL Torrent Tracker for 0DAY / GENERAL",
       "type": "General",
@@ -1730,6 +1770,14 @@
     },
     {
       "name": "PTSKIT",
+      "description": "PTSKIT is a CHINESE Private Torrent Tracker for MOVIES / TV / GENERAL",
+      "type": "General",
+      "url": "https://www.ptskit.org/",
+      "language": "zh-CN",
+      "apiSupport": "Search, tv, movie, book"
+    },
+    {
+      "name": "PTSKIT (API)",
       "description": "PTSKIT is a CHINESE Private Torrent Tracker for MOVIES / TV / GENERAL",
       "type": "General",
       "url": "https://www.ptskit.org/",
@@ -2041,6 +2089,14 @@
       "apiSupport": "Search, tv, movie, music"
     },
     {
+      "name": "SoulVoice (聆音Club) (API)",
+      "description": "SoulVoice (聆音Club) is a CHINESE Private Torrent Tracker for MOVIES / TV / GENERAL",
+      "type": "General",
+      "url": "https://pt.soulvoice.club/",
+      "language": "zh-CN",
+      "apiSupport": "Search, tv, movie, music"
+    },
+    {
       "name": "Speedmaster HD",
       "description": "Speedmaster HD is a GERMAN Time based Torrent Tracker for MOVIES / TV",
       "type": "General",
@@ -2175,6 +2231,14 @@
       "url": "https://theshow.click/",
       "language": "en-US",
       "apiSupport": "Search"
+    },
+    {
+      "name": "The Word Music",
+      "description": "The Word Music is a Private GERMAN tracker for  MUSIC / MOVIES / TV / GENERAL",
+      "type": "General",
+      "url": "https://thewordmusic.org/",
+      "language": "de-DE",
+      "apiSupport": "Search, tv, movie, music, book"
     },
     {
       "name": "TheLeachZone (API)",
@@ -2409,6 +2473,14 @@
       "apiSupport": "Search, tv, movie"
     },
     {
+      "name": "UltraHD (API)",
+      "description": "UltraHD is a CHINESE Private Torrent Tracker for UHD MOVIES / TV / GENERAL",
+      "type": "General",
+      "url": "https://ultrahd.net/",
+      "language": "zh-CN",
+      "apiSupport": "Search, tv, movie"
+    },
+    {
       "name": "Unbreakable",
       "description": "Unbreakable is a GERMAN Private Torrent Tracker for MOVIES / TV / GENERAL",
       "type": "General",
@@ -2513,6 +2585,14 @@
       "apiSupport": "Search, tv, movie, music, book"
     },
     {
+      "name": "XDY (修道院) (API)",
+      "description": "XDY (修道院) is a CHINESE Private Torrent Tracker for MOVIES / TV / GENERAL",
+      "type": "General",
+      "url": "https://xdypt.vip/",
+      "language": "zh-CN",
+      "apiSupport": "Search, tv, movie, music, book"
+    },
+    {
       "name": "Xingtan (杏坛)",
       "description": "Xingtan (杏坛) is a CHINESE Torrent Tracker focusing on Medical Resources EBOOKS",
       "type": "eBooks",
@@ -2538,6 +2618,14 @@
     },
     {
       "name": "xloli",
+      "description": "xloli (ilolicon PT) is a CHINESE Private Torrent Tracker for LOLICON / MOVIES / 3X",
+      "type": "General",
+      "url": "https://mua.xloli.cc/",
+      "language": "zh-CN",
+      "apiSupport": "Search, tv, movie, music"
+    },
+    {
+      "name": "xloli (API)",
       "description": "xloli (ilolicon PT) is a CHINESE Private Torrent Tracker for LOLICON / MOVIES / 3X",
       "type": "General",
       "url": "https://mua.xloli.cc/",
@@ -2618,6 +2706,14 @@
     },
     {
       "name": "ZmPT (织梦)",
+      "description": "ZmPT (织梦) is a CHINESE Private Torrent Tracker for MOVIES / TV / GENERAL",
+      "type": "General",
+      "url": "https://zmpt.cc/",
+      "language": "zh-CN",
+      "apiSupport": "Search, tv, movie, music"
+    },
+    {
+      "name": "ZmPT (织梦) (API)",
       "description": "ZmPT (织梦) is a CHINESE Private Torrent Tracker for MOVIES / TV / GENERAL",
       "type": "General",
       "url": "https://zmpt.cc/",
