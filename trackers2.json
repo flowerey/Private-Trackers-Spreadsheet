@@ -817,6 +817,14 @@
       "apiSupport": "Search, tv, book"
     },
     {
+      "name": "FileIplay",
+      "description": "FileIplay is a Private Torrent Tracker for MOVIES / TV / GENERAL",
+      "type": "General",
+      "url": "https://fileiplay.org/",
+      "language": "en-US",
+      "apiSupport": "Search, tv, movie"
+    },
+    {
       "name": "FinElite",
       "description": "FinElite (FE) is a FINNISH Private Torrent Tracker for MOVIES / TV / GENERAL",
       "type": "General",
@@ -1002,6 +1010,14 @@
     },
     {
       "name": "HDBao",
+      "description": "HDBao is a CHINESE Private Torrent Tracker for MOVIES / TV / GENERAL",
+      "type": "General",
+      "url": "https://hdbao.cc/",
+      "language": "zh-CN",
+      "apiSupport": "Search, tv, movie, music, book"
+    },
+    {
+      "name": "HDBao (API)",
       "description": "HDBao is a CHINESE Private Torrent Tracker for MOVIES / TV / GENERAL",
       "type": "General",
       "url": "https://hdbao.cc/",
@@ -2233,14 +2249,6 @@
       "apiSupport": "Search, tv, movie"
     },
     {
-      "name": "Slobit Games",
-      "description": "Slobit Games is a Private Torrent Tracker for GAMES",
-      "type": "General",
-      "url": "https://games.slo-bitcloud.eu/",
-      "language": "en-US",
-      "apiSupport": "Search"
-    },
-    {
       "name": "SoulVoice (聆音Club)",
       "description": "SoulVoice (聆音Club) is a CHINESE Private Torrent Tracker for MOVIES / TV / GENERAL",
       "type": "General",
@@ -2500,7 +2508,7 @@
       "name": "Torrent.LT",
       "description": "Torrent.LT is a LITHUANIAN Private Torrent Tracker for 0DAY / GENERAL",
       "type": "General",
-      "url": "https://torrent.lt/",
+      "url": "https://torrent.ai/",
       "language": "lt-LT",
       "apiSupport": "Search, tv, movie, music, book"
     },
