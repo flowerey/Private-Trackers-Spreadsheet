@@ -73,6 +73,14 @@
       "apiSupport": "Search, tv, movie, music, book"
     },
     {
+      "name": "52movie",
+      "description": "52movie is a CHINESE Private Torrent Tracker for MOVIES / TV / GENERAL",
+      "type": "General",
+      "url": "https://www.52movie.top/",
+      "language": "zh-CN",
+      "apiSupport": "Search, tv, movie, music"
+    },
+    {
       "name": "52PT",
       "description": "52PT is a CHINESE Private Torrent Tracker for HD MOVIES / TV",
       "type": "General",
@@ -129,7 +137,7 @@
       "apiSupport": "Search, tv, movie, book"
     },
     {
-      "name": "AlaBala",
+      "name": "AlaBala (API)",
       "description": "AlaBala is a BULGARIAN Private Torrent Tracker for MOVIES / TV / GENERAL",
       "type": "General",
       "url": "https://alabala.net/",
@@ -721,6 +729,14 @@
       "apiSupport": "Search, tv, movie, music, book"
     },
     {
+      "name": "DiscFan (API)",
+      "description": "DiscFan is a CHINESE Private Torrent Tracker for MOVIES / TV",
+      "type": "General",
+      "url": "https://discfan.net/",
+      "language": "zh-CN",
+      "apiSupport": "Search, tv, movie, music"
+    },
+    {
       "name": "DocsPedia",
       "description": "DocsPedia is a Private Torrent Tracker for E-LEARNING",
       "type": "General",
@@ -894,7 +910,7 @@
       "type": "General",
       "url": "https://gemini-tracker.org/",
       "language": "fr-FR",
-      "apiSupport": "Search, tv, movie, book"
+      "apiSupport": "Search, tv, movie, book, music"
     },
     {
       "name": "GAYtorrent.ru",
@@ -966,7 +982,7 @@
       "type": "General",
       "url": "https://hd-czech.eu/",
       "language": "cs-CZ",
-      "apiSupport": "Search, tv, movie, music, book"
+      "apiSupport": "Search, tv, movie"
     },
     {
       "name": "HD-Forever (API)",
@@ -2065,6 +2081,14 @@
       "apiSupport": "Search, tv"
     },
     {
+      "name": "Racing4us",
+      "description": "Racing4us is a Private Torrent Tracker for SPORTS",
+      "type": "General",
+      "url": "https://racing4us.site/",
+      "language": "en-US",
+      "apiSupport": "Search, tv, movie, book"
+    },
+    {
       "name": "RailgunPT",
       "description": "RailgunPT is a CHINESE Private Torrent Tracker for MOVIES / TV / GENERAL",
       "type": "General",
@@ -2281,16 +2305,8 @@
       "apiSupport": "Search, tv, movie, music"
     },
     {
-      "name": "Sportz247",
-      "description": "Sportz247 is a Private Torrent Tracker for SPORTS",
-      "type": "General",
-      "url": "https://sportz247.bar/",
-      "language": "en-US",
-      "apiSupport": "Search, tv, movie, book"
-    },
-    {
       "name": "Stellarwinds",
-      "description": " Stellarwinds is a Private Torrent Tracker for MOVIES / TV / GENERAL",
+      "description": "Stellarwinds is a Private Torrent Tracker for MOVIES / TV / GENERAL",
       "type": "General",
       "url": "https://stellarwinds.me/",
       "language": "en-US",
@@ -2722,6 +2738,14 @@
     },
     {
       "name": "VC-Lib",
+      "description": "VC-Lib is a CHINESE Private Torrent Tracker for MUSIC",
+      "type": "General",
+      "url": "https://pt.vclib.online/",
+      "language": "zh-CN",
+      "apiSupport": "Search, music"
+    },
+    {
+      "name": "VC-Lib (API)",
       "description": "VC-Lib is a CHINESE Private Torrent Tracker for MUSIC",
       "type": "General",
       "url": "https://pt.vclib.online/",
