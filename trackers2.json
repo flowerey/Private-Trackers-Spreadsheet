@@ -73,14 +73,6 @@
       "apiSupport": "Search, tv, movie, music, book"
     },
     {
-      "name": "52movie",
-      "description": "52movie is a CHINESE Private Torrent Tracker for MOVIES / TV / GENERAL",
-      "type": "General",
-      "url": "https://www.52movie.top/",
-      "language": "zh-CN",
-      "apiSupport": "Search, tv, movie, music"
-    },
-    {
       "name": "52PT",
       "description": "52PT is a CHINESE Private Torrent Tracker for HD MOVIES / TV",
       "type": "General",
@@ -116,7 +108,7 @@
       "name": "Aftershock",
       "description": "Aftershock is a HUNGARIAN Private Torrent Tracker for MOVIES / GENERAL",
       "type": "General",
-      "url": "https://aftershock-tracker.net/",
+      "url": "https://aftershock.hu/",
       "language": "hu-HU",
       "apiSupport": "Search, tv, movie, music, book"
     },
@@ -1921,22 +1913,6 @@
       "apiSupport": "Search, tv, movie, music, book"
     },
     {
-      "name": "PTLAO",
-      "description": "PTLAO is a CHINESE Private Torrent Tracker for MOVIES / TV / GENERAL",
-      "type": "General",
-      "url": "https://ptlao.top/",
-      "language": "zh-CN",
-      "apiSupport": "Search, tv, movie, music"
-    },
-    {
-      "name": "PTLAO (API)",
-      "description": "PTLAO is a CHINESE Private Torrent Tracker for MOVIES / TV / GENERAL",
-      "type": "General",
-      "url": "https://ptlao.top/",
-      "language": "zh-CN",
-      "apiSupport": "Search, tv, movie, music"
-    },
-    {
       "name": "PTLGS",
       "description": "PTLGS is a CHINESE Private Torrent Tracker for MOVIES / TV",
       "type": "General",
@@ -2167,6 +2143,14 @@
       "url": "https://samaritano.cc/",
       "language": "pt-BR",
       "apiSupport": "Search, tv, movie, music, book"
+    },
+    {
+      "name": "SAPIbr (API)",
+      "description": "SAPIbr (Toca Share) is a PORTUGUESE Private Torrent Tracker for EBOOKS / AUDIOBOOKS / COURSES",
+      "type": "General",
+      "url": "https://sapibr.com/",
+      "language": "pt-PT",
+      "apiSupport": "Search, book"
     },
     {
       "name": "SBPT",
@@ -2481,14 +2465,6 @@
       "apiSupport": "Search, tv, movie, music, book"
     },
     {
-      "name": "Toca Share (API)",
-      "description": "Toca Share is a PORTUGUESE Private Torrent Tracker for EBOOKS / AUDIOBOOKS / COURSES",
-      "type": "General",
-      "url": "https://tocashare.biz/",
-      "language": "pt-PT",
-      "apiSupport": "Search, book"
-    },
-    {
       "name": "Tormac",
       "description": "Tormac is a RUSSIAN Private Torrent Tracker for MAC SOFTWARE",
       "type": "General",
@@ -2783,6 +2759,14 @@
       "url": "https://world-in-hd.net/",
       "language": "fr-FR",
       "apiSupport": "Search, tv, movie"
+    },
+    {
+      "name": "World-of-Tomorrow (API)",
+      "description": "World-of-Tomorrow is a GERMAN Private tracker for MOVIES / TV / GENERAL",
+      "type": "General",
+      "url": "https://w-o-t.pro/",
+      "language": "de-DE",
+      "apiSupport": "Search, tv, movie, music, book"
     },
     {
       "name": "XDY (修道院)",
