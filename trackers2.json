@@ -313,6 +313,14 @@
       "apiSupport": "Search, tv, movie, music, book"
     },
     {
+      "name": "BinaryBay",
+      "description": "BinaryBay is a Private Torrent Tracker for MOVIES / TV / GENERAL",
+      "type": "General",
+      "url": "https://binarybay.cc/",
+      "language": "en-US",
+      "apiSupport": "Search, tv, movie, music, book"
+    },
+    {
       "name": "Bit-Bázis",
       "description": "Bit-Bázis is a HUNGARIAN Private Tracker for MOVIES / TV",
       "type": "General",
@@ -375,14 +383,6 @@
       "url": "https://bj-share.info/",
       "language": "pt-BR",
       "apiSupport": "Search, tv, movie, book"
-    },
-    {
-      "name": "BlueBird",
-      "description": "BlueBird is a RUSSIAN Private Torrent Tracker for HD MOVIES",
-      "type": "General",
-      "url": "https://bluebird-hd.org/",
-      "language": "ru-RU",
-      "apiSupport": "Search, tv, movie, music"
     },
     {
       "name": "BlueTorrents",
@@ -657,6 +657,14 @@
       "apiSupport": "Search, tv, movie, music, book"
     },
     {
+      "name": "Deep-Water (API)",
+      "description": "Deep-Water is a GERMAN Private Torrent Tracker for MOVIES / TV / GENERAL",
+      "type": "General",
+      "url": "https://deep-water.info/",
+      "language": "de-DE",
+      "apiSupport": "Search, tv, movie"
+    },
+    {
       "name": "Depth Studio",
       "description": "Depth Studio is a CHINESE Private Torrent Tracker for MOVIES / TV / GENERAL",
       "type": "General",
@@ -772,7 +780,7 @@
       "name": "eMuwarez (API)",
       "description": "eMuwarez is a SPANISH Private Torrent Tracker for MOVIES / TV / GENERAL",
       "type": "General",
-      "url": "https://emuwarez.com/",
+      "url": "https://emu-warez.com/",
       "language": "es-ES",
       "apiSupport": "Search, tv, movie, music"
     },
@@ -937,6 +945,14 @@
       "apiSupport": "Search, tv, movie, music, book"
     },
     {
+      "name": "Golden Gate (GG)",
+      "description": "Golden Gate (GG) is a Private GERMAN tracker for MOVIES / TV / GENERAL",
+      "type": "General",
+      "url": "https://leo-test.store/",
+      "language": "de-DE",
+      "apiSupport": "Search, tv, movie, music, book"
+    },
+    {
       "name": "HaiDan",
       "description": "HaiDan is a CHINESE Private Torrent Tracker for HD MOVIES / TV",
       "type": "General",
@@ -964,7 +980,7 @@
       "name": "HD Dolby",
       "description": "HD Dolby is a CHINESE Private Torrent Tracker for HD MOVIES / TV / GENERAL",
       "type": "General",
-      "url": "https://www.hddolby.com/",
+      "url": "https://www.uhddolby.com/",
       "language": "zh-CN",
       "apiSupport": "Search, tv, movie, music"
     },
@@ -1660,7 +1676,7 @@
       "name": "Old Greek Tracker (OGT)",
       "description": "Old Greek Tracker (OGT) is a GREEK Private Torrent Tracker for PRE-2020 MOVIES / TV / GENERAL",
       "type": "General",
-      "url": "https://oldgreektracker.xyz/",
+      "url": "https://greekseeders.site/",
       "language": "el-GR",
       "apiSupport": "Search, tv, movie, music, book"
     },
@@ -1841,6 +1857,14 @@
       "apiSupport": "Search, tv, movie, music, book"
     },
     {
+      "name": "Pornorip",
+      "description": "Pornorip is a Private Torrent Tracker for 3X DVD",
+      "type": "Porn",
+      "url": "https://www.pornorip.si/",
+      "language": "en-US",
+      "apiSupport": "Search"
+    },
+    {
       "name": "Portugas (API)",
       "description": "Portugas is a PORTUGUESE Private Torrent Tracker for 0DAY / GENERAL",
       "type": "General",
@@ -1957,14 +1981,6 @@
       "description": "PTTime is a ratioless CHINESE Private Torrent Tracker for HD MOVIES / TV / GENERAL",
       "type": "General",
       "url": "https://www.pttime.org/",
-      "language": "zh-CN",
-      "apiSupport": "Search, tv, movie, music"
-    },
-    {
-      "name": "PTYING (樱花)",
-      "description": "PTYING (樱花) is a CHINESE Private Torrent Tracker for MOVIES / TV / GENERAL",
-      "type": "General",
-      "url": "https://pt.ying.us.kg/",
       "language": "zh-CN",
       "apiSupport": "Search, tv, movie, music"
     },
@@ -2135,6 +2151,14 @@
       "url": "https://rousi.pro/",
       "language": "zh-CN",
       "apiSupport": "Search, tv, movie, music, book"
+    },
+    {
+      "name": "Sagmire",
+      "description": "Sagmire is a Private Torrent Tracker for XXX",
+      "type": "Porn",
+      "url": "https://sagmire.org/",
+      "language": "en-US",
+      "apiSupport": "Search"
     },
     {
       "name": "SAMARITANO (API)",
@@ -2351,14 +2375,6 @@
       "url": "https://www.teamos.xyz/",
       "language": "en-US",
       "apiSupport": "Search, book"
-    },
-    {
-      "name": "The Brothers",
-      "description": "The Brothers is a Private GERMAN tracker for MOVIES / TV / GENERAL",
-      "type": "General",
-      "url": "https://leo-test.store/",
-      "language": "de-DE",
-      "apiSupport": "Search, tv, movie, music, book"
     },
     {
       "name": "The Crazy Ones",
