@@ -126,7 +126,7 @@
       "type": "Movie, TV",
       "url": "https://aither.cc/",
       "language": "en-US",
-      "apiSupport": "Search, tv, movie, book"
+      "apiSupport": "Search, tv, movie"
     },
     {
       "name": "AlaBala (API)",
@@ -340,7 +340,7 @@
       "name": "Bitded",
       "description": "Bitded is a THAI Private Torrent Tracker for MOVIES / TV / GENERAL",
       "type": "General",
-      "url": "http://dedbit-new.dedbit.com/",
+      "url": "https://www.dedbit.com/",
       "language": "th-TH",
       "apiSupport": "Search, tv, movie, music, book"
     },
@@ -523,10 +523,10 @@
     {
       "name": "Concertos (API)",
       "description": "Concertos is a Private Torrent Tracker for Live Concerts with Strict Quality Control",
-      "type": "TV, Music",
+      "type": "General",
       "url": "https://concertos.live/",
       "language": "en-US",
-      "apiSupport": "Search, tv, music"
+      "apiSupport": "Search, tv, movie, music"
     },
     {
       "name": "CrabPT (蟹黄堡)",
@@ -1809,14 +1809,6 @@
       "apiSupport": "Search, tv, movie, music, book"
     },
     {
-      "name": "PigNetwork (猪猪网)",
-      "description": "PigNetwork (猪猪网) is a CHINESE Private Torrent Tracker for HD MOVIES / TV / GENERAL",
-      "type": "General",
-      "url": "https://piggo.me/",
-      "language": "zh-CN",
-      "apiSupport": "Search, tv, movie, music, book"
-    },
-    {
       "name": "PixelCove2FA",
       "description": "PixelCove2FA (Ultimate Gamer) is a Private Torrent Tracker for GAMES. Cookie Login for 2FA use.",
       "type": "General",
@@ -2097,6 +2089,14 @@
       "apiSupport": "Search, tv, movie, music, book"
     },
     {
+      "name": "Red Angel",
+      "description": "Red Angel is a HUNGARIAN Private Tracker for MOVIES / TV / GENERAL",
+      "type": "General",
+      "url": "https://red-angel.net/",
+      "language": "hu-HU",
+      "apiSupport": "Search, tv, movie, book, music"
+    },
+    {
       "name": "Red Star Torrent",
       "description": "Red Star Torrent (RST) is a POLISH Private Torrent Tracker for MOVIES / TV",
       "type": "General",
@@ -2231,6 +2231,14 @@
       "url": "https://sextorrent.myds.me/",
       "language": "en-US",
       "apiSupport": "Search, tv, movie, book"
+    },
+    {
+      "name": "Shadow (API)",
+      "description": "Shadow is a ROMANIAN Private Torrent Tracker for MOVIES / TV / GENERAL",
+      "type": "General",
+      "url": "https://shadow.vip3ra.org/",
+      "language": "ro-RO",
+      "apiSupport": "Search, tv, movie, book, music"
     },
     {
       "name": "Shadowbit",
@@ -2841,14 +2849,6 @@
       "apiSupport": "Search, tv, movie, music"
     },
     {
-      "name": "xTorrenty",
-      "description": "xTorrenty is a POLISH Private Torrent Tracker for MOVIES / TV / GENERAL",
-      "type": "General",
-      "url": "https://xtorrenty.org/",
-      "language": "pl-PL",
-      "apiSupport": "Search, tv, movie, music, book"
-    },
-    {
       "name": "Xtreme Bytes",
       "description": "Xtreme Bytes (TorrentSurf) is a Private Torrent Tracker for MOVIES / TV / GENERAL",
       "type": "General",
@@ -2927,6 +2927,14 @@
       "url": "https://zmpt.cc/",
       "language": "zh-CN",
       "apiSupport": "Search, tv, movie, music"
+    },
+    {
+      "name": "ZooToons",
+      "description": "ZooToons (ZT) is a Private Torrent Tracker for cartoons, animations and comics.",
+      "type": "General",
+      "url": "https://zootoons.org/",
+      "language": "en-US",
+      "apiSupport": "Search, tv, movie, book"
     },
     {
       "name": "ZRPT (自然)",
