@@ -441,6 +441,14 @@
       "apiSupport": "Search, tv, movie, music"
     },
     {
+      "name": "BytePeer",
+      "description": "BytePeer is a Private Torrent Tracker for MOVIES / TV / GENERAL",
+      "type": "General",
+      "url": "https://bytepeer.net/",
+      "language": "en-US",
+      "apiSupport": "Search"
+    },
+    {
       "name": "Caishen (财神)",
       "description": "Caishen (财神) is a CHINESE Private Torrent Tracker for MOVIES / TV / GENERAL",
       "type": "General",
@@ -578,6 +586,14 @@
     },
     {
       "name": "cyanbug (大青虫)",
+      "description": "cyanbug (大青虫) is a CHINESE Private Torrent Tracker for MOVIES / TV / GENERAL",
+      "type": "General",
+      "url": "https://cyanbug.net/",
+      "language": "zh-CN",
+      "apiSupport": "Search, tv, movie, music"
+    },
+    {
+      "name": "cyanbug (大青虫) (API)",
       "description": "cyanbug (大青虫) is a CHINESE Private Torrent Tracker for MOVIES / TV / GENERAL",
       "type": "General",
       "url": "https://cyanbug.net/",
@@ -1209,14 +1225,6 @@
       "apiSupport": "Search, tv, movie, music, book"
     },
     {
-      "name": "HxPT (好学)",
-      "description": "HxPT (好学) is a CHINESE Private Torrent Tracker for E-LEARNING",
-      "type": "General",
-      "url": "https://www.hxpt.org/",
-      "language": "zh-CN",
-      "apiSupport": "Search"
-    },
-    {
       "name": "InfinityHD (API)",
       "description": "InfinityHD is a Private Torrent Tracker for MOVIES / TV / ANIME / MUSIC",
       "type": "General",
@@ -1623,6 +1631,14 @@
       "url": "https://www.nicept.net/",
       "language": "zh-CN",
       "apiSupport": "Search"
+    },
+    {
+      "name": "NightBloom (API)",
+      "description": "NightBloom is a Private Torrent Tracker for MOVIES / TV / GENERAL",
+      "type": "General",
+      "url": "https://nightbloom.cx/",
+      "language": "en-US",
+      "apiSupport": "Search, tv, movie, music"
     },
     {
       "name": "Nirvana (API)",
