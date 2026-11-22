@@ -1553,14 +1553,6 @@
       "apiSupport": "Search, tv, movie, music, book"
     },
     {
-      "name": "MomentPT",
-      "description": "MomentPT is a CHINESE Private Torrent Tracker for Photography",
-      "type": "General",
-      "url": "https://www.momentpt.top/",
-      "language": "zh-CN",
-      "apiSupport": "Search"
-    },
-    {
       "name": "MonikaDesign (API)",
       "description": "MonikaDesign is a CHINESE Private Torrent Tracker for MOVIES / TV / ANIME",
       "type": "General",
@@ -2097,6 +2089,14 @@
       "apiSupport": "Search, tv, movie, music, book"
     },
     {
+      "name": "RailgunPT (API)",
+      "description": "RailgunPT is a CHINESE Private Torrent Tracker for MOVIES / TV / GENERAL",
+      "type": "General",
+      "url": "https://bilibili.download/",
+      "language": "zh-CN",
+      "apiSupport": "Search, tv, movie, music, book"
+    },
+    {
       "name": "Rastastugan (API)",
       "description": "Rastastugan is a NORDIC Private Torrent Tracker for MOVIES / TV / GENERAL",
       "type": "General",
@@ -2218,7 +2218,7 @@
     },
     {
       "name": "SeedCore (API)",
-      "description": "SeedCore (ROT) is a ROMANIAN Private Torrent Tracker for MOVIES / TV / GENERAL",
+      "description": "SeedCore (SC) is a ROMANIAN Private Torrent Tracker for MOVIES / TV / GENERAL",
       "type": "General",
       "url": "https://seedcore.net/",
       "language": "ro-RO",
@@ -2577,14 +2577,6 @@
       "apiSupport": "Search, tv, movie, music"
     },
     {
-      "name": "TorrentHaven (API)",
-      "description": "TorrentHaven is a Private Torrent Tracker for MOVIES / TV / GENERAL",
-      "type": "General",
-      "url": "https://torrenthaven.org/",
-      "language": "en-US",
-      "apiSupport": "Search, tv, movie, music"
-    },
-    {
       "name": "TorrentHR (API)",
       "description": "TorrentHR is a ratioless CROATIAN Private Torrent Tracker for 0DAY / GENERAL",
       "type": "General",
@@ -2606,6 +2598,14 @@
       "type": "",
       "url": "https://totheglory.im/",
       "language": "zh-CN",
+      "apiSupport": "Search, tv, movie, music, book"
+    },
+    {
+      "name": "Trackerformers",
+      "description": "Trackerformers is a GERMAN Private Torrent Tracker for MOVIES / TV / GENERAL",
+      "type": "General",
+      "url": "https://trackerformers.org/",
+      "language": "de-DE",
       "apiSupport": "Search, tv, movie, music, book"
     },
     {
